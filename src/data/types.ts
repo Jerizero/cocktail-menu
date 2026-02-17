@@ -17,9 +17,10 @@ export type ServiceStyle =
   | "shaken"
   | "punch"
   | "on-a-rock"
-  | "flip";
+  | "flip"
+  | "spritz";
 
-export type GlassType = "coupe" | "highball" | "rocks" | "nick-and-nora" | "wine";
+export type GlassType = "coupe" | "highball" | "rocks" | "nick-and-nora" | "wine" | "spritz";
 export type IceType = "none" | "large-cube" | "rocks" | "crushed";
 export type FoamType = "egg-white" | "pineapple-froth" | "salt-topped";
 export type Viscosity = "thin" | "medium" | "thick" | "syrupy";

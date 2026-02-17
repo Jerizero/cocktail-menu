@@ -30,11 +30,12 @@ const SHORT_NAMES: Record<number, string> = {
   5: "Negroni",
   6: "Mango",
   7: "Cafecito",
-  8: "Ensalada",
+  8: "El Sazón",
   9: "Habichuela",
   10: "Tabaquero",
   11: "Pina Colada",
   12: "Malta Flip",
+  13: "Mamajuana",
 };
 
 const getShortName = (drink: (typeof drinks)[0]): string =>

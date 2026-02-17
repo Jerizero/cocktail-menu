@@ -20,7 +20,7 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 
 ---
 
-## The 12-Drink Menu
+## The 13-Drink Menu
 
 ### Aperitivos y Refrescantes
 
@@ -65,6 +65,18 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 - **Status**: Spec'd, not tested
 - **Notes**: Best candidate to become the bone-dry refresher. Reduce syrup sweetness or use bark tincture + barspoon demerara.
 
+#### 13. Mamajuana Spritz — Dominican Aperitivo
+- **Base**: Mamajuana (Dominican rum + red wine + honey + bark/herbs)
+- **Modifiers**: Cava, Orange Peel
+- **Technique**: Build in glass over ice
+- **Status**: Concept
+- **Notes**:
+  - THE most Dominican spirit tradition — previously absent from the menu
+  - Mamajuana: rum steeped with red wine, honey, and tree bark/herbs — medicinal roots
+  - Deep ruby-garnet color from the red wine base
+  - Served in a balloon wine glass / spritz glass over ice
+  - Could add a Campari or Aperol rinse for additional bitter complexity
+
 ### Cócteles con Carácter
 
 #### 5. Negroni Dorado — White Negroni
@@ -96,12 +108,19 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 - **Status**: TASTE-TESTED. Jeriel loved it. Cap Corse Blanc dominates, gin recedes. Pineapple froth + salt = salted foam cafecito texture.
 - **Notes**: Originally flagged as "riskiest drink" — actually proven and delicious.
 
-#### 8. Ensalada Rusa Roja — Savory Stirred
-- **Base**: Roasted Beet-Infused Potato Vodka + Aquavit split
-- **Modifiers**: Fino Sherry, Escabeche Brine
-- **Technique**: Roasted beet infusion
-- **Status**: Spec'd, not tested
-- **Notes**: Aquavit adds caraway/dill savory spice. Driest non-stirred drink on menu (sweetness: 1/10).
+#### 8. El Sazón — Savory Stirred
+- **Base**: Annatto-Infused Potato Vodka + Aquavit split
+- **Modifiers**: Dry Vermouth, Escabeche Brine, Cilantro Oil float
+- **Technique**: Annatto warm infusion (fat-soluble extraction), stirred
+- **Garnish**: Ají dulce on a pick
+- **Status**: Concept
+- **Notes**:
+  - Annatto (achiote) provides deep saffron-gold to burnt orange color — the signature color of Dominican cooking
+  - Escabeche brine maintained — deeply Dominican preservation technique
+  - Cilantro oil as aromatic finishing layer (aroma, not flavor bomb — inspired by Perla Negra's finishing oils)
+  - Aquavit caraway/dill complements sofrito aromatics
+  - Savory without being jarring — sofrito essence, not liquid sofrito
+  - Replaces Ensalada Rusa Roja: stronger Dominican identity while keeping vodka/aquavit spirit balance
 
 ### Tragos Fuertes y Ricos
 
@@ -168,14 +187,15 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | 5 | Negroni Dorado | 8 | 2 | 2 | 9 | 1 | 6 | 8 |
 | 6 | Mango Fuego y Humo | 6 | 5 | 5 | 2 | 7 | 5 | 6 |
 | 7 | Cafecito Espuma | 6 | 4 | 3 | 7 | 3 | 5 | 9 |
-| 8 | Ensalada Rusa | 7 | 3 | 1 | 8 | 4 | 5 | 5 |
+| 8 | El Sazón | 7 | 3 | 2 | 7 | 3 | 5 | 6 |
 | 9 | Habichuela Dulce | 7 | 1 | 8 | 2 | 1 | 9 | 8 |
 | 10 | Tabaquero Francés | 8 | 1 | 5 | 5 | 0 | 8 | 6 |
 | 11 | Piña Colada Ghost | 6 | 5 | 5 | 2 | 3 | 4 | 8 |
 | 12 | Malta Cajuil Flip | 5 | 1 | 6 | 3 | 1 | 8 | 5 |
+| 13 | Mamajuana Spritz | 3 | 8 | 5 | 3 | 2 | 3 | 5 |
 
 ### Spirit Distribution
-- Rum: #1 (partial), #2, #9, #11
+- Rum: #1 (partial), #2, #6 (split), #9, #11, #13
 - Cognac: #1 (partial), #10
 - Gin: #5, #7
 - Scotch: #3
@@ -188,9 +208,10 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 - Highball/Long: #2, #3, #4
 - Stirred/Short: #5, #8, #10
 - Shaken/Up: #6, #7, #11
-- Punch: #1
+- Punch (on a rock): #1
 - On a Rock: #9
 - Flip: #12
+- Spritz: #13
 
 ### Identified Adjustments
 1. **Tabaquero → drier**: Add Cynar (0.25oz), reduce dulce de leche syrup by ~25%. Breaks sweet/rich cluster.
@@ -252,20 +273,17 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | Fat-wash spirits | Coquito (coconut oil) | 4oz oil per 750ml. Both spirits washed together. |
 | Guandules orgeat | Coco Concon | Same technique as cashew orgeat: soak → toast → blend → strain → sweeten. |
 | Cacao husk tea | Tabaquero | Brew shells, not beans. Light/fruity/floral, not chocolate. |
+| Annatto warm infusion | El Sazón | Fat-soluble extraction into vodka. Deep saffron-gold color, subtle earthy warmth. |
+| Cilantro oil finish | El Sazón | Aromatic finishing layer — aroma, not flavor bomb. Inspired by Perla Negra. |
 
 ---
 
 ## Expansion Concepts (Not on menu — future exploration)
 
-### Mamajuana Spritz
-- Mamajuana base (rum + red wine + honey + bark/herbs) + cava + orange peel
-- Could fill the bone-dry refresher gap
-- THE most Dominican spirit tradition — currently absent from menu
-
-### Sofrito Aromatics
+### Sofrito Aromatics (ADDRESSED)
 - Aji gustoso-infused spirit + cilantro element
-- Biggest flavor gap: the aromatic herbs/peppers that define Dominican cooking (sofrito base) are nowhere on the menu
-- Could be a finishing oil (like Perla Negra's cilantro oil on platano daiquiri) rather than a whole drink
+- **Now addressed by El Sazón (#8)**: annatto infusion for color, cilantro oil finish for aroma, ají dulce garnish
+- Sofrito essence integrated as accent layers, not a whole separate concept
 
 ### Tres Golpes (Dominican Breakfast)
 - Green plantain-infused aged rum + longaniza fat-wash + saline
@@ -290,11 +308,12 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | Negroni Dorado | No — NEXT UP | Fry method, infusion ratio/time, sherry split |
 | Mango Fuego y Humo | No | Smoked mango honey technique, Chartreuse enhancer |
 | Cafecito Espuma | YES | Proven and loved |
-| Ensalada Rusa | No | Beet infusion time, aquavit ratio |
+| El Sazón | No | Annatto infusion concentration, aquavit ratio, vermouth selection |
 | Habichuela Dulce | No | Agar viscosity (pourable vs gel), rum-raisin technique |
 | Tabaquero Francés | No | Cacao husk tea sourcing, Cynar balance, dulce de leche reduction |
 | Piña Colada Ghost | No | Clarification method, Chartreuse enhancer |
 | Malta Cajuil Flip | No | Cashew orgeat R&D |
+| Mamajuana Spritz | No | Mamajuana base recipe ratios, cava vs prosecco, bitter element |
 
 ---
 
@@ -313,3 +332,6 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | Pre-2026 | No naranja agria in Coco Concon | Concon eaten as standalone snack, not sauced |
 | Pre-2026 | Backload Licor 43 in Sueño | Preserves vanilla volatiles lost in clarification |
 | Pre-2026 | Chartreuse 0.25-0.3oz in Alpine | 0.5oz too forward. Champs-Élysées 4:1 ratio. |
+| 2026-02-17 | Replace Ensalada Rusa with El Sazón | Weakest Dominican connection on menu. Annatto + cilantro oil + escabeche = stronger identity, same spirit balance. |
+| 2026-02-17 | Add Mamajuana Spritz (#13) | Most Dominican spirit tradition was absent. Fills aperitivo spritz gap. |
+| 2026-02-17 | Sueño served on a rock | Changed from coupe to rocks glass with large ice cube. |

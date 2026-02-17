@@ -26,7 +26,7 @@ const DIMENSION_NARRATIVES = [
   {
     label: "Dry / Bitter",
     range: "1 -- 9",
-    text: "Negroni owns this axis at 9/10. Ensalada Rusa\u2019s escabeche brine pushes it to 8.",
+    text: "Negroni owns this axis at 9/10. El Saz\u00f3n\u2019s escabeche brine pushes it to 7.",
   },
   {
     label: "Tart",

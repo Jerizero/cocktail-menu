@@ -64,6 +64,16 @@ const GLASS = {
     meniscusL: 41,
     meniscusR: 79,
   },
+  spritz: {
+    // Large balloon wine glass for spritzes — wider and rounder than tulip wine
+    outline: "M30,28 C26,48 28,68 40,82 C48,90 54,94 60,94 C66,94 72,90 80,82 C92,68 94,48 90,28 L86,26 L34,26 Z M60,94 L60,142 M44,142 L76,142",
+    fill: "M32,30 C28,48 30,67 41,80 C49,88 55,92 60,92 C65,92 71,88 79,80 C90,67 92,48 88,30 Z",
+    liquidY: 32,
+    liquidH: 60,
+    foamW: 50,
+    meniscusL: 34,
+    meniscusR: 86,
+  },
 } as const;
 
 const IceCubes = ({ x, y, type }: { x: number; y: number; type: "large-cube" | "rocks" | "crushed" }) => {
@@ -102,8 +112,8 @@ const FoamLayer = ({
 }) => {
   const cx = 60;
   const hw = width / 2;
-  const color = type === "salt-topped" ? "#FAF3E0" : "#FFF8EE";
-  const op = type === "salt-topped" ? 0.85 : 0.7;
+  const color = type === "salt-topped" ? "#FFFFFF" : "#FFF8EE";
+  const op = type === "salt-topped" ? 0.92 : 0.7;
 
   const d1 = `M${cx - hw},${y + 2} Q${cx - hw * 0.6},${y - 5} ${cx - hw * 0.2},${y - 3} Q${cx},${y - 7} ${cx + hw * 0.2},${y - 3} Q${cx + hw * 0.6},${y - 6} ${cx + hw},${y + 2} Z`;
   const d2 = `M${cx - hw},${y + 2} Q${cx - hw * 0.6},${y - 6} ${cx - hw * 0.2},${y - 4} Q${cx},${y - 5} ${cx + hw * 0.2},${y - 4} Q${cx + hw * 0.6},${y - 7} ${cx + hw},${y + 2} Z`;

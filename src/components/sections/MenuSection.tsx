@@ -10,10 +10,12 @@ import { DrinkModal } from "@/components/ui/DrinkModal";
 import { drinks } from "@/data/drinks";
 import type { Category, Drink } from "@/data/types";
 import { slugify } from "@/lib/utils";
+import { useDrinkNavigation } from "@/hooks/useDrinkNavigation";
 
 export const MenuSection = () => {
   const [activeCategory, setActiveCategory] = useState<Category>("aperitivos");
   const [selectedDrink, setSelectedDrink] = useState<Drink | null>(null);
+  const { pendingDrinkId, clearPendingDrink } = useDrinkNavigation();
 
   const filtered = drinks.filter((d) => d.category === activeCategory);
 
@@ -26,6 +28,22 @@ export const MenuSection = () => {
     setSelectedDrink(null);
     window.history.replaceState(null, "", window.location.pathname);
   }, []);
+
+  // Handle cross-section navigation: when another section requests a drink modal
+  useEffect(() => {
+    if (pendingDrinkId === null) return;
+    const drink = drinks.find((d) => d.id === pendingDrinkId);
+    if (drink) {
+      setActiveCategory(drink.category);
+      // Small delay so category switch renders before modal opens
+      setTimeout(() => {
+        openDrink(drink);
+        clearPendingDrink();
+      }, 100);
+    } else {
+      clearPendingDrink();
+    }
+  }, [pendingDrinkId, clearPendingDrink, openDrink]);
 
   // Navigate between drinks within the same category
   const currentIndex = selectedDrink ? filtered.findIndex(d => d.id === selectedDrink.id) : -1;
@@ -64,7 +82,7 @@ export const MenuSection = () => {
   return (
     <SectionWrapper id="menu" variant="wide">
       <SectionHeading
-        title="The 12-Drink Menu"
+        title={`The ${drinks.length}-Drink Menu`}
         subtitle="Dominican food culture deconstructed into liquid form"
       />
 

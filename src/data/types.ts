@@ -73,9 +73,12 @@ export interface Drink {
   visual: DrinkVisual;
 }
 
+export type TechniqueCategory = "clarification" | "infusion" | "preparation";
+
 export interface Technique {
   id: string;
   name: string;
+  category: TechniqueCategory;
   usedIn: number[];
   keyNotes: string;
 }

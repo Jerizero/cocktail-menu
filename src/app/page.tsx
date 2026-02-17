@@ -14,10 +14,11 @@ import { PageBackgroundWrapper } from "./PageBackgroundWrapper";
 import { ScatteredBlobs } from "./ScatteredBlobs";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { BotanicalIllustration } from "@/components/ui/BotanicalIllustration";
+import { ClientProviders } from "./ClientProviders";
 
 export default function Home() {
   return (
-    <>
+    <ClientProviders>
       <SiteHeader />
       <PageBackgroundWrapper />
       <main className="relative pt-14 lg:pt-14">
@@ -41,12 +42,34 @@ export default function Home() {
           {/* Act III: The Story — why these drinks exist */}
           <RegionalSection />
 
+          {/* Editorial bridge: Regional → Dimensional */}
+          <p className="max-w-2xl mx-auto text-center text-text-muted italic text-sm py-8 px-4">
+            The land shapes the ingredient. Now see what those ingredients taste like.
+          </p>
+
           <SectionDivider variant={3} flip />
 
           {/* Act IV: The Craft — analysis and depth */}
           <DimensionalSection />
+
+          {/* Editorial bridge: Dimensional → Flavor Map */}
+          <p className="max-w-2xl mx-auto text-center text-text-muted italic text-sm py-8 px-4">
+            Seven dimensions condensed to two axes — where each drink lives.
+          </p>
+
           <FlavorMapSection />
+
+          {/* Editorial bridge: Flavor Map → Spirit */}
+          <p className="max-w-2xl mx-auto text-center text-text-muted italic text-sm py-8 px-4">
+            Each dot is a drink. What holds them together? The spirits.
+          </p>
+
           <SpiritSection />
+
+          {/* Editorial bridge: Spirit → Technique */}
+          <p className="max-w-2xl mx-auto text-center text-text-muted italic text-sm py-8 px-4">
+            Spirits provide the foundation. Technique turns ingredients into cocktails.
+          </p>
 
           {/* Act V: The Method */}
           <TechniqueSection />
@@ -59,6 +82,6 @@ export default function Home() {
         <InspirationSection />
       </main>
       <Footer />
-    </>
+    </ClientProviders>
   );
 }

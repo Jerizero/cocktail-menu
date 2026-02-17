@@ -30,8 +30,8 @@ const VARIANT_CLASSES: Record<Variant, string> = {
 
 const DRIFT_CLASSES: Record<Drift, string> = {
   none: "",
-  left: "lg:pr-[8%] lg:pl-[2%]",
-  right: "lg:pl-[8%] lg:pr-[2%]",
+  left: "lg:pr-[15%] lg:pl-[2%]",
+  right: "lg:pl-[15%] lg:pr-[2%]",
 };
 
 const PADDING_CLASSES: Record<Padding, string> = {

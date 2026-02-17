@@ -67,7 +67,7 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 
 ### Cócteles con Carácter
 
-#### 5. Negroni de Plátano Dorado — White Negroni
+#### 5. Negroni Dorado — White Negroni
 - **Base**: 1.5oz Plantain-Infused Gin (Fords or Tanqueray No. Ten — NOT Monkey 47)
 - **Modifiers**: 1oz Dolin Blanc (or 0.5oz Blanc + 0.5oz Fino Sherry split), 0.75oz Suze
 - **Technique**: Fry ripe maduros (DARK — deep amber/mahogany) → cool → infuse in gin 24-48hr → freeze → skim fat cap → coffee filter strain
@@ -165,7 +165,7 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | 2 | Chinola Eléctrica | 3 | 9 | 6 | 1 | 8 | 2 | 2 |
 | 3 | Coco Concon | 5 | 7 | 4 | 2 | 2 | 5 | 8 |
 | 4 | Mabí Burbujas | 4 | 8 | 3 | 6 | 5 | 2 | 4 |
-| 5 | Negroni Plátano | 8 | 2 | 2 | 9 | 1 | 6 | 8 |
+| 5 | Negroni Dorado | 8 | 2 | 2 | 9 | 1 | 6 | 8 |
 | 6 | Mango Fuego y Humo | 6 | 5 | 5 | 2 | 7 | 5 | 6 |
 | 7 | Cafecito Espuma | 6 | 4 | 3 | 7 | 3 | 5 | 9 |
 | 8 | Ensalada Rusa | 7 | 3 | 1 | 8 | 4 | 5 | 5 |
@@ -287,7 +287,7 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | Chinola Eléctrica | No | Straightforward, low risk |
 | Coco Concon | Partially (fat-wash proven) | Guandules orgeat needs R&D |
 | Mabí Burbujas | No | Bark tincture vs low-sugar syrup |
-| Negroni Plátano | No — NEXT UP | Fry method, infusion ratio/time, sherry split |
+| Negroni Dorado | No — NEXT UP | Fry method, infusion ratio/time, sherry split |
 | Mango Fuego y Humo | No | Smoked mango honey technique, Chartreuse enhancer |
 | Cafecito Espuma | YES | Proven and loved |
 | Ensalada Rusa | No | Beet infusion time, aquavit ratio |

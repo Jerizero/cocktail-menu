@@ -180,9 +180,9 @@ export const drinks: Drink[] = [
 
   {
     id: 5,
-    name: "Negroni de Plátano Dorado",
+    name: "Negroni Dorado",
     subtitle: "White Negroni",
-    slug: "negroni-platano",
+    slug: "negroni-dorado",
     category: "caracter",
     base: "Plantain-Infused Gin (Fords or Tanqueray No. Ten — NOT Monkey 47)",
     modifiers: [

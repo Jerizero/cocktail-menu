@@ -27,6 +27,27 @@ export const MenuSection = () => {
     window.history.replaceState(null, "", window.location.pathname);
   }, []);
 
+  // Navigate between drinks within the same category
+  const currentIndex = selectedDrink ? filtered.findIndex(d => d.id === selectedDrink.id) : -1;
+  const hasPrev = currentIndex > 0;
+  const hasNext = currentIndex >= 0 && currentIndex < filtered.length - 1;
+
+  const goToPrev = useCallback(() => {
+    if (hasPrev) {
+      const prev = filtered[currentIndex - 1];
+      setSelectedDrink(prev);
+      window.history.replaceState(null, "", `#drink-${prev.slug}`);
+    }
+  }, [filtered, currentIndex, hasPrev]);
+
+  const goToNext = useCallback(() => {
+    if (hasNext) {
+      const next = filtered[currentIndex + 1];
+      setSelectedDrink(next);
+      window.history.replaceState(null, "", `#drink-${next.slug}`);
+    }
+  }, [filtered, currentIndex, hasNext]);
+
   // URL hash → open modal on load
   useEffect(() => {
     const hash = window.location.hash;
@@ -62,7 +83,14 @@ export const MenuSection = () => {
 
       <AnimatePresence>
         {selectedDrink && (
-          <DrinkModal drink={selectedDrink} onClose={closeDrink} />
+          <DrinkModal
+            drink={selectedDrink}
+            onClose={closeDrink}
+            onPrev={goToPrev}
+            onNext={goToNext}
+            hasPrev={hasPrev}
+            hasNext={hasNext}
+          />
         )}
       </AnimatePresence>
     </SectionWrapper>

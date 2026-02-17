@@ -12,51 +12,57 @@ interface Props {
 }
 
 // Glass shape data — viewBox 0 0 120 180
+// All stemmed glasses: wide rim at TOP (small y), narrow at stem connection (large y)
 const GLASS = {
   coupe: {
-    outline: "M30,80 Q30,55 40,45 Q50,38 60,36 Q70,38 80,45 Q90,55 90,80 L85,82 L35,82 Z M60,82 L60,140 M45,140 L75,140",
-    fill: "M32,78 Q32,57 41,47 Q51,40 60,38 Q69,40 79,47 Q88,57 88,78 Z",
-    liquidY: 42,
-    liquidH: 38,
-    foamW: 46,
-    meniscusL: 40,
-    meniscusR: 80,
+    // Wide shallow bowl — champagne coupe style. Widest at rim.
+    outline: "M24,44 C28,68 46,80 60,84 C74,80 92,68 96,44 L92,42 L28,42 Z M60,84 L60,142 M44,142 L76,142",
+    fill: "M27,46 C30,66 47,78 60,82 C73,78 90,66 93,46 Z",
+    liquidY: 48,
+    liquidH: 34,
+    foamW: 56,
+    meniscusL: 30,
+    meniscusR: 90,
   },
   highball: {
-    outline: "M38,35 L35,145 L85,145 L82,35 Z",
-    fill: "M37,50 L35,143 L85,143 L83,50 Z",
+    // Tall Collins glass — slightly wider at top
+    outline: "M35,35 L38,145 L82,145 L85,35 Z",
+    fill: "M36,50 L38,143 L82,143 L84,50 Z",
     liquidY: 50,
     liquidH: 93,
     foamW: 44,
-    meniscusL: 39,
-    meniscusR: 81,
+    meniscusL: 37,
+    meniscusR: 83,
   },
   rocks: {
-    outline: "M32,65 L30,145 L90,145 L88,65 Z",
-    fill: "M31,75 L30,143 L90,143 L89,75 Z",
+    // Old Fashioned tumbler — slightly wider at top (outward flare)
+    outline: "M30,65 L32,145 L88,145 L90,65 Z",
+    fill: "M30,75 L32,143 L88,143 L90,75 Z",
     liquidY: 75,
     liquidH: 68,
     foamW: 56,
-    meniscusL: 34,
-    meniscusR: 86,
+    meniscusL: 32,
+    meniscusR: 88,
   },
   "nick-and-nora": {
-    outline: "M35,75 Q35,50 45,42 Q55,36 60,35 Q65,36 75,42 Q85,50 85,75 L80,78 L40,78 Z M60,78 L60,140 M45,140 L75,140",
-    fill: "M37,73 Q37,52 46,44 Q55,38 60,37 Q65,38 74,44 Q83,52 83,73 Z",
-    liquidY: 40,
-    liquidH: 35,
-    foamW: 42,
-    meniscusL: 42,
-    meniscusR: 78,
+    // Deeper, rounder bowl than coupe — bell-shaped
+    outline: "M33,38 C33,62 48,78 60,82 C72,78 87,62 87,38 L83,36 L37,36 Z M60,82 L60,142 M44,142 L76,142",
+    fill: "M35,40 C35,60 49,76 60,80 C71,76 85,60 85,40 Z",
+    liquidY: 42,
+    liquidH: 38,
+    foamW: 44,
+    meniscusL: 38,
+    meniscusR: 82,
   },
   wine: {
-    outline: "M38,80 Q35,55 42,42 Q50,32 60,30 Q70,32 78,42 Q85,55 82,80 L78,82 L42,82 Z M60,82 L60,145 M42,145 L78,145",
-    fill: "M40,78 Q37,57 43,44 Q51,34 60,32 Q69,34 77,44 Q83,57 80,78 Z",
-    liquidY: 36,
-    liquidH: 44,
-    foamW: 38,
-    meniscusL: 44,
-    meniscusR: 76,
+    // Taller tulip/goblet — rounder belly, narrows slightly at rim and bottom
+    outline: "M37,30 C33,44 34,62 42,76 C50,86 57,90 60,90 C63,90 70,86 78,76 C86,62 87,44 83,30 L79,28 L41,28 Z M60,90 L60,145 M42,145 L78,145",
+    fill: "M39,32 C35,44 36,61 43,74 C51,84 58,88 60,88 C62,88 69,84 77,74 C84,61 85,44 81,32 Z",
+    liquidY: 34,
+    liquidH: 54,
+    foamW: 36,
+    meniscusL: 41,
+    meniscusR: 79,
   },
 } as const;
 

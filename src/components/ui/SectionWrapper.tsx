@@ -8,6 +8,7 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 type Variant = "contained" | "wide" | "full-bleed" | "narrow";
 type Padding = "sm" | "md" | "lg" | "xl";
 type Entrance = "fade-up" | "fade-left" | "scale-up" | "none";
+type Drift = "none" | "left" | "right";
 
 interface SectionWrapperProps {
   id: string;
@@ -16,6 +17,8 @@ interface SectionWrapperProps {
   variant?: Variant;
   padding?: Padding;
   entrance?: Entrance;
+  drift?: Drift;
+  bg?: string;
 }
 
 const VARIANT_CLASSES: Record<Variant, string> = {
@@ -25,11 +28,17 @@ const VARIANT_CLASSES: Record<Variant, string> = {
   narrow: "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8",
 };
 
+const DRIFT_CLASSES: Record<Drift, string> = {
+  none: "",
+  left: "lg:pr-[8%] lg:pl-[2%]",
+  right: "lg:pl-[8%] lg:pr-[2%]",
+};
+
 const PADDING_CLASSES: Record<Padding, string> = {
-  sm: "py-10 md:py-14",
-  md: "py-12 md:py-20",
-  lg: "py-16 md:py-24",
-  xl: "py-20 md:py-32",
+  sm: "py-8 md:py-12",
+  md: "py-10 md:py-16",
+  lg: "py-12 md:py-20",
+  xl: "py-16 md:py-28",
 };
 
 const ENTRANCE_INITIAL: Record<Entrance, Record<string, number>> = {
@@ -53,20 +62,37 @@ export const SectionWrapper = ({
   variant = "contained",
   padding = "lg",
   entrance = "fade-up",
+  drift = "none",
+  bg,
 }: SectionWrapperProps) => {
   const shouldReduceMotion = useReducedMotion();
   const noAnimate = shouldReduceMotion || entrance === "none";
 
-  return (
+  const inner = (
     <motion.section
       id={id}
       initial={noAnimate ? {} : ENTRANCE_INITIAL[entrance]}
       whileInView={noAnimate ? {} : ENTRANCE_ANIMATE[entrance]}
       viewport={{ once: true, margin: "-100px" }}
       transition={noAnimate ? {} : { duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className={cn(VARIANT_CLASSES[variant], PADDING_CLASSES[padding], className)}
+      className={cn(
+        VARIANT_CLASSES[variant],
+        PADDING_CLASSES[padding],
+        DRIFT_CLASSES[drift],
+        className
+      )}
     >
       {children}
     </motion.section>
   );
+
+  if (bg) {
+    return (
+      <div className={bg}>
+        {inner}
+      </div>
+    );
+  }
+
+  return inner;
 };

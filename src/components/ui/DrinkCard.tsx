@@ -82,9 +82,18 @@ export const DrinkCard = ({ drink, index, onClick }: Props) => {
         <h3 className="font-serif text-lg text-text-primary mb-0.5 group-hover:text-amber transition-colors duration-200">
           {drink.name}
         </h3>
-        <p className="text-sm text-text-muted mb-2">{drink.subtitle}</p>
+        <p className="text-sm text-text-muted mb-1.5">{drink.subtitle}</p>
 
-        <p className="text-xs text-text-secondary mb-3">{spiritNames}</p>
+        {/* Ingredients */}
+        <div className="mb-3 space-y-0.5">
+          <p className="text-xs text-text-primary font-medium truncate">{drink.base.split('(')[0].trim()}</p>
+          {drink.modifiers.slice(0, 3).map((mod) => (
+            <p key={mod} className="text-[11px] text-text-muted truncate">{mod.split('(')[0].trim()}</p>
+          ))}
+          {drink.modifiers.length > 3 && (
+            <p className="text-[10px] text-text-muted">+{drink.modifiers.length - 3} more</p>
+          )}
+        </div>
 
         {/* Top 2 dimension bars */}
         <div className="space-y-1.5">

@@ -16,6 +16,17 @@ export const inspirations: Inspiration[] = [
       "Malta India Espresso Martini (aged rum, coffee liqueur, amaro, cold brew, malta & condensed milk foam, volcanic salt)",
   },
   {
+    name: "Attaboy",
+    description:
+      "134 Eldridge St, NYC. No-menu cocktail bar — successor to Milk & Honey. Bartenders craft drinks to your taste.",
+    highlight: "The bespoke, conversation-driven approach to cocktail service",
+  },
+  {
+    name: "Ethos",
+    description:
+      "Cocktail philosophy rooted in intention and restraint. Every ingredient earns its place.",
+  },
+  {
     name: "Evie Negri-Albert",
     handle: "@drinksbyevie",
     description: "736K TikTok, romantic vintage aesthetic",

@@ -3,13 +3,15 @@
 import { useEffect, useState } from "react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
-// Section color stops — cool cream → warmer → warmest → warm → neutral
+// Section color stops — more pronounced warmth shift for visual rhythm
 const COLORS = [
-  { pos: 0, r: 253, g: 252, b: 250 },    // Hero: #FDFCFA
-  { pos: 0.25, r: 251, g: 248, b: 242 },  // Menu: #FBF8F2
-  { pos: 0.5, r: 249, g: 243, b: 234 },   // Analysis: #F9F3EA
-  { pos: 0.7, r: 247, g: 241, b: 232 },   // Roots: #F7F1E8
-  { pos: 1, r: 253, g: 252, b: 250 },      // R&D: #FDFCFA
+  { pos: 0, r: 253, g: 252, b: 250 },    // Hero: cool cream #FDFCFA
+  { pos: 0.12, r: 251, g: 247, b: 240 }, // Menu: warming #FBF7F0
+  { pos: 0.3, r: 247, g: 240, b: 228 },  // Roots: warm earth #F7F0E4
+  { pos: 0.5, r: 244, g: 237, b: 224 },  // Analysis: warmest #F4EDE0
+  { pos: 0.7, r: 248, g: 242, b: 232 },  // Techniques: still warm #F8F2E8
+  { pos: 0.85, r: 245, g: 240, b: 230 }, // R&D: earthy #F5F0E6
+  { pos: 1, r: 250, g: 248, b: 244 },    // Credits: cooling back #FAF8F4
 ];
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;

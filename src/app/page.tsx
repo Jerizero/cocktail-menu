@@ -9,6 +9,7 @@ import { SpiritSection } from "@/components/sections/SpiritSection";
 import { RegionalSection } from "@/components/sections/RegionalSection";
 import { TechniqueSection } from "@/components/sections/TechniqueSection";
 import { RnDSection } from "@/components/sections/RnDSection";
+import { InspirationSection } from "@/components/sections/InspirationSection";
 import { PageBackgroundWrapper } from "./PageBackgroundWrapper";
 import { ScatteredBlobs } from "./ScatteredBlobs";
 import { SectionDivider } from "@/components/ui/SectionDivider";
@@ -20,31 +21,42 @@ export default function Home() {
       <SiteHeader />
       <PageBackgroundWrapper />
       <main className="relative pt-14 lg:pt-14">
+        {/* Act I: The Hook */}
         <HeroSection />
+        <PhilosophySection />
         <SectionDivider variant={1} />
 
         <div className="relative">
           <ScatteredBlobs />
-          <BotanicalIllustration type="plantain-leaf" className="top-[5%] -right-8 opacity-10" size={140} />
-          <BotanicalIllustration type="coffee-beans" className="top-[35%] -left-4 opacity-10" size={100} />
-          <BotanicalIllustration type="palm-leaf" className="top-[65%] -right-6 opacity-10" size={130} />
-          <BotanicalIllustration type="cacao-pod" className="top-[85%] -left-6 opacity-10" size={110} />
+          <BotanicalIllustration type="plantain-leaf" className="top-[3%] -right-8 opacity-[0.07]" size={160} />
+          <BotanicalIllustration type="coffee-beans" className="top-[25%] -left-4 opacity-[0.07]" size={120} />
+          <BotanicalIllustration type="palm-leaf" className="top-[50%] -right-6 opacity-[0.07]" size={150} />
+          <BotanicalIllustration type="cacao-pod" className="top-[75%] -left-6 opacity-[0.07]" size={130} />
 
-          <PhilosophySection />
+          {/* Act II: The Menu */}
           <MenuSection />
+
+          <SectionDivider variant={2} />
+
+          {/* Act III: The Story — why these drinks exist */}
+          <RegionalSection />
+
+          <SectionDivider variant={3} flip />
+
+          {/* Act IV: The Craft — analysis and depth */}
           <DimensionalSection />
           <FlavorMapSection />
           <SpiritSection />
 
-          <SectionDivider variant={2} />
-          <RegionalSection />
-          <SectionDivider variant={3} flip />
-
+          {/* Act V: The Method */}
           <TechniqueSection />
           <RnDSection />
         </div>
 
         <SectionDivider variant={4} />
+
+        {/* Act VI: The Credits */}
+        <InspirationSection />
       </main>
       <Footer />
     </>

@@ -28,7 +28,7 @@ export const SpiritSection = () => {
   }, []);
 
   return (
-    <SectionWrapper id="spirits" variant="narrow" padding="md">
+    <SectionWrapper id="spirits" variant="narrow" padding="md" drift="left">
       <SectionHeading
         title="Spirit Distribution"
         subtitle="The base spirits that anchor each drink"

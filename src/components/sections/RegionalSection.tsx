@@ -66,7 +66,21 @@ export const RegionalSection = () => {
   const [activeRegion, setActiveRegion] = useState<Region | null>(null);
 
   return (
-    <SectionWrapper id="roots" variant="full-bleed" padding="xl" entrance="none">
+    <SectionWrapper id="roots" variant="full-bleed" padding="xl" entrance="none" bg="bg-gradient-to-b from-transparent via-cream-dark/30 to-transparent">
+      {/* Decorative topographic lines */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-[0.04]" aria-hidden="true">
+        <svg className="w-full h-full" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" fill="none">
+          {[0, 1, 2, 3, 4, 5].map(i => (
+            <path
+              key={i}
+              d={`M0,${80 + i * 50} C200,${60 + i * 50 + (i % 2 === 0 ? 30 : -20)} 400,${90 + i * 50 + (i % 2 === 0 ? -20 : 30)} 600,${75 + i * 50} C700,${70 + i * 50 + (i % 2 === 0 ? 15 : -15)} 800,${85 + i * 50}`}
+              stroke="#78350F"
+              strokeWidth="1"
+            />
+          ))}
+        </svg>
+      </div>
+
       <SectionHeading
         title="Our Roots"
         subtitle="Two Dominican regions, two cocktails, two stories"

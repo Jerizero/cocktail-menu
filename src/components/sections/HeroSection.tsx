@@ -30,7 +30,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4"
+      className="relative min-h-[85vh] flex items-center justify-center overflow-hidden px-4"
     >
       {/* Watercolor blobs */}
       <WatercolorBlob color="#B45309" className="top-10 -left-32 w-[500px] h-[500px]" />

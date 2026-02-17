@@ -2,7 +2,7 @@
   "project": "cocktail-menu",
   "description": "Dominican-inspired cocktail menu R&D website — interactive data viz + editorial storytelling",
   "lastUpdated": "2026-02-17",
-  "currentPhase": "Website Phase 6 — Polish & Verify",
+  "currentPhase": "Visual Overhaul Complete — Phase 7 (Deploy)",
   "status": "active",
   "context": {
     "familyRoots": "Samaná & Tenares, Dominican Republic",
@@ -16,36 +16,37 @@
   },
   "website": {
     "stack": "Next.js 16 + TypeScript + Tailwind v4 + Framer Motion",
-    "status": "Phases 1-5 complete. Phase 6 (polish) in progress.",
+    "status": "Visual overhaul complete. Phases 1-6 done. Ready for deploy.",
     "github": "https://github.com/Jerizero/cocktail-menu",
     "completedPhases": [
       "Phase 1: Scaffold + data layer (Next.js, fonts, typed data)",
       "Phase 2: Layout + nav + hero (SiteHeader, HeroSection, PhilosophySection)",
       "Phase 3: Menu section + drink modal (CategoryTabs, DrinkCard, DrinkModal, DrinkRadar)",
       "Phase 4: Editorial charts (DimensionalHeatmap, FlavorScatter, SpiritBars)",
-      "Phase 5: Supporting sections (Regional, Technique, R&D, SideProjects)"
+      "Phase 5: Supporting sections (Regional, Technique, R&D, SideProjects)",
+      "Phase 6: Visual Overhaul — SVG drink illustrations, interactive DR map, dynamic layout, background density"
     ],
     "remaining": [
-      "Visual polish pass — verify watercolor blobs, spacing, animation timing",
-      "Responsive testing at 375/768/1280px",
-      "Keyboard navigation audit",
-      "prefers-reduced-motion verification",
       "Lighthouse performance/a11y check",
-      "Visual screenshots for verification"
+      "Deploy to Vercel/hosting"
     ],
-    "fileCount": "30+ component files across data/, charts/, sections/, ui/, hooks/"
+    "fileCount": "35+ component files across data/, charts/, sections/, ui/, hooks/"
   },
   "recentDecisions": [
-    "Pre-rendered watercolor SVG blobs (not live CSS blur — performance)",
-    "Tailwind v4 @theme inline for custom design tokens",
-    "Custom SVG for all charts (no chart library — 12 data points, full control)",
-    "Scrollytelling for dimensional analysis (sticky chart + scrolling narrative)",
-    "Horizontal bars for spirit distribution (FT/Economist principle, not donut)"
+    "Programmatic SVG illustrations (soft flat style, no feGaussianBlur — performance)",
+    "DrinkVisual data type drives per-drink rendering (glass, liquid, ice, foam, smoke)",
+    "Interactive DR map with keyboard accessibility, mobile card fallback",
+    "SectionWrapper variants (contained/wide/full-bleed/narrow) break layout monotony",
+    "Static grain texture PNG tile overlay at 3% opacity (not live feTurbulence)",
+    "Scroll-based background color shift via single page-level scroll listener",
+    "Botanical decorative SVGs desktop-only, parallax via consolidated scroll"
   ],
   "keyFiles": {
     "menu": "MENU.md",
     "page": "src/app/page.tsx",
     "drinks": "src/data/drinks.ts",
-    "types": "src/data/types.ts"
+    "types": "src/data/types.ts",
+    "drinkIllustration": "src/components/ui/DrinkIllustration.tsx",
+    "drMap": "src/components/ui/DRMap.tsx"
   }
 }

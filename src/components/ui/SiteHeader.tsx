@@ -14,7 +14,6 @@ const NAV_ITEMS = [
   { id: "roots", label: "Our Roots" },
   { id: "techniques", label: "Techniques" },
   { id: "rnd", label: "R&D Lab" },
-  { id: "side-projects", label: "Side Projects" },
 ];
 
 export const SiteHeader = () => {

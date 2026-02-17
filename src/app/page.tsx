@@ -9,8 +9,6 @@ import { SpiritSection } from "@/components/sections/SpiritSection";
 import { RegionalSection } from "@/components/sections/RegionalSection";
 import { TechniqueSection } from "@/components/sections/TechniqueSection";
 import { RnDSection } from "@/components/sections/RnDSection";
-import { SideProjectsSection } from "@/components/sections/SideProjectsSection";
-
 export default function Home() {
   return (
     <>
@@ -25,7 +23,6 @@ export default function Home() {
         <RegionalSection />
         <TechniqueSection />
         <RnDSection />
-        <SideProjectsSection />
       </main>
       <Footer />
     </>

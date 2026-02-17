@@ -4,6 +4,7 @@ import { useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import type { Drink } from "@/data/types";
 import { DrinkRadar } from "@/components/charts/DrinkRadar";
+import { DrinkIllustration } from "./DrinkIllustration";
 import { StatusBadge } from "./StatusBadge";
 import { SPIRIT_COLORS, CATEGORY_COLORS } from "@/lib/colors";
 import { useScrollLock } from "@/hooks/useScrollLock";
@@ -92,29 +93,24 @@ export const DrinkModal = ({ drink, onClose }: Props) => {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 text-text-muted hover:text-text-primary transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-amber/40"
+          className="absolute top-4 right-4 z-20 p-2 text-text-muted hover:text-text-primary transition-colors duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-amber/40"
           aria-label="Close"
         >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M4 4l12 12M4 16L16 4" />
           </svg>
         </button>
 
-        <div className="p-6 sm:p-8">
-          {/* Header */}
-          <div className="mb-6">
-            <div className="flex items-center gap-3 mb-2">
-              <span
-                className="text-sm font-medium tabular-nums"
-                style={{ color: spiritColor }}
-              >
+        {/* Illustration header */}
+        <div
+          className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 p-6 sm:p-8 pb-4"
+          style={{ backgroundColor: `${drink.visual.liquidColor}08` }}
+        >
+          <DrinkIllustration visual={drink.visual} size="modal" className="shrink-0" />
+
+          <div className="text-center sm:text-left">
+            <div className="flex items-center justify-center sm:justify-start gap-3 mb-2">
+              <span className="text-sm font-medium tabular-nums" style={{ color: spiritColor }}>
                 #{drink.id}
               </span>
               <StatusBadge status={drink.status} />
@@ -130,7 +126,9 @@ export const DrinkModal = ({ drink, onClose }: Props) => {
             </h2>
             <p className="text-text-muted">{drink.subtitle}</p>
           </div>
+        </div>
 
+        <div className="p-6 sm:p-8 pt-4">
           {/* Content grid */}
           <div className="grid sm:grid-cols-2 gap-8 mb-8">
             {/* Specs */}

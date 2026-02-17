@@ -38,6 +38,15 @@ export const drinks: Drink[] = [
     ],
     batchSpecs:
       "105g orange peels, 75g white sugar, 80g Tang, 4g citric acid, 2g malic acid, 300g OJ, 150g chamomile tea, 420g Cognac, 60g Dry Curacao, 120g Ten To One Rum, 150g whole milk, 150g evap milk → backload 100g Licor 43",
+    visual: {
+      glassType: "coupe",
+      liquidColor: "#F5DEB3",
+      liquidGradient: "#E8D5A0",
+      opacity: 0.35,
+      iceType: "none",
+      garnish: "Crystal-clear pale gold punch in a coupe",
+      viscosity: "thin",
+    },
   },
 
   {
@@ -65,6 +74,15 @@ export const drinks: Drink[] = [
       "Simplest drink on the menu",
       "Every menu needs one the bartender can bang out in 30 seconds",
     ],
+    visual: {
+      glassType: "highball",
+      liquidColor: "#FF8C00",
+      liquidGradient: "#FFB347",
+      opacity: 0.8,
+      iceType: "rocks",
+      garnish: "Bright orange passion fruit highball with ice",
+      viscosity: "thin",
+    },
   },
 
   {
@@ -106,6 +124,15 @@ export const drinks: Drink[] = [
     region: "samana",
     regionNote:
       "Coconut + pigeon pea + concon = guandules con coco meets crispy rice",
+    visual: {
+      glassType: "highball",
+      liquidColor: "#FAF0E6",
+      liquidGradient: "#F5E6D3",
+      opacity: 0.7,
+      iceType: "rocks",
+      garnish: "Cloudy coconut highball with ice",
+      viscosity: "medium",
+    },
   },
 
   {
@@ -138,6 +165,15 @@ export const drinks: Drink[] = [
       "Best candidate to become the bone-dry refresher",
       "Reduce syrup sweetness or use bark tincture + barspoon demerara",
     ],
+    visual: {
+      glassType: "highball",
+      liquidColor: "#8B6914",
+      liquidGradient: "#A67B1A",
+      opacity: 0.65,
+      iceType: "rocks",
+      garnish: "Amber-brown fizzy highball with lime",
+      viscosity: "thin",
+    },
   },
 
   // ─── Cócteles con Carácter ───────────────────────────────────────────
@@ -178,6 +214,15 @@ export const drinks: Drink[] = [
       "Ratio starting point: 2 medium plantains per 750ml gin",
       "Tasting schedule: 24hr, 36hr, 48hr — find the window where plantain is present but gin botanicals aren't buried",
     ],
+    visual: {
+      glassType: "rocks",
+      liquidColor: "#DAA520",
+      liquidGradient: "#C4961A",
+      opacity: 0.85,
+      iceType: "large-cube",
+      garnish: "Oily deep gold Negroni with large ice cube",
+      viscosity: "thick",
+    },
   },
 
   {
@@ -205,6 +250,17 @@ export const drinks: Drink[] = [
     notes: [
       "Possible enhancer: Green Chartreuse (0.25-0.5oz) — use with caution, lots of voices already",
     ],
+    visual: {
+      glassType: "coupe",
+      liquidColor: "#FF7F50",
+      liquidGradient: "#FF9966",
+      opacity: 0.75,
+      iceType: "none",
+      foam: "egg-white",
+      smoke: true,
+      garnish: "Coral-orange sour with egg white foam and smoke wisps",
+      viscosity: "medium",
+    },
   },
 
   {
@@ -239,6 +295,16 @@ export const drinks: Drink[] = [
     notes: [
       'Originally flagged as "riskiest drink" — actually proven and delicious',
     ],
+    visual: {
+      glassType: "coupe",
+      liquidColor: "#3E2723",
+      liquidGradient: "#5D4037",
+      opacity: 0.9,
+      iceType: "none",
+      foam: "salt-topped",
+      garnish: "Dark coffee coupe with pineapple froth cap and salt",
+      viscosity: "medium",
+    },
   },
 
   {
@@ -267,6 +333,15 @@ export const drinks: Drink[] = [
       "Aquavit adds caraway/dill savory spice",
       "Driest non-stirred drink on menu (sweetness: 1/10)",
     ],
+    visual: {
+      glassType: "rocks",
+      liquidColor: "#8B1A1A",
+      liquidGradient: "#A52A2A",
+      opacity: 0.8,
+      iceType: "large-cube",
+      garnish: "Deep beet-red stirred cocktail with large ice cube",
+      viscosity: "medium",
+    },
   },
 
   // ─── Tragos Fuertes y Ricos ──────────────────────────────────────────
@@ -297,6 +372,15 @@ export const drinks: Drink[] = [
     notes: [
       "Differentiated from Piña Colada by texture — this is viscous/rich, Piña Colada is crystal clear/elegant",
     ],
+    visual: {
+      glassType: "rocks",
+      liquidColor: "#8B7355",
+      liquidGradient: "#A0896B",
+      opacity: 0.95,
+      iceType: "large-cube",
+      garnish: "Creamy thick brown habichuela dulce on a rock",
+      viscosity: "syrupy",
+    },
   },
 
   {
@@ -336,6 +420,16 @@ export const drinks: Drink[] = [
     region: "tenares",
     regionNote:
       "Tobacco + cacao from the same valley. Two agricultural products from the same land.",
+    visual: {
+      glassType: "rocks",
+      liquidColor: "#6B4226",
+      liquidGradient: "#8B5E3C",
+      opacity: 0.85,
+      iceType: "large-cube",
+      smoke: true,
+      garnish: "Deep amber smoked Old Fashioned with large ice cube",
+      viscosity: "thick",
+    },
   },
 
   {
@@ -365,6 +459,15 @@ export const drinks: Drink[] = [
       "Served up",
       "Possible enhancer: Yellow Chartreuse",
     ],
+    visual: {
+      glassType: "coupe",
+      liquidColor: "#FAFAFA",
+      liquidGradient: "#F0EDE8",
+      opacity: 0.25,
+      iceType: "none",
+      garnish: "Ethereal crystal-clear ghost piña colada in a coupe",
+      viscosity: "thin",
+    },
   },
 
   {
@@ -395,5 +498,15 @@ export const drinks: Drink[] = [
     status: "specced",
     openQuestions: "Cashew orgeat R&D",
     notes: [],
+    visual: {
+      glassType: "wine",
+      liquidColor: "#4A3728",
+      liquidGradient: "#5C4A3A",
+      opacity: 0.9,
+      iceType: "none",
+      foam: "egg-white",
+      garnish: "Dark malt flip in wine glass with egg foam and nutmeg",
+      viscosity: "thick",
+    },
   },
 ];

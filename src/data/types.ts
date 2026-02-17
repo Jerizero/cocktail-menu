@@ -19,6 +19,23 @@ export type ServiceStyle =
   | "on-a-rock"
   | "flip";
 
+export type GlassType = "coupe" | "highball" | "rocks" | "nick-and-nora" | "wine";
+export type IceType = "none" | "large-cube" | "rocks" | "crushed";
+export type FoamType = "egg-white" | "pineapple-froth" | "salt-topped";
+export type Viscosity = "thin" | "medium" | "thick" | "syrupy";
+
+export interface DrinkVisual {
+  glassType: GlassType;
+  liquidColor: string;
+  liquidGradient?: string;
+  opacity: number;
+  iceType: IceType;
+  foam?: FoamType;
+  smoke?: boolean;
+  garnish?: string;
+  viscosity: Viscosity;
+}
+
 export type RnDStatus = "tested" | "partially-tested" | "specced" | "concept";
 
 export type Region = "samana" | "tenares";
@@ -52,6 +69,7 @@ export interface Drink {
   region?: Region;
   regionNote?: string;
   batchSpecs?: string;
+  visual: DrinkVisual;
 }
 
 export interface Technique {

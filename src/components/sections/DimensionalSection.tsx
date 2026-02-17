@@ -82,7 +82,7 @@ export const DimensionalSection = () => {
   }, []);
 
   return (
-    <SectionWrapper id="dimensions">
+    <SectionWrapper id="dimensions" entrance="none">
       <SectionHeading
         title="Dimensional Analysis"
         subtitle="Seven dimensions reveal how 12 drinks create a balanced menu"

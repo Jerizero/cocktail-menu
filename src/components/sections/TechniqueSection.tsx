@@ -99,7 +99,7 @@ export const TechniqueSection = () => {
   }, []);
 
   return (
-    <SectionWrapper id="techniques">
+    <SectionWrapper id="techniques" variant="narrow" padding="md">
       <SectionHeading
         title="Technique Library"
         subtitle="The methods behind the menu"

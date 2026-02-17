@@ -11,7 +11,7 @@ export const FlavorMapSection = () => {
   };
 
   return (
-    <SectionWrapper id="flavor-map">
+    <SectionWrapper id="flavor-map" padding="md" entrance="scale-up">
       <SectionHeading
         title="Flavor Map"
         subtitle="Where each drink lives on the sweet-dry and light-heavy spectrum"

@@ -1,86 +1,106 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { DRMap, RegionSelector } from "@/components/ui/DRMap";
+import { DrinkIllustration } from "@/components/ui/DrinkIllustration";
 import { regions } from "@/data/regions";
 import { drinks } from "@/data/drinks";
+import type { Region } from "@/data/types";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
-const RegionCard = ({
-  region,
-  drinkName,
-  index,
-}: {
-  region: (typeof regions)[number];
-  drinkName: string;
-  index: number;
-}) => {
+const RegionDetail = ({ regionId }: { regionId: Region }) => {
   const shouldReduceMotion = useReducedMotion();
+  const region = regions.find(r => r.id === regionId)!;
+  const drink = drinks.find(d => d.id === region.drinkId)!;
 
   return (
     <motion.div
-      initial={shouldReduceMotion ? {} : { opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay: index * 0.15 }}
-      className="bg-cream-dark rounded-2xl border border-border p-8 md:p-10"
+      key={regionId}
+      initial={shouldReduceMotion ? {} : { opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={shouldReduceMotion ? {} : { opacity: 0, x: -20 }}
+      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      className="space-y-5"
     >
-      <h3 className="font-serif text-3xl md:text-4xl text-text-primary mb-2">
-        {region.name}
-      </h3>
-
-      <p className="text-amber font-semibold text-lg mb-6">{drinkName}</p>
-
-      <div className="space-y-5">
+      <div className="flex items-start gap-4">
+        <DrinkIllustration visual={drink.visual} size="card" className="shrink-0" />
         <div>
-          <p className="text-text-muted text-xs uppercase tracking-wider mb-1">
-            Connection
-          </p>
-          <p className="text-text-secondary leading-relaxed">
-            {region.connection}
-          </p>
+          <h3 className="font-serif text-2xl md:text-3xl text-text-primary mb-1">
+            {region.name}
+          </h3>
+          <p className="text-amber font-semibold">{drink.name}</p>
         </div>
+      </div>
 
+      <div className="space-y-4">
         <div>
-          <p className="text-text-muted text-xs uppercase tracking-wider mb-1">
-            Key Ingredient
-          </p>
-          <p className="text-text-primary font-medium">
-            {region.keyIngredient}
-          </p>
+          <p className="text-text-muted text-xs uppercase tracking-wider mb-1">Connection</p>
+          <p className="text-text-secondary leading-relaxed">{region.connection}</p>
         </div>
-
+        <div>
+          <p className="text-text-muted text-xs uppercase tracking-wider mb-1">Key Ingredient</p>
+          <p className="text-text-primary font-medium">{region.keyIngredient}</p>
+        </div>
         <div className="pt-3 border-t border-border">
-          <p className="text-text-secondary text-sm leading-relaxed">
-            {region.about}
-          </p>
+          <p className="text-text-secondary text-sm leading-relaxed">{region.about}</p>
         </div>
       </div>
     </motion.div>
   );
 };
 
+// Default view when no region is selected
+const DefaultDetail = () => (
+  <div className="flex flex-col items-center justify-center h-full text-center py-8">
+    <p className="text-text-muted text-sm mb-2">Click a region to explore</p>
+    <p className="text-text-secondary text-sm max-w-xs">
+      Two Dominican regions, two cocktails, two stories of family heritage.
+    </p>
+  </div>
+);
+
 export const RegionalSection = () => {
+  const [activeRegion, setActiveRegion] = useState<Region | null>(null);
+
   return (
-    <SectionWrapper id="roots">
+    <SectionWrapper id="roots" variant="full-bleed" padding="xl" entrance="none">
       <SectionHeading
         title="Our Roots"
         subtitle="Two Dominican regions, two cocktails, two stories"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-        {regions.map((region, i) => {
-          const drink = drinks.find((d) => d.id === region.drinkId);
-          return (
-            <RegionCard
-              key={region.id}
-              region={region}
-              drinkName={drink?.name ?? ""}
-              index={i}
-            />
-          );
-        })}
+      {/* Mobile: card-based selector */}
+      <RegionSelector activeRegion={activeRegion} onSelectRegion={setActiveRegion} />
+
+      {/* Desktop: map + detail panel */}
+      <div className="hidden md:grid md:grid-cols-[55%_45%] gap-8 items-start mt-8">
+        {/* Map */}
+        <div className="flex items-center justify-center">
+          <DRMap activeRegion={activeRegion} onSelectRegion={setActiveRegion} />
+        </div>
+
+        {/* Detail panel */}
+        <div className="min-h-[320px]">
+          <AnimatePresence mode="wait">
+            {activeRegion ? (
+              <RegionDetail key={activeRegion} regionId={activeRegion} />
+            ) : (
+              <DefaultDetail key="default" />
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* Mobile: detail panel */}
+      <div className="md:hidden mt-4">
+        <AnimatePresence mode="wait">
+          {activeRegion && (
+            <RegionDetail key={activeRegion} regionId={activeRegion} />
+          )}
+        </AnimatePresence>
       </div>
     </SectionWrapper>
   );

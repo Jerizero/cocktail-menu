@@ -41,7 +41,7 @@ export const MenuSection = () => {
   }, []);
 
   return (
-    <SectionWrapper id="menu">
+    <SectionWrapper id="menu" variant="wide">
       <SectionHeading
         title="The 12-Drink Menu"
         subtitle="Dominican food culture deconstructed into liquid form"

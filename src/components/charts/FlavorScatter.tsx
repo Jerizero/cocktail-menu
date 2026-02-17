@@ -8,6 +8,7 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 interface Props {
   onSelectDrink?: (id: number) => void;
+  selectedId?: number | null;
 }
 
 const SHORT_NAMES: Record<number, string> = {
@@ -168,7 +169,7 @@ const Annotation = ({
 
 // --- Desktop Scatter ---
 
-const DesktopScatter = ({ onSelectDrink }: Props) => {
+const DesktopScatter = ({ onSelectDrink, selectedId }: Props) => {
   const shouldReduceMotion = useReducedMotion();
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const labelPlacements = useMemo(computeLabelPlacements, []);
@@ -221,6 +222,10 @@ const DesktopScatter = ({ onSelectDrink }: Props) => {
           const pos = getPosition(drink);
           const color = CATEGORY_COLORS[drink.category];
           const isHovered = hoveredId === drink.id;
+          const isSelected = selectedId === drink.id;
+          const hasSelection = selectedId != null;
+          // Dimming: if something is selected, unselected+unhovered dots dim to 0.3
+          const baseOpacity = hasSelection && !isSelected && !isHovered ? 0.3 : isHovered || isSelected ? 0.9 : 0.65;
 
           return (
             <g
@@ -239,14 +244,39 @@ const DesktopScatter = ({ onSelectDrink }: Props) => {
                 }
               }}
             >
+              {/* Pulsing selection ring */}
+              {isSelected && !shouldReduceMotion && (
+                <motion.circle
+                  cx={pos.x}
+                  cy={pos.y}
+                  r={pos.r + 4}
+                  fill="none"
+                  stroke={color}
+                  strokeWidth={2}
+                  initial={{ opacity: 0.8, scale: 1 }}
+                  animate={{ opacity: [0.8, 0.3, 0.8], scale: [1, 1.15, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                />
+              )}
+              {isSelected && shouldReduceMotion && (
+                <circle
+                  cx={pos.x}
+                  cy={pos.y}
+                  r={pos.r + 4}
+                  fill="none"
+                  stroke={color}
+                  strokeWidth={2}
+                  opacity={0.8}
+                />
+              )}
               <motion.circle
                 cx={pos.x}
                 cy={pos.y}
                 r={pos.r}
                 fill={color}
-                fillOpacity={isHovered ? 0.9 : 0.65}
-                stroke={isHovered ? "#78350F" : color}
-                strokeWidth={isHovered ? 2 : 1}
+                fillOpacity={baseOpacity}
+                stroke={isSelected ? "#78350F" : isHovered ? "#78350F" : color}
+                strokeWidth={isSelected || isHovered ? 2 : 1}
                 initial={
                   shouldReduceMotion
                     ? {}
@@ -254,7 +284,7 @@ const DesktopScatter = ({ onSelectDrink }: Props) => {
                 }
                 animate={{
                   r: pos.r,
-                  fillOpacity: isHovered ? 0.9 : 0.65,
+                  fillOpacity: baseOpacity,
                 }}
                 transition={{
                   duration: shouldReduceMotion ? 0 : 0.5,
@@ -322,7 +352,7 @@ const DesktopScatter = ({ onSelectDrink }: Props) => {
 
 // --- Mobile Scatter (numbered dots + legend) ---
 
-const MobileScatter = ({ onSelectDrink }: Props) => {
+const MobileScatter = ({ onSelectDrink, selectedId }: Props) => {
   const shouldReduceMotion = useReducedMotion();
   const MOBILE_W = 360;
   const MOBILE_H = 320;
@@ -364,6 +394,9 @@ const MobileScatter = ({ onSelectDrink }: Props) => {
           {drinks.map((drink, i) => {
             const pos = getMobilePos(drink);
             const color = CATEGORY_COLORS[drink.category];
+            const isSelected = selectedId === drink.id;
+            const hasSelection = selectedId != null;
+            const dotOpacity = hasSelection && !isSelected ? 0.3 : isSelected ? 0.9 : 0.65;
 
             return (
               <g
@@ -376,11 +409,11 @@ const MobileScatter = ({ onSelectDrink }: Props) => {
                   cy={pos.y}
                   r={pos.r}
                   fill={color}
-                  fillOpacity={0.65}
-                  stroke={color}
-                  strokeWidth={1}
+                  fillOpacity={dotOpacity}
+                  stroke={isSelected ? "#78350F" : color}
+                  strokeWidth={isSelected ? 2 : 1}
                   initial={shouldReduceMotion ? {} : { r: 0 }}
-                  animate={{ r: pos.r }}
+                  animate={{ r: pos.r, fillOpacity: dotOpacity }}
                   transition={{
                     duration: shouldReduceMotion ? 0 : 0.4,
                     delay: shouldReduceMotion ? 0 : i * 0.03,

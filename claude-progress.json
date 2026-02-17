@@ -1,0 +1,32 @@
+{
+  "project": "cocktail-menu",
+  "description": "Dominican-inspired cocktail menu R&D — 12 drinks + side projects",
+  "lastUpdated": "2026-02-16",
+  "currentPhase": "R&D — Negroni infusion next",
+  "status": "active",
+  "context": {
+    "familyRoots": "Samaná & Tenares, Dominican Republic",
+    "menuSize": 12,
+    "testedDrinks": ["Sueño Clarificado", "Cafecito con Espuma Salada", "Alpine Salt Meadow (side project)"],
+    "nextRnD": "Negroni de Plátano Dorado — plantain infusion protocol",
+    "geminiExport": "/Users/jerielacosta/Downloads/ai-studio-export-2026-02-17 (1).md",
+    "geminiExportLines": 15946
+  },
+  "recentDecisions": [
+    "No cacao nibs in Negroni — Suze handles bitter, nibs would muddy plantain",
+    "No default saline in stirred drinks",
+    "Guandules orgeat replaces demerara in Coco Concon (Samaná homage)",
+    "Cacao husk tea in Tabaquero syrup (Tenares homage)",
+    "Add Cynar to Tabaquero, reduce dulce de leche (break sweet cluster)",
+    "Push Mabí drier — bark tincture or low-sugar syrup (bone-dry refresher gap)"
+  ],
+  "keyFiles": {
+    "menu": "MENU.md",
+    "geminiHistory": "/Users/jerielacosta/Downloads/ai-studio-export-2026-02-17 (1).md"
+  },
+  "sideProjects": {
+    "alpineSaltMeadow": "Complete — taste-tested, specs locked",
+    "coquito": "Spec'd — modular system with variants",
+    "jadeAndAllspice": "Concept only"
+  }
+}

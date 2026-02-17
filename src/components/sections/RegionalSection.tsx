@@ -10,9 +10,11 @@ import { regions } from "@/data/regions";
 import { drinks } from "@/data/drinks";
 import type { Region } from "@/data/types";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useDrinkNavigation } from "@/hooks/useDrinkNavigation";
 
 const RegionDetail = ({ regionId }: { regionId: Region }) => {
   const shouldReduceMotion = useReducedMotion();
+  const { openDrinkModal } = useDrinkNavigation();
   const region = regions.find(r => r.id === regionId)!;
   const drink = drinks.find(d => d.id === region.drinkId)!;
 
@@ -31,7 +33,13 @@ const RegionDetail = ({ regionId }: { regionId: Region }) => {
           <h3 className="font-serif text-2xl md:text-3xl text-text-primary mb-1">
             {region.name}
           </h3>
-          <p className="text-amber font-semibold">{drink.name}</p>
+          <button
+            type="button"
+            onClick={() => openDrinkModal(drink.id)}
+            className="text-amber font-semibold hover:text-amber-700 transition-colors cursor-pointer"
+          >
+            {drink.name} →
+          </button>
         </div>
       </div>
 

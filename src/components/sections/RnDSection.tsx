@@ -6,6 +6,7 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { drinks } from "@/data/drinks";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useDrinkNavigation } from "@/hooks/useDrinkNavigation";
 import type { RnDStatus } from "@/data/types";
 
 const STATUS_CONFIG: Record<
@@ -59,6 +60,7 @@ const StatusBadge = ({ status }: { status: RnDStatus }) => {
 
 export const RnDSection = () => {
   const shouldReduceMotion = useReducedMotion();
+  const { openDrinkModal } = useDrinkNavigation();
 
   const groupedDrinks = useMemo(() => {
     const groups = new Map<RnDStatus, typeof drinks>();
@@ -118,9 +120,13 @@ export const RnDSection = () => {
                       transition={{ duration: 0.3 }}
                       className="bg-cream-dark border border-border rounded-lg px-4 py-3"
                     >
-                      <p className="font-serif text-text-primary text-sm">
-                        {drink.name}
-                      </p>
+                      <button
+                        type="button"
+                        onClick={() => openDrinkModal(drink.id)}
+                        className="font-serif text-text-primary text-sm hover:text-amber transition-colors text-left cursor-pointer"
+                      >
+                        {drink.name} →
+                      </button>
                       <p className="text-text-muted text-xs mt-0.5">
                         {drink.subtitle}
                       </p>

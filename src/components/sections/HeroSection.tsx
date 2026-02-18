@@ -91,7 +91,7 @@ export const HeroSection = () => {
           }}
           className="text-base sm:text-lg text-text-muted max-w-xl mx-auto mb-8"
         >
-          13 drinks rooted in family heritage from{" "}
+          14 drinks rooted in family heritage from{" "}
           <span className="text-amber font-medium">Samaná</span> &amp;{" "}
           <span className="text-warm-brown font-medium">Tenares</span>.
           <br />
@@ -106,7 +106,7 @@ export const HeroSection = () => {
         >
           <span>R&amp;D Collection</span>
           <span className="w-1 h-1 rounded-full bg-text-muted" />
-          <span>13 Drinks</span>
+          <span>14 Drinks</span>
         </motion.div>
       </motion.div>
     </motion.div>

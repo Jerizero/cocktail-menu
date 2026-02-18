@@ -102,7 +102,7 @@ export const DimensionalSection = () => {
     <SectionWrapper id="dimensions" entrance="none" drift="left" className="section-accent-left">
       <SectionHeading
         title="Dimensional Analysis"
-        subtitle="Eight dimensions reveal how 13 drinks create a balanced menu"
+        subtitle="Eight dimensions reveal how 14 drinks create a balanced menu"
       />
 
       {/* Desktop: side-by-side sticky layout */}

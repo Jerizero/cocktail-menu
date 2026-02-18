@@ -1,4 +1,4 @@
-export type Category = "aperitivos" | "caracter" | "fuertes";
+export type Category = "aperitivos" | "caracter" | "fuertes" | "refrescantes";
 
 export type Spirit =
   | "rum"
@@ -9,7 +9,8 @@ export type Spirit =
   | "vodka"
   | "aquavit"
   | "bourbon"
-  | "mezcal";
+  | "mezcal"
+  | "clairin";
 
 export type ServiceStyle =
   | "highball"
@@ -18,7 +19,8 @@ export type ServiceStyle =
   | "punch"
   | "on-a-rock"
   | "flip"
-  | "spritz";
+  | "spritz"
+  | "frozen";
 
 export type GlassType = "coupe" | "highball" | "rocks" | "nick-and-nora" | "wine" | "spritz";
 export type IceType = "none" | "large-cube" | "rocks" | "crushed" | "pebbled";

@@ -29,6 +29,7 @@ export const SPIRIT_LABELS: Record<Spirit, string> = {
   aquavit: "Aquavit",
   bourbon: "Bourbon",
   mezcal: "Mezcal",
+  clairin: "Clairin",
 };
 
 const computeSpiritCounts = (): SpiritCount[] => {

@@ -9,12 +9,14 @@ export const SPIRIT_COLORS: Record<string, string> = {
   rye: "#92400E",
   bourbon: "#854D0E",
   mezcal: "#B45309",
+  clairin: "#D97706",
 };
 
 export const CATEGORY_COLORS = {
   aperitivos: "#B45309",
   caracter: "#166534",
   fuertes: "#78350F",
+  refrescantes: "#0E7490",
 } as const;
 
 export const HIGHLIGHT_COLOR = "#DC2626";

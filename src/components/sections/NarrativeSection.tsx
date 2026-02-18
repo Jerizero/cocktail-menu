@@ -22,7 +22,7 @@ export const NarrativeSection = () => {
         {/* Pull quote */}
         <p className="font-serif text-2xl sm:text-3xl md:text-4xl text-text-primary leading-snug tracking-tight">
           <span className="text-amber italic">El Campo</span> is Dominican
-          dishes and traditions deconstructed into liquid form.
+          traditions deconstructed into liquid form.
         </p>
 
         <div className="w-16 h-px bg-warm-brown/30" />

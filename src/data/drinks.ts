@@ -832,4 +832,58 @@ export const drinks: Drink[] = [
       viscosity: "thin",
     },
   },
+
+  {
+    id: 15,
+    name: "Mabí Fresco",
+    subtitle: "Traditional Bark Ferment",
+    slug: "mabi-fresco",
+    category: "refrescantes",
+    base: "Non-Alcoholic",
+    modifiers: ["Behuco indio bark", "Raw cane sugar", "Lime"],
+    technique:
+      "Traditional 3-day bark fermentation with raw cane sugar, served cold over ice with fresh lime",
+    serviceStyle: "highball",
+    spirits: [],
+    dimensions: {
+      boozy: 0,
+      refreshing: 7,
+      sweet: 3,
+      dry: 5,
+      bitter: 4,
+      tart: 5,
+      weight: 2,
+      complexity: 5,
+    },
+    status: "concept",
+    openQuestions: "Fermentation time (2 vs 3 days), carbonation level",
+    notes: [
+      "Mabí is one of the oldest Dominican drinks — fermented bark of the behuco indio vine",
+      "Most people outside DR have never tried it",
+      "Naturally slightly carbonated from fermentation",
+      "Bitter, earthy, dry — like a Dominican root beer ancestor",
+      "Pairs with the Mabí Burbujas cocktail (#4) as its non-alc counterpart",
+    ],
+    story:
+      "The oldest drink in the Dominican canon. Behuco indio bark fermented for three days with cane sugar — bitter, earthy, alive. Most people have never tried it.",
+    ingredients: [
+      "6 oz Mabí (3-day bark ferment)",
+      "0.5 oz Raw cane syrup",
+      "0.5 oz Fresh lime juice",
+    ],
+    instructions: [
+      "Ferment behuco indio bark with raw cane sugar and water for 3 days",
+      "Strain and chill",
+      "Pour over ice in highball, add lime juice and cane syrup to taste",
+    ],
+    visual: {
+      glassType: "highball",
+      liquidColor: "#8B6914",
+      liquidGradient: "#6B4F10",
+      opacity: 0.7,
+      iceType: "rocks",
+      garnish: "Traditional bark ferment served cold with lime",
+      viscosity: "thin",
+    },
+  },
 ];

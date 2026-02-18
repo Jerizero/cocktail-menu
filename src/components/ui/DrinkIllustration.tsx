@@ -164,21 +164,59 @@ const Straw = ({ glassY }: { glassY: number }) => (
   </g>
 );
 
-const SmokeWisps = ({ y, animate }: { y: number; animate: boolean }) => (
-  <g opacity={0.2}>
-    {[0, 1, 2].map(i => {
-      const sx = 50 + i * 10;
-      return (
-        <motion.path key={i}
-          d={`M${sx},${y} Q${sx + 3},${y - 12} ${sx - 2},${y - 24} Q${sx + 4},${y - 32} ${sx + 1},${y - 40}`}
-          stroke="#A89F91" strokeWidth={1.2} fill="none" strokeLinecap="round"
-          animate={animate ? { opacity: [0.15, 0.25, 0.15], y: [0, -6, 0] } : undefined}
-          transition={animate ? { duration: 4 + i * 0.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut", delay: i * 0.8 } : undefined}
-        />
-      );
-    })}
-  </g>
-);
+const SmokeWisps = ({ y, animate }: { y: number; animate: boolean }) => {
+  // Each wisp: starting x, horizontal sway amplitude, height, stroke width, delay, duration
+  const wisps = [
+    { sx: 46, sway: -4, h: 38, sw: 1.6, delay: 0, dur: 5 },
+    { sx: 54, sway: 3, h: 44, sw: 1.2, delay: 0.6, dur: 4.5 },
+    { sx: 60, sway: -2, h: 48, sw: 1.4, delay: 1.3, dur: 5.5 },
+    { sx: 66, sway: 4, h: 42, sw: 1.0, delay: 0.3, dur: 4.8 },
+    { sx: 74, sway: -3, h: 36, sw: 1.3, delay: 0.9, dur: 5.2 },
+  ];
+
+  return (
+    <g>
+      {wisps.map((w, i) => {
+        const q1y = y - w.h * 0.25;
+        const q2y = y - w.h * 0.55;
+        const q3y = y - w.h * 0.8;
+        const endY = y - w.h;
+        // S-curve wisp path
+        const d = `M${w.sx},${y} Q${w.sx + w.sway * 1.2},${q1y} ${w.sx - w.sway * 0.8},${q2y} Q${w.sx + w.sway * 1.5},${q3y} ${w.sx + w.sway * 0.5},${endY}`;
+        return (
+          <motion.path
+            key={i}
+            d={d}
+            stroke="#B8AFA5"
+            strokeWidth={w.sw}
+            fill="none"
+            strokeLinecap="round"
+            opacity={0}
+            animate={
+              animate
+                ? {
+                    opacity: [0, 0.22, 0.3, 0.18, 0],
+                    y: [4, 0, -5, -10, -14],
+                    x: [0, w.sway * 0.3, w.sway * 0.5, w.sway * 0.2, 0],
+                  }
+                : undefined
+            }
+            transition={
+              animate
+                ? {
+                    duration: w.dur,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: w.delay,
+                  }
+                : undefined
+            }
+          />
+        );
+      })}
+    </g>
+  );
+};
 
 export const DrinkIllustration = ({ visual, size = "card", className }: Props) => {
   const ref = useRef<SVGSVGElement>(null);

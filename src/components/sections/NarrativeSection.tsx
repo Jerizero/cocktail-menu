@@ -21,10 +21,9 @@ export const NarrativeSection = () => {
       >
         {/* Pull quote */}
         <p className="font-serif text-2xl sm:text-3xl md:text-4xl text-text-primary leading-snug tracking-tight">
-          This is{" "}
-          <span className="text-amber italic">El Campo</span>
-          &mdash;a Dominican cocktail bar concept built from the ground up,
-          not borrowed from anyone else&rsquo;s playbook.
+          <span className="text-amber italic">El Campo</span> marries
+          Dominican cuisine with modern mixology&mdash;not as a gimmick,
+          but as a language.
         </p>
 
         <div className="w-16 h-px bg-warm-brown/30" />
@@ -36,13 +35,15 @@ export const NarrativeSection = () => {
           transition={{ duration: 0.6, delay: 0.15, ease }}
           className="font-serif text-lg sm:text-xl md:text-2xl text-text-secondary leading-relaxed"
         >
-          The idea is simple but specific: take the dishes, the traditions,
-          the ingredients that define Dominican life&mdash;guandules con coco
-          simmering in a caldero, concon scraped from the bottom of the pot,
-          mab&iacute; bark fermenting in a jar on the counter, habichuela dulce
-          passed around at Easter&mdash;and deconstruct them into cocktails.
-          Not &ldquo;Dominican ingredients dropped into classic templates.&rdquo;
-          The food comes first. The drink follows.
+          Every drink on this menu begins in the kitchen, not behind the bar.
+          Guandules con coco simmering in a caldero becomes a coconut-forward
+          base. Concon scraped from the bottom of the pot becomes a toasted
+          rice syrup. Mab&iacute; bark fermenting in a jar on the counter
+          becomes a bitter, dry refresher. The fusion is literal: Dominican
+          food traditions deconstructed through the lens of modern cocktail
+          technique&mdash;milk clarification, oleo-saccharum, acid adjustment,
+          fat-washing&mdash;to create something that belongs to neither world
+          alone.
         </motion.p>
 
         <motion.p
@@ -52,15 +53,18 @@ export const NarrativeSection = () => {
           transition={{ duration: 0.6, delay: 0.3, ease }}
           className="font-serif text-lg sm:text-xl md:text-2xl text-text-secondary leading-relaxed"
         >
-          My family is from{" "}
-          <span className="text-amber font-medium">Saman&aacute;</span>,
-          the coconut peninsula on the northeast coast, and{" "}
-          <span className="text-warm-brown font-medium">Tenares</span>,
-          deep in the Cibao valley where cacao, tobacco, and coffee grow in
-          the same red soil. Those two places shape every drink on this menu
-          &mdash;the ingredients, the stories, the reason any of it matters.
-          Every recipe is an R&amp;D project: technique-forward, obsessively
-          tested, and rooted in something real.
+          The roots run through two places.{" "}
+          <span className="text-amber font-medium">Saman&aacute;</span> is
+          the peninsula on the northeast coast where coconut palms outnumber
+          people, where a community of descendants of freed Black Americans
+          who arrived in 1824 built churches, kept English alive, and wove
+          their foodways into the local fabric. Its drinks taste like salt
+          air and coco water.{" "}
+          <span className="text-warm-brown font-medium">Tenares</span> sits
+          in the heart of the Cibao valley&mdash;red soil, tobacco fields,
+          cacao drying in the sun, coffee picked at altitude. Its drinks are
+          earthy, bitter, and layered. Between these two poles, thirteen
+          cocktails map an entire island&rsquo;s worth of flavor.
         </motion.p>
       </motion.div>
     </section>

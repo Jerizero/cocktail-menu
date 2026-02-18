@@ -15,15 +15,17 @@ export const HeroSection = () => {
     offset: ["start start", "end start"],
   });
 
-  // Shrink transforms — hero compresses as user scrolls
-  const scale = useTransform(scrollYProgress, [0, 0.8], [1, 0.85]);
+  // Shrink transforms — hero compresses horizontally + vertically as user scrolls
+  const scale = useTransform(scrollYProgress, [0, 0.8], [1, 0.82]);
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 0.8], [0, -60]);
+  const y = useTransform(scrollYProgress, [0, 0.8], [0, -40]);
+  const borderRadius = useTransform(scrollYProgress, [0, 0.8], [0, 32]);
+  const paddingInline = useTransform(scrollYProgress, [0, 0.8], [0, 48]);
 
   // Reduced motion: no scroll-linked transforms
   const motionStyle = shouldReduceMotion
     ? {}
-    : { scale, opacity, y };
+    : { scale, opacity, y, borderRadius, paddingInline };
 
   return (
     <section

@@ -231,6 +231,23 @@ export const DrinkModal = ({ drink, onClose, onPrev, onNext, hasPrev, hasNext }:
                   <p className="text-text-primary font-medium">{drink.base}</p>
                 </div>
 
+                {/* Ingredients */}
+                {drink.ingredients && drink.ingredients.length > 0 && (
+                  <div>
+                    <h4 className="text-xs font-semibold text-text-muted uppercase tracking-[0.15em] mb-2">
+                      Ingredients
+                    </h4>
+                    <ul className="space-y-1">
+                      {drink.ingredients.map((ing) => (
+                        <li key={ing} className="text-sm text-text-secondary flex items-start gap-2">
+                          <span className="w-1 h-1 rounded-full bg-amber/50 mt-2 shrink-0" />
+                          {ing}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 {/* Modifiers */}
                 <div>
                   <h4 className="text-xs font-semibold text-text-muted uppercase tracking-[0.15em] mb-2">

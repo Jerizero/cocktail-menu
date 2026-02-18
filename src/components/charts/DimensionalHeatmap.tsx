@@ -212,11 +212,11 @@ const DesktopHeatmap = ({ activeDimension, onSelectDrink }: Props) => {
 
 const MiniBar = ({
   value,
-  initial,
+  label,
   dimmed,
 }: {
   value: number;
-  initial: string;
+  label: string;
   dimmed: boolean;
 }) => {
   const widthPct = (value / 10) * 100;
@@ -225,11 +225,11 @@ const MiniBar = ({
 
   return (
     <div
-      className="flex items-center gap-1"
+      className="flex items-center gap-1.5"
       style={{ opacity: dimmed ? 0.35 : 1 }}
     >
-      <span className="text-[10px] font-semibold text-amber-900 w-3 text-center shrink-0">
-        {initial}
+      <span className="text-[10px] font-semibold text-amber-900 w-12 text-right shrink-0">
+        {label}
       </span>
       <div className="relative h-4 flex-1 rounded-sm bg-amber-50 overflow-hidden min-w-0">
         <div
@@ -264,12 +264,12 @@ const MobileHeatmap = ({ activeDimension, onSelectDrink }: Props) => {
           <div className="text-[13px] font-semibold text-amber-900 mb-2">
             {getShortName(drink)}
           </div>
-          <div className="grid grid-cols-2 gap-x-3 gap-y-1">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-1">
             {DIMENSIONS.map((dim, colIdx) => (
               <MiniBar
                 key={dim.key}
                 value={drink.dimensions[dim.key]}
-                initial={dim.initial}
+                label={dim.label}
                 dimmed={activeDimension != null && activeDimension !== colIdx}
               />
             ))}

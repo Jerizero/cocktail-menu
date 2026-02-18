@@ -16,7 +16,8 @@ const DIMENSION_LABELS: Record<keyof DimensionalScores, string> = {
   boozy: "Boozy",
   refreshing: "Refreshing",
   sweet: "Sweet",
-  dryBitter: "Dry/Bitter",
+  dry: "Dry",
+  bitter: "Bitter",
   tart: "Tart",
   weight: "Weight",
   complexity: "Complexity",
@@ -120,7 +121,7 @@ export const FlavorMapSection = () => {
       />
 
       <p className="text-text-secondary max-w-2xl mb-10 leading-relaxed">
-        The horizontal axis maps each drink from sweet to dry/bitter. The
+        The horizontal axis maps each drink from sweet to dry. The
         vertical axis maps from light and refreshing to heavy and rich. Drinks
         that cluster together share a sensory neighborhood; outliers fill
         deliberate gaps in the menu.

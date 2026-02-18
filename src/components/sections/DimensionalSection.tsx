@@ -24,9 +24,14 @@ const DIMENSION_NARRATIVES = [
     text: "Only Habichuela Dulce goes full sweet at 8/10. The menu leans dry \u2014 half the drinks score 5 or below.",
   },
   {
-    label: "Dry / Bitter",
-    range: "1 -- 9",
-    text: "Negroni owns this axis at 9/10. El Saz\u00f3n\u2019s escabeche brine pushes it to 7.",
+    label: "Dry",
+    range: "1 -- 7",
+    text: "Negroni leads at 7/10 with gin and dry vermouth. Mab\u00ed pushes to 6 as the bone-dry refresher. Most drinks sit low \u2014 the menu leans rich over parched.",
+  },
+  {
+    label: "Bitter",
+    range: "1 -- 8",
+    text: "Negroni\u2019s Suze drives it to 8/10. Cafecito\u2019s Cap Corse quinquina hits 7. Tabaquero\u2019s Cynar adds 5. Light drinks like Chinola and Pi\u00f1a Colada barely register.",
   },
   {
     label: "Tart",
@@ -85,7 +90,7 @@ export const DimensionalSection = () => {
     <SectionWrapper id="dimensions" entrance="none" drift="left" className="section-accent-left">
       <SectionHeading
         title="Dimensional Analysis"
-        subtitle="Seven dimensions reveal how 12 drinks create a balanced menu"
+        subtitle="Eight dimensions reveal how 13 drinks create a balanced menu"
       />
 
       {/* Desktop: side-by-side sticky layout */}

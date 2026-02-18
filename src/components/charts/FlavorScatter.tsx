@@ -43,9 +43,9 @@ const ANNOTATION_CHINOLA_ID = 2;
 
 // Map drink to plot coordinates
 const getPosition = (drink: (typeof drinks)[0]) => {
-  const { sweet, dryBitter, weight, complexity } = drink.dimensions;
-  // X: sweet (left) to dry/bitter (right)
-  const x = ((dryBitter - sweet + 10) / 20) * PLOT_W;
+  const { sweet, dry, weight, complexity } = drink.dimensions;
+  // X: sweet (left) to dry (right)
+  const x = ((dry - sweet + 10) / 20) * PLOT_W;
   // Y: light (top) to heavy (bottom)
   const y = (weight / 10) * PLOT_H;
   // Radius: complexity mapped to 8-20px
@@ -182,7 +182,7 @@ const DesktopScatter = ({ onSelectDrink, selectedId }: Props) => {
       viewBox={`0 0 ${FULL_W} ${FULL_H}`}
       className="w-full max-w-[640px]"
       role="img"
-      aria-label={`Scatter plot of ${drinks.length} cocktails. X axis: Sweet (left) to Dry/Bitter (right). Y axis: Light (top) to Heavy (bottom). Dot size represents complexity.`}
+      aria-label={`Scatter plot of ${drinks.length} cocktails. X axis: Sweet (left) to Dry (right). Y axis: Light (top) to Heavy (bottom). Dot size represents complexity.`}
     >
       <g transform={`translate(${MARGIN.left}, ${MARGIN.top})`}>
         {/* Quadrant labels */}
@@ -208,7 +208,7 @@ const DesktopScatter = ({ onSelectDrink, selectedId }: Props) => {
           Sweet
         </text>
         <text x={PLOT_W} y={centerY - 8} textAnchor="end" className="text-[10px] font-semibold" fill="#92400E" opacity={0.7}>
-          Dry/Bitter
+          Dry
         </text>
         <text x={centerX + 8} y={12} textAnchor="start" className="text-[10px] font-semibold" fill="#92400E" opacity={0.7}>
           Light
@@ -236,7 +236,7 @@ const DesktopScatter = ({ onSelectDrink, selectedId }: Props) => {
               style={{ cursor: onSelectDrink ? "pointer" : "default" }}
               role="button"
               tabIndex={0}
-              aria-label={`${getShortName(drink)}: Sweet ${drink.dimensions.sweet}, Dry/Bitter ${drink.dimensions.dryBitter}, Weight ${drink.dimensions.weight}, Complexity ${drink.dimensions.complexity}`}
+              aria-label={`${getShortName(drink)}: Sweet ${drink.dimensions.sweet}, Dry ${drink.dimensions.dry}, Bitter ${drink.dimensions.bitter}, Weight ${drink.dimensions.weight}, Complexity ${drink.dimensions.complexity}`}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
                   e.preventDefault();
@@ -361,8 +361,8 @@ const MobileScatter = ({ onSelectDrink, selectedId }: Props) => {
   const M_PLOT_H = MOBILE_H - M_MARGIN.top - M_MARGIN.bottom;
 
   const getMobilePos = (drink: (typeof drinks)[0]) => {
-    const { sweet, dryBitter, weight, complexity } = drink.dimensions;
-    const x = ((dryBitter - sweet + 10) / 20) * M_PLOT_W;
+    const { sweet, dry, weight, complexity } = drink.dimensions;
+    const x = ((dry - sweet + 10) / 20) * M_PLOT_W;
     const y = (weight / 10) * M_PLOT_H;
     const r = 6 + (complexity / 10) * 8;
     return { x, y, r };
@@ -377,7 +377,7 @@ const MobileScatter = ({ onSelectDrink, selectedId }: Props) => {
         viewBox={`0 0 ${MOBILE_W} ${MOBILE_H}`}
         className="w-full max-w-[360px] mx-auto"
         role="img"
-        aria-label={`Scatter plot of ${drinks.length} cocktails. X: Sweet to Dry/Bitter. Y: Light to Heavy.`}
+        aria-label={`Scatter plot of ${drinks.length} cocktails. X: Sweet to Dry. Y: Light to Heavy.`}
       >
         <g transform={`translate(${M_MARGIN.left}, ${M_MARGIN.top})`}>
           {/* Axis lines */}

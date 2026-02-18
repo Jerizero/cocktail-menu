@@ -16,7 +16,8 @@ const DIMENSIONS: { key: keyof DimensionalScores; label: string; initial: string
   { key: "boozy", label: "Boozy", initial: "B" },
   { key: "refreshing", label: "Refreshing", initial: "R" },
   { key: "sweet", label: "Sweet", initial: "S" },
-  { key: "dryBitter", label: "Dry/Bitter", initial: "D" },
+  { key: "dry", label: "Dry", initial: "D" },
+  { key: "bitter", label: "Bitter", initial: "Bi" },
   { key: "tart", label: "Tart", initial: "T" },
   { key: "weight", label: "Weight", initial: "W" },
   { key: "complexity", label: "Complexity", initial: "C" },
@@ -63,7 +64,7 @@ const DesktopHeatmap = ({ activeDimension, onSelectDrink }: Props) => {
     [onSelectDrink]
   );
 
-  const ariaLabel = `Heatmap of dimensional scores for ${drinks.length} cocktails across 7 flavor dimensions: ${DIMENSIONS.map((d) => d.label).join(", ")}. Scores range from 0 to 10.`;
+  const ariaLabel = `Heatmap of dimensional scores for ${drinks.length} cocktails across ${DIMENSIONS.length} flavor dimensions: ${DIMENSIONS.map((d) => d.label).join(", ")}. Scores range from 0 to 10.`;
 
   return (
     <svg

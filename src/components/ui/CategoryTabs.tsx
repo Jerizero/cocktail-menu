@@ -13,6 +13,7 @@ const TABS: { id: Category; label: string }[] = [
   { id: "aperitivos", label: "Aperitivos" },
   { id: "caracter", label: "Carácter" },
   { id: "fuertes", label: "Fuertes" },
+  { id: "refrescantes", label: "Refrescantes" },
 ];
 
 export const CategoryTabs = ({ active, onChange }: Props) => (

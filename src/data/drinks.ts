@@ -178,7 +178,7 @@ export const drinks: Drink[] = [
       "Top with coconut water and ice, stir gently",
     ],
     story:
-      "The crispy rice scraped from the bottom of every Dominican caldero, fat-washed into scotch and lengthened with coconut water from Samana's groves.",
+      "A Samaná homage — concon fat-washed into scotch, lengthened with coconut water from the peninsula's groves. The crispy rice tradition meets the coconut coast.",
     region: "samana",
     regionNote:
       "Coconut + pigeon pea + concon = guandules con coco meets crispy rice",
@@ -315,7 +315,7 @@ export const drinks: Drink[] = [
 
   {
     id: 6,
-    name: "Mango de Fuego y Humo",
+    name: "Fuego y Humo",
     subtitle: "Tropical Sour",
     slug: "mango-fuego-y-humo",
     category: "caracter",
@@ -370,7 +370,7 @@ export const drinks: Drink[] = [
 
   {
     id: 7,
-    name: "Cafecito con Espuma Salada",
+    name: "Piña Cafecito",
     subtitle: "Coffee Aperitivo",
     slug: "cafecito-espuma",
     category: "caracter",
@@ -492,7 +492,7 @@ export const drinks: Drink[] = [
 
   {
     id: 9,
-    name: "Esencia de Habichuela Dulce",
+    name: "Habichuela Dulce",
     subtitle: "Served Viscous on a Rock",
     slug: "habichuela-dulce",
     category: "fuertes",
@@ -545,7 +545,7 @@ export const drinks: Drink[] = [
 
   {
     id: 10,
-    name: "El Tabaquero Francés",
+    name: "El Tabaquero",
     subtitle: "Tenares Homage (Smoked Old Fashioned)",
     slug: "tabaquero-frances",
     category: "fuertes",
@@ -610,7 +610,7 @@ export const drinks: Drink[] = [
 
   {
     id: 11,
-    name: 'Alma de Piña Colada — Crystal Clear "Ghost"',
+    name: "Piña Fantasma",
     subtitle: "Served Up",
     slug: "pina-colada-ghost",
     category: "fuertes",
@@ -665,7 +665,7 @@ export const drinks: Drink[] = [
 
   {
     id: 12,
-    name: "Malta de Cajuil Flip",
+    name: "Malta Flip",
     subtitle: "Egg Flip",
     slug: "malta-cajuil-flip",
     category: "fuertes",

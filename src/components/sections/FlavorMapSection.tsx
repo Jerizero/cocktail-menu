@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -47,6 +47,7 @@ export const FlavorMapSection = () => {
   const isMobile = useIsMobile();
   const { openDrinkModal } = useDrinkNavigation();
   const shouldReduceMotion = useReducedMotion();
+  const detailRef = useRef<HTMLDivElement>(null);
 
   const selectedDrink = selectedDrinkId
     ? drinks.find((d) => d.id === selectedDrinkId) ?? null
@@ -54,6 +55,12 @@ export const FlavorMapSection = () => {
 
   const handleSelectDrink = (drinkId: number) => {
     setSelectedDrinkId((prev) => (prev === drinkId ? null : drinkId));
+    // On mobile, scroll the detail panel into view after selection
+    if (isMobile && drinkId) {
+      requestAnimationFrame(() => {
+        detailRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    }
   };
 
   const detailContent = selectedDrink ? (
@@ -157,19 +164,21 @@ export const FlavorMapSection = () => {
             />
           </div>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={selectedDrinkId ?? "empty"}
-              variants={shouldReduceMotion ? undefined : mobilePanelVariants}
-              initial={shouldReduceMotion ? {} : "initial"}
-              animate={shouldReduceMotion ? {} : "animate"}
-              exit={shouldReduceMotion ? {} : "exit"}
-              transition={{ duration: 0.25, ease: [0, 0, 0.2, 1] }}
-              className="rounded-2xl border border-amber-200/40 bg-amber-50/30 p-5"
-            >
-              {detailContent}
-            </motion.div>
-          </AnimatePresence>
+          <div ref={detailRef}>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedDrinkId ?? "empty"}
+                variants={shouldReduceMotion ? undefined : mobilePanelVariants}
+                initial={shouldReduceMotion ? {} : "initial"}
+                animate={shouldReduceMotion ? {} : "animate"}
+                exit={shouldReduceMotion ? {} : "exit"}
+                transition={{ duration: 0.25, ease: [0, 0, 0.2, 1] }}
+                className="rounded-2xl border border-amber-200/40 bg-amber-50/30 p-5"
+              >
+                {detailContent}
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       )}
     </SectionWrapper>

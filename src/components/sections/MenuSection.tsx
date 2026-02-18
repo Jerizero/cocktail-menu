@@ -86,7 +86,10 @@ export const MenuSection = () => {
         subtitle="Dominican food culture deconstructed into liquid form"
       />
 
-      <CategoryTabs active={activeCategory} onChange={setActiveCategory} />
+      {/* Sticky tabs — stays below fixed header on mobile so you don't have to scroll up to switch categories */}
+      <div className="sticky top-[calc(3rem+env(safe-area-inset-top))] lg:static z-20 bg-cream -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 py-2 lg:py-0">
+        <CategoryTabs active={activeCategory} onChange={setActiveCategory} />
+      </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {filtered.map((drink, i) => (

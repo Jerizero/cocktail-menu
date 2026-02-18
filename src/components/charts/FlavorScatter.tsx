@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { drinks } from "@/data/drinks";
 import { CATEGORY_COLORS } from "@/lib/colors";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface Props {
   onSelectDrink?: (id: number) => void;
@@ -404,6 +405,13 @@ const MobileScatter = ({ onSelectDrink, selectedId }: Props) => {
                 onClick={() => onSelectDrink?.(drink.id)}
                 style={{ cursor: onSelectDrink ? "pointer" : "default" }}
               >
+                {/* Invisible hit area for touch targets */}
+                <circle
+                  cx={pos.x}
+                  cy={pos.y}
+                  r={pos.r + 8}
+                  fill="transparent"
+                />
                 <motion.circle
                   cx={pos.x}
                   cy={pos.y}
@@ -466,14 +474,7 @@ const MobileScatter = ({ onSelectDrink, selectedId }: Props) => {
 // --- Main Component ---
 
 export const FlavorScatter = (props: Props) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 500);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
+  const isMobile = useIsMobile(500);
 
   return isMobile ? <MobileScatter {...props} /> : <DesktopScatter {...props} />;
 };

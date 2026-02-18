@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 type BotanicalType = "palm-leaf" | "cacao-pod" | "plantain-leaf" | "coffee-beans";
 
@@ -24,8 +25,14 @@ const PATHS: Record<BotanicalType, string> = {
 
 export const BotanicalIllustration = ({ type, className = "", size = 120 }: Props) => {
   const shouldReduceMotion = useReducedMotion();
+  const isMobile = useIsMobile();
+
+  // Guard scroll hooks — element is hidden md:block, so no need for scroll listeners on mobile
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 5000], [0, -60], { clamp: false });
+
+  // On mobile, don't render at all (element is hidden via CSS anyway, but this avoids hook work)
+  if (isMobile) return null;
 
   return (
     <motion.div

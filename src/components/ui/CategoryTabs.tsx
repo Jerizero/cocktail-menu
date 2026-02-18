@@ -17,12 +17,15 @@ const TABS: { id: Category; label: string }[] = [
 ];
 
 export const CategoryTabs = ({ active, onChange }: Props) => (
-  <div className="flex gap-1 p-1 bg-cream-dark rounded-lg w-fit mb-8">
+  <div
+    className="flex gap-1 p-1 bg-cream-dark rounded-lg w-full md:w-fit mb-8 overflow-x-auto"
+    style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
+  >
     {TABS.map((tab) => (
       <button
         key={tab.id}
         onClick={() => onChange(tab.id)}
-        className={`relative px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
+        className={`relative shrink-0 px-4 py-2.5 text-sm font-medium rounded-md transition-colors duration-200 ${
           active === tab.id ? "text-white" : "text-text-secondary hover:text-text-primary"
         }`}
       >

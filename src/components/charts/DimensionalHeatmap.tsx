@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { drinks } from "@/data/drinks";
 import type { DimensionalScores } from "@/data/types";
 import { getHeatmapColor, getHeatmapTextColor } from "@/lib/colors";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface Props {
   activeDimension?: number | null;
@@ -282,14 +283,7 @@ const MobileHeatmap = ({ activeDimension, onSelectDrink }: Props) => {
 // --- Main Component ---
 
 export const DimensionalHeatmap = (props: Props) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
+  const isMobile = useIsMobile();
 
   return isMobile ? <MobileHeatmap {...props} /> : <DesktopHeatmap {...props} />;
 };

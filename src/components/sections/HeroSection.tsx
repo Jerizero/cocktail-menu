@@ -4,9 +4,11 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { WatercolorBlob } from "@/components/ui/WatercolorBlob";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export const HeroSection = () => {
   const shouldReduceMotion = useReducedMotion();
+  const isMobile = useIsMobile();
   const sectionRef = useRef<HTMLDivElement>(null);
 
   // Track scroll progress through the hero section
@@ -25,9 +27,12 @@ export const HeroSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   // Reduced motion: no scroll-linked transforms
+  // Mobile: only apply scale, y, opacity (skip borderRadius + paddingInline for GPU savings)
   const sectionStyle = shouldReduceMotion
     ? {}
-    : { scale, y, borderRadius, paddingInline };
+    : isMobile
+      ? { scale, y }
+      : { scale, y, borderRadius, paddingInline };
 
   const contentStyle = shouldReduceMotion ? {} : { opacity };
 
@@ -41,16 +46,16 @@ export const HeroSection = () => {
       {/* Watercolor blobs — now shrink with the section */}
       <WatercolorBlob
         color="#B45309"
-        className="top-10 -left-32 w-[500px] h-[500px]"
+        className="top-10 -left-16 md:-left-32 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px]"
       />
       <WatercolorBlob
         color="#166534"
-        className="bottom-20 -right-24 w-[400px] h-[400px]"
+        className="bottom-20 -right-12 md:-right-24 w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px]"
         variant={1}
       />
       <WatercolorBlob
         color="#DC2626"
-        className="top-1/3 right-1/4 w-[300px] h-[300px]"
+        className="top-1/3 right-1/4 w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px]"
         variant={2}
         opacity={0.08}
       />

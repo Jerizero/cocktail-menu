@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -10,6 +10,7 @@ import { drinks } from "@/data/drinks";
 import { CATEGORY_COLORS } from "@/lib/colors";
 import { useDrinkNavigation } from "@/hooks/useDrinkNavigation";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import type { DimensionalScores } from "@/data/types";
 
 const DIMENSION_LABELS: Record<keyof DimensionalScores, string> = {
@@ -43,16 +44,9 @@ const mobilePanelVariants = {
 
 export const FlavorMapSection = () => {
   const [selectedDrinkId, setSelectedDrinkId] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useIsMobile();
   const { openDrinkModal } = useDrinkNavigation();
   const shouldReduceMotion = useReducedMotion();
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
 
   const selectedDrink = selectedDrinkId
     ? drinks.find((d) => d.id === selectedDrinkId) ?? null

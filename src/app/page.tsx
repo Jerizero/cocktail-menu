@@ -30,7 +30,9 @@ export default function Home() {
         <SectionDivider variant={1} />
 
         <div className="relative">
-          <ScatteredBlobs />
+          <div className="hidden md:contents">
+            <ScatteredBlobs />
+          </div>
           <BotanicalIllustration type="plantain-leaf" className="top-[3%] -right-8 opacity-[0.07]" size={160} />
           <BotanicalIllustration type="coffee-beans" className="top-[25%] -left-4 opacity-[0.07]" size={120} />
           <BotanicalIllustration type="palm-leaf" className="top-[50%] -right-6 opacity-[0.07]" size={150} />
@@ -45,7 +47,7 @@ export default function Home() {
           <RegionalSection />
 
           {/* Editorial bridge: Regional → Dimensional */}
-          <p className="max-w-2xl mx-auto text-center text-text-muted italic text-sm py-8 px-4">
+          <p className="max-w-2xl mx-auto text-center text-text-muted italic text-sm py-6 sm:py-8 px-4">
             The land shapes the ingredient. Now see what those ingredients taste like.
           </p>
 
@@ -55,21 +57,21 @@ export default function Home() {
           <DimensionalSection />
 
           {/* Editorial bridge: Dimensional → Flavor Map */}
-          <p className="max-w-2xl mx-auto text-center text-text-muted italic text-sm py-8 px-4">
+          <p className="max-w-2xl mx-auto text-center text-text-muted italic text-sm py-6 sm:py-8 px-4">
             Seven dimensions condensed to two axes — where each drink lives.
           </p>
 
           <FlavorMapSection />
 
           {/* Editorial bridge: Flavor Map → Spirit */}
-          <p className="max-w-2xl mx-auto text-center text-text-muted italic text-sm py-8 px-4">
+          <p className="max-w-2xl mx-auto text-center text-text-muted italic text-sm py-6 sm:py-8 px-4">
             Each dot is a drink. What holds them together? The spirits.
           </p>
 
           <SpiritSection />
 
           {/* Editorial bridge: Spirit → Technique */}
-          <p className="max-w-2xl mx-auto text-center text-text-muted italic text-sm py-8 px-4">
+          <p className="max-w-2xl mx-auto text-center text-text-muted italic text-sm py-6 sm:py-8 px-4">
             Spirits provide the foundation. Technique turns ingredients into cocktails.
           </p>
 

@@ -21,7 +21,7 @@ interface Props {
 
 const SLIDE_VARIANTS = {
   enter: (direction: number) => ({
-    x: direction > 0 ? 300 : -300,
+    x: direction > 0 ? 100 : -100,
     opacity: 0,
   }),
   center: {
@@ -29,7 +29,7 @@ const SLIDE_VARIANTS = {
     opacity: 1,
   },
   exit: (direction: number) => ({
-    x: direction < 0 ? 300 : -300,
+    x: direction < 0 ? 100 : -100,
     opacity: 0,
   }),
 };
@@ -38,6 +38,7 @@ export const DrinkModal = ({ drink, onClose, onPrev, onNext, hasPrev, hasNext }:
   const modalRef = useRef<HTMLDivElement>(null);
   const shouldReduceMotion = useReducedMotion();
   const [direction, setDirection] = useState(0);
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
   useScrollLock(true);
 
   const spiritColor =
@@ -106,6 +107,31 @@ export const DrinkModal = ({ drink, onClose, onPrev, onNext, hasPrev, hasNext }:
     }
   };
 
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  }, []);
+
+  const handleTouchEnd = useCallback(
+    (e: React.TouchEvent) => {
+      if (!touchStartRef.current) return;
+      const dx = e.changedTouches[0].clientX - touchStartRef.current.x;
+      const dy = e.changedTouches[0].clientY - touchStartRef.current.y;
+      touchStartRef.current = null;
+
+      // Only trigger if horizontal swipe > 50px and more horizontal than vertical
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        if (dx < 0 && hasNext && onNext) {
+          setDirection(1);
+          onNext();
+        } else if (dx > 0 && hasPrev && onPrev) {
+          setDirection(-1);
+          onPrev();
+        }
+      }
+    },
+    [hasPrev, hasNext, onPrev, onNext]
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -120,11 +146,11 @@ export const DrinkModal = ({ drink, onClose, onPrev, onNext, hasPrev, hasNext }:
       {/* Backdrop */}
       <div className="absolute inset-0 bg-text-primary/60 backdrop-blur-md" />
 
-      {/* Navigation arrows */}
+      {/* Navigation arrows — hidden on mobile, replaced by swipe */}
       {hasPrev && onPrev && (
         <button
           onClick={handlePrev}
-          className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-cream/80 backdrop-blur-sm border border-border/50 text-text-secondary hover:text-text-primary hover:bg-cream transition-all duration-200 shadow-lg"
+          className="hidden md:block absolute left-8 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-cream/80 backdrop-blur-sm border border-border/50 text-text-secondary hover:text-text-primary hover:bg-cream transition-all duration-200 shadow-lg"
           aria-label="Previous drink"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -135,7 +161,7 @@ export const DrinkModal = ({ drink, onClose, onPrev, onNext, hasPrev, hasNext }:
       {hasNext && onNext && (
         <button
           onClick={handleNext}
-          className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-cream/80 backdrop-blur-sm border border-border/50 text-text-secondary hover:text-text-primary hover:bg-cream transition-all duration-200 shadow-lg"
+          className="hidden md:block absolute right-8 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-cream/80 backdrop-blur-sm border border-border/50 text-text-secondary hover:text-text-primary hover:bg-cream transition-all duration-200 shadow-lg"
           aria-label="Next drink"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -158,12 +184,15 @@ export const DrinkModal = ({ drink, onClose, onPrev, onNext, hasPrev, hasNext }:
           animate="center"
           exit={shouldReduceMotion ? {} : "exit"}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-20 bg-cream border border-border/30 rounded-2xl max-w-3xl w-full mx-4 max-h-[90vh] overflow-y-auto shadow-2xl"
+          className="relative z-20 bg-cream border border-border/30 rounded-2xl max-w-3xl w-full mx-3 sm:mx-4 max-h-[90vh] overflow-y-auto shadow-2xl pb-[env(safe-area-inset-bottom)]"
+          style={{ touchAction: "pan-y" }}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
         >
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-20 p-2 text-text-muted hover:text-text-primary transition-colors duration-200 rounded-full hover:bg-cream-dark focus:outline-none focus:ring-2 focus:ring-amber/40"
+            className="absolute top-4 right-4 z-20 p-2.5 sm:p-2 text-text-muted hover:text-text-primary transition-colors duration-200 rounded-full hover:bg-cream-dark focus:outline-none focus:ring-2 focus:ring-amber/40"
             aria-label="Close"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
@@ -173,7 +202,7 @@ export const DrinkModal = ({ drink, onClose, onPrev, onNext, hasPrev, hasNext }:
 
           {/* Hero area — large illustration + identity */}
           <div
-            className="relative flex flex-col md:flex-row items-center gap-6 md:gap-10 p-8 md:p-12 pb-6"
+            className="relative flex flex-col md:flex-row items-center gap-4 md:gap-10 p-5 sm:p-8 md:p-12 pb-4 sm:pb-6"
             style={{ background: `linear-gradient(135deg, ${drink.visual.liquidColor}08 0%, ${drink.visual.liquidColor}04 100%)` }}
           >
             {/* Decorative ring behind illustration */}
@@ -182,7 +211,12 @@ export const DrinkModal = ({ drink, onClose, onPrev, onNext, hasPrev, hasNext }:
                 className="absolute inset-0 -m-4 rounded-full opacity-10"
                 style={{ border: `2px solid ${drink.visual.liquidColor}` }}
               />
-              <DrinkIllustration visual={drink.visual} size="modal" />
+              <div className="hidden md:block">
+                <DrinkIllustration visual={drink.visual} size="modal" />
+              </div>
+              <div className="block md:hidden">
+                <DrinkIllustration visual={drink.visual} size="card" />
+              </div>
             </div>
 
             <div className="text-center md:text-left flex-1">
@@ -225,7 +259,7 @@ export const DrinkModal = ({ drink, onClose, onPrev, onNext, hasPrev, hasNext }:
           </div>
 
           {/* Content — two-column editorial layout */}
-          <div className="p-8 md:p-12 pt-6 space-y-8">
+          <div className="p-5 sm:p-8 md:p-12 pt-6 space-y-8">
             <div className="grid md:grid-cols-[1fr_auto] gap-10">
               {/* Left: recipe breakdown */}
               <div className="space-y-6">
@@ -352,9 +386,14 @@ export const DrinkModal = ({ drink, onClose, onPrev, onNext, hasPrev, hasNext }:
 
             {/* Navigation hint */}
             {(hasPrev || hasNext) && (
-              <p className="text-center text-text-muted text-xs pt-2">
-                Use <kbd className="px-1.5 py-0.5 bg-cream-dark rounded text-[10px] font-mono">←</kbd> <kbd className="px-1.5 py-0.5 bg-cream-dark rounded text-[10px] font-mono">→</kbd> to browse drinks
-              </p>
+              <>
+                <p className="hidden md:block text-center text-text-muted text-xs pt-2">
+                  Use <kbd className="px-1.5 py-0.5 bg-cream-dark rounded text-[10px] font-mono">←</kbd> <kbd className="px-1.5 py-0.5 bg-cream-dark rounded text-[10px] font-mono">→</kbd> to browse drinks
+                </p>
+                <p className="block md:hidden text-center text-text-muted text-xs pt-2">
+                  Swipe to browse
+                </p>
+              </>
             )}
           </div>
         </motion.div>

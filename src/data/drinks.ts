@@ -102,6 +102,12 @@ export const drinks: Drink[] = [
       "Every menu needs one the bartender can bang out in 30 seconds",
       "Use a Dominican white rum",
     ],
+    ingredients: [
+      "2 oz White rum",
+      "1 oz Chinola (passion fruit) puree",
+      "0.5 oz Cayenne-infused agave",
+      "Top with soda water",
+    ],
     instructions: [
       "Build in highball glass over ice",
       "Add rum, chinola puree, and cayenne-agave",
@@ -155,6 +161,12 @@ export const drinks: Drink[] = [
       "Guandules orgeat replaces High-Saline Demerara (orgeat provides sweetness + body + earthiness)",
       "Concon carries salt through fat-wash; add saline drops if needed",
     ],
+    ingredients: [
+      "1.5 oz Concon fat-washed blended scotch",
+      "0.5 oz Velvet Falernum",
+      "0.75 oz Guandules (pigeon pea) orgeat",
+      "Top with coconut water",
+    ],
     instructions: [
       "Fat-wash: flash-blend fried concon into scotch (10-15s)",
       "Freeze fat-washed scotch, skim fat cap, strain through coffee filter",
@@ -206,6 +218,12 @@ export const drinks: Drink[] = [
     notes: [
       "Best candidate to become the bone-dry refresher",
       "Reduce syrup sweetness or use bark tincture + barspoon demerara",
+    ],
+    ingredients: [
+      "2 oz Rye whiskey",
+      "0.75 oz Mabi bark syrup",
+      "0.75 oz Lime juice",
+      "Top with dry tonic",
     ],
     instructions: [
       "Build in highball glass over ice",
@@ -429,6 +447,13 @@ export const drinks: Drink[] = [
       "Aquavit caraway/dill complements sofrito aromatics",
       "Savory without being jarring — sofrito essence, not liquid sofrito",
     ],
+    ingredients: [
+      "1.5 oz Annatto-infused potato vodka",
+      "0.5 oz Aquavit",
+      "0.75 oz Dry vermouth",
+      "0.25 oz Escabeche brine",
+      "Cilantro oil float",
+    ],
     instructions: [
       "Infuse vodka: warm annatto seeds in potato vodka (fat-soluble extraction)",
       "Combine annatto vodka, aquavit, dry vermouth, and escabeche brine in mixing glass",
@@ -476,6 +501,12 @@ export const drinks: Drink[] = [
     notes: [
       "Differentiated from Piña Colada by texture — this is viscous/rich, Piña Colada is crystal clear/elegant",
       "Use a Dominican aged rum for authenticity",
+    ],
+    ingredients: [
+      "1.5 oz Aged rum",
+      "0.5 oz Blackstrap rum",
+      "1.5 oz Spiced bean & batata nectar",
+      "0.5 oz Rum-raisin syrup",
     ],
     instructions: [
       "Prepare spiced bean & batata nectar (R&D — Pectinex + agar-agar for pourable viscosity)",
@@ -586,6 +617,12 @@ export const drinks: Drink[] = [
       "Possible enhancer: Yellow Chartreuse",
       "Infusion, NOT fat-wash — keeps the rum clear",
     ],
+    ingredients: [
+      "2 oz Toasted coconut-infused white rum",
+      "0.75 oz Pineapple oleo-saccharum",
+      "2 dashes Lime bitters",
+      "1 dash Allspice dram",
+    ],
     instructions: [
       "Toast coconut, infuse into white rum (infusion, not fat-wash)",
       "Prepare pineapple oleo-saccharum",
@@ -692,6 +729,11 @@ export const drinks: Drink[] = [
       "Deep ruby-garnet color from the red wine base",
       "Served in a balloon wine glass / spritz glass over ice",
       "Could add a Campari or Aperol rinse for additional bitter complexity",
+    ],
+    ingredients: [
+      "2 oz Mamajuana",
+      "3 oz Cava",
+      "1 Orange peel",
     ],
     instructions: [
       "Build in balloon wine glass / spritz glass over ice",

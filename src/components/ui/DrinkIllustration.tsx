@@ -95,26 +95,72 @@ const IceCubes = ({ x, y, type }: { x: number; y: number; type: "large-cube" | "
     );
   }
   if (type === "pebbled") {
-    // Pebbled/crushed ice mound at the top of the glass
+    // Swizzle-style pebbled ice mound that overflows above the glass rim.
+    // The highball rim is at y≈35. We build layers from inside the glass
+    // up through the rim and into a rounded dome above it.
+    const rimY = 35;
+    const pebbles: { cx: number; cy: number; r: number; op: number }[] = [];
+
+    // Layer 1 — deep inside glass (widest, most transparent)
+    for (let i = 0; i < 9; i++) {
+      pebbles.push({
+        cx: x + (i - 4) * 5 + (i % 2 ? 1.5 : -1),
+        cy: rimY + 18 - (i % 3) * 2.5,
+        r: 3.2 + (i % 3) * 0.8,
+        op: 0.18 + (i % 2) * 0.06,
+      });
+    }
+
+    // Layer 2 — just below rim (wide)
+    for (let i = 0; i < 10; i++) {
+      pebbles.push({
+        cx: x + (i - 4.5) * 4.9 + (i % 2 ? -1 : 1.2),
+        cy: rimY + 8 - (i % 3) * 2,
+        r: 3 + (i % 3) * 0.7,
+        op: 0.22 + (i % 2) * 0.06,
+      });
+    }
+
+    // Layer 3 — at the rim line (full width of glass opening)
+    for (let i = 0; i < 11; i++) {
+      pebbles.push({
+        cx: x + (i - 5) * 4.6 + (i % 2 ? 1 : -0.8),
+        cy: rimY + 1 - (i % 2) * 2,
+        r: 3.2 + (i % 3) * 0.6,
+        op: 0.28 + (i % 2) * 0.05,
+      });
+    }
+
+    // Layer 4 — above rim, narrowing for dome shape
+    for (let i = 0; i < 9; i++) {
+      pebbles.push({
+        cx: x + (i - 4) * 4.5 + (i % 2 ? -1.2 : 0.8),
+        cy: rimY - 7 + Math.abs(i - 4) * 1.2 - (i % 3),
+        r: 3 + (i % 2) * 0.8,
+        op: 0.30 + (i % 2) * 0.06,
+      });
+    }
+
+    // Layer 5 — dome crown, narrower still
+    for (let i = 0; i < 5; i++) {
+      pebbles.push({
+        cx: x + (i - 2) * 5 + (i % 2 ? 0.5 : -0.5),
+        cy: rimY - 13 + Math.abs(i - 2) * 2,
+        r: 3.5 + (i % 2) * 0.5,
+        op: 0.32 + (i % 2) * 0.05,
+      });
+    }
+
+    // Top cap — peak of the mound
+    pebbles.push({ cx: x - 2, cy: rimY - 17, r: 3, op: 0.30 });
+    pebbles.push({ cx: x + 3, cy: rimY - 16, r: 2.8, op: 0.28 });
+    pebbles.push({ cx: x, cy: rimY - 19, r: 2.5, op: 0.26 });
+
     return (
       <g>
-        {Array.from({ length: 10 }, (_, i) => {
-          const cx = x + (i - 4.5) * 4.5;
-          const cy = y - 14 + Math.abs(i - 4.5) * 1.8 + (i % 3) * 1.5;
-          const r = 2.5 + (i % 3) * 0.8;
-          return (
-            <circle key={i} cx={cx} cy={cy} r={r} fill="white" fillOpacity={0.3 + (i % 2) * 0.1} />
-          );
-        })}
-        {/* Second layer for depth */}
-        {Array.from({ length: 7 }, (_, i) => {
-          const cx = x + (i - 3) * 5;
-          const cy = y - 8 + (i % 2) * 2;
-          const r = 2 + (i % 2) * 0.6;
-          return (
-            <circle key={`b${i}`} cx={cx} cy={cy} r={r} fill="white" fillOpacity={0.2} />
-          );
-        })}
+        {pebbles.map((p, i) => (
+          <circle key={i} cx={p.cx} cy={p.cy} r={p.r} fill="white" fillOpacity={p.op} />
+        ))}
       </g>
     );
   }
@@ -156,13 +202,17 @@ const FoamLayer = ({
   );
 };
 
-const Straw = ({ glassY }: { glassY: number }) => (
-  <g>
-    {/* Thin diagonal straw from inside glass to above rim */}
-    <line x1={68} y1={glassY - 12} x2={52} y2={glassY + 40} stroke="#A89F91" strokeWidth={1.8} strokeLinecap="round" />
-    <line x1={68} y1={glassY - 12} x2={52} y2={glassY + 40} stroke="#C4B8A8" strokeWidth={0.8} strokeLinecap="round" />
-  </g>
-);
+const Straw = ({ glassY, iceType }: { glassY: number; iceType?: string }) => {
+  // When pebbled ice overflows above the rim, the straw pokes out from the ice mound
+  const topY = iceType === "pebbled" ? 35 - 28 : glassY - 12;
+  return (
+    <g>
+      {/* Thin diagonal straw from inside glass to above the ice mound */}
+      <line x1={68} y1={topY} x2={52} y2={glassY + 40} stroke="#A89F91" strokeWidth={1.8} strokeLinecap="round" />
+      <line x1={68} y1={topY} x2={52} y2={glassY + 40} stroke="#C4B8A8" strokeWidth={0.8} strokeLinecap="round" />
+    </g>
+  );
+};
 
 const SmokeWisps = ({ y, animate }: { y: number; animate: boolean }) => {
   // Each wisp: starting x, horizontal sway amplitude, height, stroke width, delay, duration
@@ -269,7 +319,7 @@ export const DrinkIllustration = ({ visual, size = "card", className }: Props) =
       <path d={g.outline} fill="none" stroke="#A89F91" strokeWidth={1.2} strokeLinecap="round" strokeLinejoin="round" />
 
       {/* Straw */}
-      {straw && <Straw glassY={g.liquidY} />}
+      {straw && <Straw glassY={g.liquidY} iceType={iceType} />}
 
       {/* Smoke */}
       {smoke && <SmokeWisps y={g.liquidY - 5} animate={animate} />}

@@ -21,7 +21,7 @@ export type ServiceStyle =
   | "spritz";
 
 export type GlassType = "coupe" | "highball" | "rocks" | "nick-and-nora" | "wine" | "spritz";
-export type IceType = "none" | "large-cube" | "rocks" | "crushed";
+export type IceType = "none" | "large-cube" | "rocks" | "crushed" | "pebbled";
 export type FoamType = "egg-white" | "pineapple-froth" | "salt-topped";
 export type Viscosity = "thin" | "medium" | "thick" | "syrupy";
 
@@ -33,6 +33,7 @@ export interface DrinkVisual {
   iceType: IceType;
   foam?: FoamType;
   smoke?: boolean;
+  straw?: boolean;
   garnish?: string;
   viscosity: Viscosity;
 }

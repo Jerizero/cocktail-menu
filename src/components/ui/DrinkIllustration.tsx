@@ -76,7 +76,7 @@ const GLASS = {
   },
 } as const;
 
-const IceCubes = ({ x, y, type }: { x: number; y: number; type: "large-cube" | "rocks" | "crushed" }) => {
+const IceCubes = ({ x, y, type }: { x: number; y: number; type: "large-cube" | "rocks" | "crushed" | "pebbled" }) => {
   if (type === "large-cube") {
     return (
       <g>
@@ -91,6 +91,30 @@ const IceCubes = ({ x, y, type }: { x: number; y: number; type: "large-cube" | "
         {[{ dx: -7, dy: -4, s: 8, r: 12 }, { dx: 5, dy: -2, s: 7, r: -6 }, { dx: -1, dy: 5, s: 6, r: 18 }].map((c, i) => (
           <rect key={i} x={x + c.dx - c.s / 2} y={y + c.dy - c.s / 2} width={c.s} height={c.s} rx={2} fill="white" fillOpacity={0.3} transform={`rotate(${c.r} ${x + c.dx} ${y + c.dy})`} />
         ))}
+      </g>
+    );
+  }
+  if (type === "pebbled") {
+    // Pebbled/crushed ice mound at the top of the glass
+    return (
+      <g>
+        {Array.from({ length: 10 }, (_, i) => {
+          const cx = x + (i - 4.5) * 4.5;
+          const cy = y - 14 + Math.abs(i - 4.5) * 1.8 + (i % 3) * 1.5;
+          const r = 2.5 + (i % 3) * 0.8;
+          return (
+            <circle key={i} cx={cx} cy={cy} r={r} fill="white" fillOpacity={0.3 + (i % 2) * 0.1} />
+          );
+        })}
+        {/* Second layer for depth */}
+        {Array.from({ length: 7 }, (_, i) => {
+          const cx = x + (i - 3) * 5;
+          const cy = y - 8 + (i % 2) * 2;
+          const r = 2 + (i % 2) * 0.6;
+          return (
+            <circle key={`b${i}`} cx={cx} cy={cy} r={r} fill="white" fillOpacity={0.2} />
+          );
+        })}
       </g>
     );
   }
@@ -132,6 +156,14 @@ const FoamLayer = ({
   );
 };
 
+const Straw = ({ glassY }: { glassY: number }) => (
+  <g>
+    {/* Thin diagonal straw from inside glass to above rim */}
+    <line x1={68} y1={glassY - 12} x2={52} y2={glassY + 40} stroke="#A89F91" strokeWidth={1.8} strokeLinecap="round" />
+    <line x1={68} y1={glassY - 12} x2={52} y2={glassY + 40} stroke="#C4B8A8" strokeWidth={0.8} strokeLinecap="round" />
+  </g>
+);
+
 const SmokeWisps = ({ y, animate }: { y: number; animate: boolean }) => (
   <g opacity={0.2}>
     {[0, 1, 2].map(i => {
@@ -154,7 +186,7 @@ export const DrinkIllustration = ({ visual, size = "card", className }: Props) =
   const shouldReduceMotion = useReducedMotion();
   const animate = isInView && !shouldReduceMotion;
 
-  const { glassType, liquidColor, liquidGradient, opacity, iceType, foam, smoke, viscosity } = visual;
+  const { glassType, liquidColor, liquidGradient, opacity, iceType, foam, smoke, straw, viscosity } = visual;
   const g = GLASS[glassType];
   const dim =
     size === "tiny"
@@ -197,6 +229,9 @@ export const DrinkIllustration = ({ visual, size = "card", className }: Props) =
 
       {/* Glass outline — on top */}
       <path d={g.outline} fill="none" stroke="#A89F91" strokeWidth={1.2} strokeLinecap="round" strokeLinejoin="round" />
+
+      {/* Straw */}
+      {straw && <Straw glassY={g.liquidY} />}
 
       {/* Smoke */}
       {smoke && <SmokeWisps y={g.liquidY - 5} animate={animate} />}

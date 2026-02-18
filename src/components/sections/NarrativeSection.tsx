@@ -45,8 +45,7 @@ export const NarrativeSection = () => {
           a cayenne-spiked highball. Mamajuana&rsquo;s bark-steeped rum becomes
           a spritz. The fusion is literal: Dominican food and drink traditions
           deconstructed through the lens of modern cocktail
-          technique&mdash;milk clarification, oleo-saccharum, acid adjustment,
-          fat-washing&mdash;to create something that belongs to neither world
+          technique&mdash;to create something that belongs to neither world
           alone.
         </motion.p>
 

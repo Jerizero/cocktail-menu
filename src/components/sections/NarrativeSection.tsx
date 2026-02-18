@@ -35,18 +35,12 @@ export const NarrativeSection = () => {
           transition={{ duration: 0.6, delay: 0.15, ease }}
           className="font-serif text-lg sm:text-xl md:text-2xl text-text-secondary leading-relaxed"
         >
-          Every drink on this menu begins with Dominican tradition&mdash;the
-          kitchen and the colmado alike. Guandules con coco simmering in a
-          caldero becomes a coconut-forward base. Concon scraped from the pot
-          becomes a toasted rice syrup. But the drinks themselves trace back too:
-          mab&iacute; bark fermenting in a jar becomes a bone-dry highball
-          refresher. Morir so&ntilde;ando&rsquo;s orange-and-milk marriage
-          becomes a clarified punch. Chinola hawked from roadside carts becomes
-          a cayenne-spiked highball. Mamajuana&rsquo;s bark-steeped rum becomes
-          a spritz. The fusion is literal: Dominican food and drink traditions
-          deconstructed through the lens of modern cocktail
-          technique&mdash;to create something that belongs to neither world
-          alone.
+          Concon scraped from the caldero becomes a toasted rice syrup.
+          Mab&iacute; bark fermenting in a jar becomes a bone-dry highball.
+          Morir so&ntilde;ando becomes a clarified punch. Mamajuana becomes
+          a spritz. Dominican food and drink traditions, deconstructed through
+          modern technique&mdash;into something that belongs to neither
+          world alone.
         </motion.p>
 
         <motion.p
@@ -56,18 +50,13 @@ export const NarrativeSection = () => {
           transition={{ duration: 0.6, delay: 0.3, ease }}
           className="font-serif text-lg sm:text-xl md:text-2xl text-text-secondary leading-relaxed"
         >
-          The roots run through two places.{" "}
-          <span className="text-amber font-medium">Saman&aacute;</span> is
-          the peninsula on the northeast coast where coconut palms outnumber
-          people, where a community of descendants of freed Black Americans
-          who arrived in 1824 built churches, kept English alive, and wove
-          their foodways into the local fabric. Its drinks taste like salt
-          air and coco water.{" "}
-          <span className="text-warm-brown font-medium">Tenares</span> sits
-          in the heart of the Cibao valley&mdash;red soil, tobacco fields,
-          cacao drying in the sun, coffee picked at altitude. Its drinks are
-          earthy, bitter, and layered. Between these two poles, thirteen
-          cocktails map an entire island&rsquo;s worth of flavor.
+          Two places shape every drink.{" "}
+          <span className="text-amber font-medium">Saman&aacute;</span>&mdash;coconut
+          palms, salt air, a community of freed Black Americans who arrived
+          in 1824 and wove their foodways into the peninsula.{" "}
+          <span className="text-warm-brown font-medium">Tenares</span>&mdash;red
+          soil, tobacco, cacao, coffee at altitude. Between these two poles,
+          thirteen cocktails map an island.
         </motion.p>
       </motion.div>
     </section>

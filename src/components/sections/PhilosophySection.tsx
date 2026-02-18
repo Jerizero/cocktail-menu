@@ -19,10 +19,9 @@ export const PhilosophySection = () => {
         className="text-center"
       >
         <p className="text-text-secondary text-lg md:text-xl leading-relaxed italic">
-          Not &ldquo;Dominican ingredients dropped into classic templates&rdquo;
-          &mdash; Dominican{" "}
+          Dominican{" "}
           <em className="text-text-primary font-medium not-italic">
-            dishes and traditions
+            tradition
           </em>{" "}
           deconstructed into liquid form.
         </p>

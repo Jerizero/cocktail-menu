@@ -45,7 +45,8 @@ export interface DimensionalScores {
   boozy: number;
   refreshing: number;
   sweet: number;
-  dryBitter: number;
+  dry: number;
+  bitter: number;
   tart: number;
   weight: number;
   complexity: number;
@@ -67,6 +68,8 @@ export interface Drink {
   testedNotes?: string;
   openQuestions?: string;
   notes: string[];
+  ingredients?: string[];
+  instructions?: string[];
   region?: Region;
   regionNote?: string;
   batchSpecs?: string;

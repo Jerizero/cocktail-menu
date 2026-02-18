@@ -1,6 +1,7 @@
 import { SiteHeader } from "@/components/ui/SiteHeader";
 import { Footer } from "@/components/ui/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { NarrativeSection } from "@/components/sections/NarrativeSection";
 import { PhilosophySection } from "@/components/sections/PhilosophySection";
 import { MenuSection } from "@/components/sections/MenuSection";
 import { DimensionalSection } from "@/components/sections/DimensionalSection";
@@ -24,6 +25,7 @@ export default function Home() {
       <main className="relative pt-14 lg:pt-14">
         {/* Act I: The Hook */}
         <HeroSection />
+        <NarrativeSection />
         <PhilosophySection />
         <SectionDivider variant={1} />
 

@@ -9,7 +9,7 @@ export const regions: RegionInfo[] = [
       "Coconut + pigeon pea (guandules) + concon = guandules con coco meets crispy rice",
     keyIngredient: "Guandules orgeat replaces demerara syrup",
     about:
-      "Coconut capital of DR. Peninsula covered in coconut groves. Unique Afro-American community \u2014 descendants of freed Black Americans who emigrated in 1824. Over 80% of population descends from these settlers. English-speaking heritage, AME churches. Signature dish: guandules con coco.",
+      "Coconut capital of DR. Peninsula covered in coconut groves. Home to a unique Afro-American community \u2014 descendants of freed Black Americans who emigrated in 1824, guided by the AME Church. Their English-speaking heritage and distinct traditions persist in the peninsula\u2019s churches and culture. Signature dish: guandules con coco.",
   },
   {
     id: "tenares",

@@ -203,6 +203,12 @@ export const DrinkModal = ({ drink, onClose, onPrev, onNext, hasPrev, hasNext }:
               </h2>
               <p className="text-text-muted text-lg">{drink.subtitle}</p>
 
+              {drink.story && (
+                <p className="text-sm text-text-secondary/80 italic mt-3 max-w-md leading-relaxed">
+                  {drink.story}
+                </p>
+              )}
+
               {/* Service style + glass */}
               <div className="flex items-center justify-center md:justify-start gap-4 mt-4 text-sm text-text-secondary">
                 <span className="capitalize">{drink.serviceStyle.replace(/-/g, ' ')}</span>

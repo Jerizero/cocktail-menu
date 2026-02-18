@@ -62,6 +62,8 @@ export const drinks: Drink[] = [
       "Backload Licor 43 into clarified punch (preserves volatile aromatics)",
       "Serve over a large ice cube",
     ],
+    story:
+      "Morir soñando — the orange-and-milk street drink every Dominican kid grows up on — run through milk clarification with cognac and rum until it emerges crystal clear, all memory and no cloudiness.",
     batchSpecs:
       "105g orange peels, 75g white sugar, 80g Tang, 4g citric acid, 2g malic acid, 300g OJ, 150g chamomile tea, 420g Cognac, 60g Dry Curacao, 120g Ten To One Rum, 150g whole milk, 150g evap milk → backload 100g Licor 43",
     visual: {
@@ -113,6 +115,8 @@ export const drinks: Drink[] = [
       "Add rum, chinola puree, and cayenne-agave",
       "Top with soda, stir gently",
     ],
+    story:
+      "Chinola from every roadside stand in the country, shaken into a sparkling highball with cayenne heat that lingers where the tropical sweetness ends.",
     visual: {
       glassType: "highball",
       liquidColor: "#FF8C00",
@@ -173,6 +177,8 @@ export const drinks: Drink[] = [
       "Build in highball: concon-washed scotch, falernum, guandules orgeat",
       "Top with coconut water and ice, stir gently",
     ],
+    story:
+      "The crispy rice scraped from the bottom of every Dominican caldero, fat-washed into scotch and lengthened with coconut water from Samana's groves.",
     region: "samana",
     regionNote:
       "Coconut + pigeon pea + concon = guandules con coco meets crispy rice",
@@ -230,6 +236,8 @@ export const drinks: Drink[] = [
       "Add rye, mabí bark syrup (or tincture + barspoon demerara), lime juice",
       "Top with dry tonic, stir gently",
     ],
+    story:
+      "Mabi — the fermented bark drink that predates every soda on the island — married with rye whiskey into a dry, bitter highball that tastes like Dominican root beer grew up.",
     visual: {
       glassType: "highball",
       liquidColor: "#8B6914",
@@ -281,6 +289,8 @@ export const drinks: Drink[] = [
       "Ratio starting point: 2 medium plantains per 750ml gin",
       "Tasting schedule: 24hr, 36hr, 48hr — find the window where plantain is present but gin botanicals aren't buried",
     ],
+    story:
+      "Ripe maduros fried dark and infused into gin, replacing the Negroni's bitter orange with Dominican gold — plantain as perfume, not food.",
     ingredients: [
       "1.5 oz Plantain-infused gin",
       "1 oz Blanc vermouth",
@@ -330,6 +340,8 @@ export const drinks: Drink[] = [
       "Possible enhancer: Green Chartreuse (0.25-0.5oz) — use with caution, lots of voices already",
       "Rum rec: Smith & Cross (Jamaican pot still for funk)",
     ],
+    story:
+      "Dominican mango season — when the trees drop fruit faster than anyone can eat it — meets Jamaican rum funk and mezcal smoke in a sour that tastes like a Caribbean summer bonfire.",
     ingredients: [
       "1 oz Jamaican pot still rum (Smith & Cross rec.)",
       "0.75 oz Mezcal",
@@ -391,6 +403,8 @@ export const drinks: Drink[] = [
       "Gin rec: Hendrick's, Roku, or Tanqueray No. Ten (citrus-forward profile needed)",
       "Espresso rec: Cometeer light-roast capsules",
     ],
+    story:
+      "The Dominican cafecito ritual — strong, sweet, passed hand to hand — reimagined as a shaken cocktail where pineapple froth stands in for espuma and flaky salt finishes every sip.",
     ingredients: [
       "1.5 oz Citrus-forward gin",
       "1 oz Cap Corse Blanc",
@@ -447,6 +461,8 @@ export const drinks: Drink[] = [
       "Aquavit caraway/dill complements sofrito aromatics",
       "Savory without being jarring — sofrito essence, not liquid sofrito",
     ],
+    story:
+      "Sazon — the annatto-and-cilantro seasoning that colors every Dominican pot — warm-infused into vodka and stirred into a savory cocktail that drinks like liquid sofrito.",
     ingredients: [
       "1.5 oz Annatto-infused potato vodka",
       "0.5 oz Aquavit",
@@ -502,6 +518,8 @@ export const drinks: Drink[] = [
       "Differentiated from Piña Colada by texture — this is viscous/rich, Piña Colada is crystal clear/elegant",
       "Use a Dominican aged rum for authenticity",
     ],
+    story:
+      "Habichuela dulce — the sweet bean dessert ladled out at every Dominican Easter — deconstructed into a viscous, spiced rum cocktail that keeps the ritual's richness intact.",
     ingredients: [
       "1.5 oz Aged rum",
       "0.5 oz Blackstrap rum",
@@ -560,6 +578,8 @@ export const drinks: Drink[] = [
       "Cynar pushes drink from sweet toward bitter-sweet (breaks the rich/sweet cluster)",
       "Reduced dulce de leche syrup compensates for Cynar addition",
     ],
+    story:
+      "Tobacco and cacao grow in the same Tenares valley — this smoked old fashioned with cognac and cacao husk tea puts both crops in one glass.",
     ingredients: [
       "2 oz VSOP Cognac",
       "0.5 oz Dulce de leche & cacao husk tea syrup",
@@ -617,6 +637,8 @@ export const drinks: Drink[] = [
       "Possible enhancer: Yellow Chartreuse",
       "Infusion, NOT fat-wash — keeps the rum clear",
     ],
+    story:
+      "The pina colada stripped to its soul — toasted coconut infused into rum, pineapple rendered as oleo-saccharum, then clarified until nothing remains but the ghost of the original.",
     ingredients: [
       "2 oz Toasted coconut-infused white rum",
       "0.75 oz Pineapple oleo-saccharum",
@@ -672,6 +694,8 @@ export const drinks: Drink[] = [
     notes: [
       "Cashew orgeat (\"Dulce de Cajuil\") is the key R&D element",
     ],
+    story:
+      "Malta — the malt soda Dominicans drink like water — and cajuil, the cashew fruit most of the world throws away, shaken into a bourbon egg flip with nutmeg on top.",
     ingredients: [
       "2 oz Bourbon",
       "1 oz Malta",
@@ -730,6 +754,8 @@ export const drinks: Drink[] = [
       "Served in a balloon wine glass / spritz glass over ice",
       "Could add a Campari or Aperol rinse for additional bitter complexity",
     ],
+    story:
+      "Mamajuana — rum steeped with bark, herbs, and honey, the Dominican remedy older than the republic — lightened into an aperitivo spritz with cava and orange peel.",
     ingredients: [
       "2 oz Mamajuana",
       "3 oz Cava",

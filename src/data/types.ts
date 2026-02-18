@@ -71,6 +71,7 @@ export interface Drink {
   notes: string[];
   ingredients?: string[];
   instructions?: string[];
+  story?: string;
   region?: Region;
   regionNote?: string;
   batchSpecs?: string;

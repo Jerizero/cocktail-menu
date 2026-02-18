@@ -7,7 +7,7 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 interface Props {
   visual: DrinkVisual;
-  size?: "card" | "modal";
+  size?: "tiny" | "card" | "modal";
   className?: string;
 }
 
@@ -156,7 +156,12 @@ export const DrinkIllustration = ({ visual, size = "card", className }: Props) =
 
   const { glassType, liquidColor, liquidGradient, opacity, iceType, foam, smoke, viscosity } = visual;
   const g = GLASS[glassType];
-  const dim = size === "card" ? { w: 120, h: 160 } : { w: 200, h: 280 };
+  const dim =
+    size === "tiny"
+      ? { w: 36, h: 48 }
+      : size === "card"
+        ? { w: 120, h: 160 }
+        : { w: 200, h: 280 };
 
   return (
     <svg ref={ref} viewBox="0 0 120 180" width={dim.w} height={dim.h} className={className} aria-hidden="true" role="presentation">

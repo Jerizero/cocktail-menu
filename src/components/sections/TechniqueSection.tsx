@@ -244,7 +244,7 @@ export const TechniqueSection = () => {
   }, []);
 
   return (
-    <SectionWrapper id="techniques" variant="contained" padding="md">
+    <SectionWrapper id="techniques" variant="contained" padding="md" drift="right">
       <SectionHeading
         title="Technique Library"
         subtitle="The methods behind the menu"

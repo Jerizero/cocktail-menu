@@ -3,7 +3,7 @@
   "description": "Dominican-inspired cocktail menu R&D website — interactive data viz + editorial storytelling",
   "lastUpdated": "2026-02-17",
   "currentPhase": "Visual Overhaul Complete — Phase 7 (Deploy)",
-  "status": "active",
+  "status": "ended",
   "context": {
     "familyRoots": "Samaná & Tenares, Dominican Republic",
     "menuSize": 12,
@@ -23,7 +23,7 @@
       "Phase 2: Layout + nav + hero (SiteHeader, HeroSection, PhilosophySection)",
       "Phase 3: Menu section + drink modal (CategoryTabs, DrinkCard, DrinkModal, DrinkRadar)",
       "Phase 4: Editorial charts (DimensionalHeatmap, FlavorScatter, SpiritBars)",
-      "Phase 5: Supporting sections (Regional, Technique, R&D, SideProjects)",
+      "Phase 5: Supporting sections (Regional, Technique, R&D)",
       "Phase 6: Visual Overhaul — SVG drink illustrations, interactive DR map, dynamic layout, background density"
     ],
     "remaining": [

@@ -35,12 +35,16 @@ export const NarrativeSection = () => {
           transition={{ duration: 0.6, delay: 0.15, ease }}
           className="font-serif text-lg sm:text-xl md:text-2xl text-text-secondary leading-relaxed"
         >
-          Every drink on this menu begins in the kitchen, not behind the bar.
-          Guandules con coco simmering in a caldero becomes a coconut-forward
-          base. Concon scraped from the bottom of the pot becomes a toasted
-          rice syrup. Mab&iacute; bark fermenting in a jar on the counter
-          becomes a bitter, dry refresher. The fusion is literal: Dominican
-          food traditions deconstructed through the lens of modern cocktail
+          Every drink on this menu begins with Dominican tradition&mdash;the
+          kitchen and the colmado alike. Guandules con coco simmering in a
+          caldero becomes a coconut-forward base. Concon scraped from the pot
+          becomes a toasted rice syrup. But the drinks themselves trace back too:
+          mab&iacute; bark fermenting in a jar becomes a bone-dry highball
+          refresher. Morir so&ntilde;ando&rsquo;s orange-and-milk marriage
+          becomes a clarified punch. Chinola hawked from roadside carts becomes
+          a cayenne-spiked highball. Mamajuana&rsquo;s bark-steeped rum becomes
+          a spritz. The fusion is literal: Dominican food and drink traditions
+          deconstructed through the lens of modern cocktail
           technique&mdash;milk clarification, oleo-saccharum, acid adjustment,
           fat-washing&mdash;to create something that belongs to neither world
           alone.

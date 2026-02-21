@@ -102,8 +102,8 @@ export const NarrativeSection = () => {
         >
           Two towns anchor the whole menu.{" "}
           <span className="text-amber font-medium">Saman&aacute;</span>&mdash;coconut
-          palms, salt air, a community of freed Black Americans who arrived in
-          1824 and wove their foodways into the peninsula&rsquo;s soil.{" "}
+          palms, salt air, fishing boats, and a trace of African-American
+          heritage from freed people who arrived in 1824.{" "}
           <span className="text-warm-brown font-medium">Tenares</span>&mdash;red
           earth, cacao, tobacco, coffee at altitude.
         </motion.p>

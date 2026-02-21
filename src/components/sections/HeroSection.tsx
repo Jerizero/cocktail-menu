@@ -77,7 +77,7 @@ export const HeroSection = () => {
           }}
           className="font-serif text-2xl sm:text-3xl text-text-secondary/80 tracking-tight"
         >
-          A Dominican Cocktail Bar
+          A Dominican Cocktail Bar Concept
         </motion.p>
 
         <motion.p

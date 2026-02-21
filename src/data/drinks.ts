@@ -791,7 +791,7 @@ export const drinks: Drink[] = [
     modifiers: ["Fresh sugarcane juice", "Lime", "Ice"],
     technique:
       "Fresh-pressed sugarcane juice served over ice with lime — no cooking, no syrup, just cane",
-    serviceStyle: "highball",
+    serviceStyle: "rocks",
     spirits: [],
     dimensions: {
       boozy: 0,
@@ -809,7 +809,7 @@ export const drinks: Drink[] = [
       "The simplest drink on the menu — and intentionally so",
       "Guarapo is sold at every roadside stand in the DR, pressed fresh from sugarcane stalks",
       "Lime cuts the sweetness and makes it a drink, not just juice",
-      "Served tall over ice — the Dominican equivalent of lemonade",
+      "Served over rocks — the Dominican equivalent of lemonade",
       "Non-alcoholic counterpart to the cocktail menu — everyone should have something to drink",
     ],
     story:
@@ -821,12 +821,12 @@ export const drinks: Drink[] = [
     ],
     instructions: [
       "Press fresh sugarcane through a juicer or trapiche",
-      "Pour over ice in a highball glass",
+      "Pour over ice in a rocks glass",
       "Add fresh lime juice, stir gently",
       "Garnish with a lime wheel",
     ],
     visual: {
-      glassType: "highball",
+      glassType: "rocks",
       liquidColor: "#C8B560",
       liquidGradient: "#A89940",
       opacity: 0.6,

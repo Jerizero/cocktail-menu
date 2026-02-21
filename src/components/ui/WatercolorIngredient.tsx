@@ -89,8 +89,8 @@ export const WatercolorIngredient = ({
   return (
     <motion.div
       style={{ y: shouldReduceMotion ? 0 : y }}
-      initial={shouldReduceMotion ? { opacity: 0.18 } : { opacity: 0 }}
-      whileInView={shouldReduceMotion ? {} : { opacity: 0.18 }}
+      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
+      whileInView={shouldReduceMotion ? {} : { opacity: 1 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
       className={`absolute pointer-events-none hidden md:block ${className}`}
@@ -103,7 +103,7 @@ export const WatercolorIngredient = ({
         xmlns="http://www.w3.org/2000/svg"
       >
         {/* Layer 1: Watercolor fill blob */}
-        <path d={paths.fill} fill={color} fillOpacity={0.08} />
+        <path d={paths.fill} fill={color} fillOpacity={0.15} />
         {/* Layer 2: Hand-drawn stroke outline */}
         <path
           d={paths.stroke}
@@ -112,7 +112,7 @@ export const WatercolorIngredient = ({
           strokeWidth={1.2}
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeOpacity={0.2}
+          strokeOpacity={0.35}
         />
       </svg>
     </motion.div>

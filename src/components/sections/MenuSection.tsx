@@ -83,7 +83,7 @@ export const MenuSection = () => {
     <SectionWrapper id="menu" variant="wide">
       <SectionHeading
         title={`The ${drinks.length}-Drink Menu`}
-        subtitle="Dominican food culture deconstructed into liquid form"
+        subtitle="Dominican food culture distilled into liquid form"
       />
 
       {/* Sticky tabs — stays below fixed header on mobile so you don't have to scroll up to switch categories */}

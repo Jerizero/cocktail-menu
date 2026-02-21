@@ -22,7 +22,7 @@ export const NarrativeSection = () => {
         {/* Pull quote */}
         <p className="font-serif text-2xl sm:text-3xl md:text-4xl text-text-primary leading-snug tracking-tight">
           <span className="text-amber italic">El Campo</span> is Dominican
-          tradition deconstructed into liquid form.
+          tradition distilled into liquid form.
         </p>
 
         <div className="w-16 h-px bg-warm-brown/30" />
@@ -37,7 +37,7 @@ export const NarrativeSection = () => {
           Concon scraped from the caldero becomes a toasted rice syrup.
           Mab&iacute; bark fermenting in a jar becomes a bone-dry highball.
           Morir so&ntilde;ando becomes a clarified punch. Mamajuana becomes
-          a spritz. Dominican food and drink traditions, deconstructed
+          a spritz. Dominican food and drink traditions, distilled
           through modern technique.
         </motion.p>
 

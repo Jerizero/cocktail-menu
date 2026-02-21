@@ -23,7 +23,7 @@ export const PhilosophySection = () => {
           <em className="text-text-primary font-medium not-italic">
             tradition
           </em>{" "}
-          deconstructed into liquid form.
+          distilled into liquid form.
         </p>
         <p className="text-text-muted text-sm mt-4 tracking-wider uppercase">
           Technique-forward &middot; Story-driven &middot; Family-rooted

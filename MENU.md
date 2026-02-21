@@ -8,7 +8,7 @@
 
 ## Menu Philosophy
 
-Dominican food culture reinterpreted as cocktail architecture. Not "Dominican ingredients dropped into classic templates" — Dominican *dishes and traditions* deconstructed into liquid form. Technique-forward but never technique-for-technique's-sake. Every technique serves the flavor.
+Dominican food culture reinterpreted as cocktail architecture. Not "Dominican ingredients dropped into classic templates" — Dominican *dishes and traditions* distilled into liquid form. Technique-forward but never technique-for-technique's-sake. Every technique serves the flavor.
 
 ### Inspirations & References
 - **Casarré** (@casarre.sdq) — Chef Olivier Bur, half Swiss/half Dominican, trained at Pujol and Noma México. Haute Dominican cuisine. Pineapple oil Negroni.
@@ -20,7 +20,7 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 
 ---
 
-## The 13-Drink Menu
+## The 15-Drink Menu
 
 ### Aperitivos y Refrescantes
 
@@ -58,12 +58,12 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
   - Guandules orgeat replaces High-Saline Demerara (orgeat provides sweetness + body + earthiness)
   - Concon carries salt through fat-wash; add saline drops if needed
 
-#### 4. Mabí Burbujas — Mabí Highball
+#### 4. Mabí Burbujas — Dominican Rickey
 - **Base**: Rye
-- **Modifiers**: Mabí Bark Syrup (push drier — reduce sugar or convert to tincture + minimal demerara), Lime, Dry Tonic
-- **Technique**: Mabí bark syrup/tincture
+- **Modifiers**: Mabí Bark Syrup (push drier — reduce sugar or convert to tincture + minimal demerara), Lime, Soda Water
+- **Technique**: Rickey template (spirit + citrus + soda) with mabí bark as the Dominican twist
 - **Status**: Spec'd, not tested
-- **Notes**: Best candidate to become the bone-dry refresher. Reduce syrup sweetness or use bark tincture + barspoon demerara.
+- **Notes**: Rickey template — the driest, most refreshing classic format. Soda water instead of tonic lets bark flavor speak without competing quinine. Reduce syrup sweetness or use bark tincture + barspoon demerara.
 
 #### 13. Mamajuana Spritz — Dominican Aperitivo
 - **Base**: Mamajuana (Dominican rum + red wine + honey + bark/herbs)
@@ -76,6 +76,30 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
   - Deep ruby-garnet color from the red wine base
   - Served in a balloon wine glass / spritz glass over ice
   - Could add a Campari or Aperol rinse for additional bitter complexity
+
+### Refrescantes (Non-Alcoholic)
+
+#### 14. Mabí Fresco — Traditional Bark Ferment
+- **Base**: Non-Alcoholic
+- **Modifiers**: Behuco indio bark, Raw cane sugar, Lime
+- **Technique**: Traditional 3-day bark fermentation, served cold over ice with lime
+- **Status**: Concept
+- **Notes**:
+  - Mabí is one of the oldest Dominican drinks — fermented bark of the behuco indio vine
+  - Naturally slightly carbonated from fermentation
+  - Bitter, earthy, dry — like a Dominican root beer ancestor
+  - Pairs with Mabí Burbujas (#4) as its non-alc counterpart
+
+#### 15. Guarapo y Lima — Sugarcane Juice on the Rocks
+- **Base**: Non-Alcoholic
+- **Modifiers**: Fresh sugarcane juice, Lime, Ice
+- **Technique**: Fresh-pressed sugarcane juice over ice with lime — no cooking, no syrup
+- **Status**: Concept
+- **Notes**:
+  - The simplest drink on the menu — intentionally so
+  - Guarapo is sold at every roadside stand in the DR, pressed fresh from cane stalks
+  - Lime cuts the sweetness and makes it a drink, not just juice
+  - The Dominican equivalent of lemonade
 
 ### Cócteles con Carácter
 
@@ -183,7 +207,7 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | 1 | Sueño Clarificado | 7 | 6 | 6 | 2 | 5 | 4 | 10 |
 | 2 | Chinola Eléctrica | 3 | 9 | 6 | 1 | 8 | 2 | 2 |
 | 3 | Coco Concon | 5 | 7 | 4 | 2 | 2 | 5 | 8 |
-| 4 | Mabí Burbujas | 4 | 8 | 3 | 6 | 5 | 2 | 4 |
+| 4 | Mabí Burbujas | 4 | 8 | 2 | 7 | 6 | 2 | 4 |
 | 5 | Negroni Dorado | 8 | 2 | 2 | 9 | 1 | 6 | 8 |
 | 6 | Mango Fuego y Humo | 6 | 5 | 5 | 2 | 7 | 5 | 6 |
 | 7 | Cafecito Espuma | 6 | 4 | 3 | 7 | 3 | 5 | 9 |
@@ -193,6 +217,8 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | 11 | Piña Colada Ghost | 6 | 5 | 5 | 2 | 3 | 4 | 8 |
 | 12 | Malta Cajuil Flip | 5 | 1 | 6 | 3 | 1 | 8 | 5 |
 | 13 | Mamajuana Spritz | 3 | 8 | 5 | 3 | 2 | 3 | 5 |
+| 14 | Mabí Fresco | 0 | 7 | 3 | 5 | 5 | 2 | 5 |
+| 15 | Guarapo y Lima | 0 | 9 | 7 | 1 | 5 | 2 | 1 |
 
 ### Spirit Distribution
 - Rum: #1 (partial), #2, #6 (split), #9, #11, #13
@@ -314,6 +340,8 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | Piña Colada Ghost | No | Clarification method, Chartreuse enhancer |
 | Malta Cajuil Flip | No | Cashew orgeat R&D |
 | Mamajuana Spritz | No | Mamajuana base recipe ratios, cava vs prosecco, bitter element |
+| Mabí Fresco | No | Fermentation time (2 vs 3 days), carbonation level |
+| Guarapo y Lima | No | Sugarcane sourcing (fresh press vs bottled guarapo) |
 
 ---
 
@@ -335,3 +363,6 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | 2026-02-17 | Replace Ensalada Rusa with El Sazón | Weakest Dominican connection on menu. Annatto + cilantro oil + escabeche = stronger identity, same spirit balance. |
 | 2026-02-17 | Add Mamajuana Spritz (#13) | Most Dominican spirit tradition was absent. Fills aperitivo spritz gap. |
 | 2026-02-17 | Sueño served on a rock | Changed from coupe to rocks glass with large ice cube. |
+| 2026-02-20 | "Deconstructed" → "Distilled" | Better word, avoids colonizer connotation. Feedback from Brandon. |
+| 2026-02-20 | Mabí Burbujas → Dominican Rickey | Ricky template (spirit + lime + soda). Soda water replaces dry tonic so bark flavor isn't competing with quinine. |
+| 2026-02-20 | Added Guarapo y Lima (#15) | Fresh sugarcane juice + lime on the rocks. Simplest drink on the menu. Non-alcoholic. |

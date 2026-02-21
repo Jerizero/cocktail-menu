@@ -26,6 +26,8 @@ const SHORT_NAMES: Record<number, string> = {
   11: "Pina Colada",
   12: "Malta Flip",
   13: "Mamajuana",
+  14: "Mabí NA",
+  15: "Guarapo",
 };
 
 const getShortName = (drink: (typeof drinks)[0]): string =>

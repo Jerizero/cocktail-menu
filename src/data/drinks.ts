@@ -198,47 +198,49 @@ export const drinks: Drink[] = [
   {
     id: 4,
     name: "Mabí Burbujas",
-    subtitle: "Mabí Highball",
+    subtitle: "Dominican Rickey",
     slug: "mabi-burbujas",
     category: "aperitivos",
     base: "Rye",
     modifiers: [
       "Mabí Bark Syrup (pushed drier — reduced sugar or converted to tincture + minimal demerara)",
       "Lime",
-      "Dry Tonic",
+      "Soda Water",
     ],
-    technique: "Mabí bark syrup/tincture",
+    technique: "Mabí bark syrup/tincture, Rickey template (spirit + citrus + soda)",
     serviceStyle: "highball",
     spirits: ["rye"],
     dimensions: {
       boozy: 4,
       refreshing: 8,
-      sweet: 3,
-      dry: 6,
-      bitter: 3,
-      tart: 5,
+      sweet: 2,
+      dry: 7,
+      bitter: 2,
+      tart: 6,
       weight: 2,
       complexity: 4,
     },
     status: "specced",
     openQuestions: "Bark tincture vs low-sugar syrup",
     notes: [
-      "Best candidate to become the bone-dry refresher",
+      "Rickey template: spirit + lime + soda — the driest, most refreshing classic cocktail format",
+      "Mabí bark is the Dominican twist on the template — earthy bitterness replaces the usual plainness",
       "Reduce syrup sweetness or use bark tincture + barspoon demerara",
+      "Soda water instead of tonic lets the bark flavor speak without competing quinine",
     ],
     ingredients: [
       "2 oz Rye whiskey",
-      "0.75 oz Mabi bark syrup",
+      "0.75 oz Mabí bark syrup",
       "0.75 oz Lime juice",
-      "Top with dry tonic",
+      "Top with soda water",
     ],
     instructions: [
       "Build in highball glass over ice",
       "Add rye, mabí bark syrup (or tincture + barspoon demerara), lime juice",
-      "Top with dry tonic, stir gently",
+      "Top with soda water, stir gently",
     ],
     story:
-      "Mabi — the fermented bark drink that predates every soda on the island — married with rye whiskey into a dry, bitter highball that tastes like Dominican root beer grew up.",
+      "The Rickey — spirit, lime, soda, nothing else — is the driest cocktail template there is. Mabí bark, the fermented root drink older than the republic, gives it a Dominican backbone.",
     visual: {
       glassType: "highball",
       liquidColor: "#8B6914",
@@ -520,7 +522,7 @@ export const drinks: Drink[] = [
       "Use a Dominican aged rum for authenticity",
     ],
     story:
-      "Habichuela dulce — the sweet bean dessert ladled out at every Dominican Easter — deconstructed into a viscous, spiced rum cocktail that keeps the ritual's richness intact.",
+      "Habichuela dulce — the sweet bean dessert ladled out at every Dominican Easter — distilled into a viscous, spiced rum cocktail that keeps the ritual's richness intact.",
     ingredients: [
       "1.5 oz Aged rum",
       "0.5 oz Blackstrap rum",
@@ -778,6 +780,61 @@ export const drinks: Drink[] = [
   },
 
   // ─── Refrescantes (Non-Alcoholic) ───────────────────────────────────
+
+  {
+    id: 15,
+    name: "Guarapo y Lima",
+    subtitle: "Sugarcane Juice on the Rocks",
+    slug: "guarapo-y-lima",
+    category: "refrescantes",
+    base: "Non-Alcoholic",
+    modifiers: ["Fresh sugarcane juice", "Lime", "Ice"],
+    technique:
+      "Fresh-pressed sugarcane juice served over ice with lime — no cooking, no syrup, just cane",
+    serviceStyle: "highball",
+    spirits: [],
+    dimensions: {
+      boozy: 0,
+      refreshing: 9,
+      sweet: 7,
+      dry: 1,
+      bitter: 0,
+      tart: 5,
+      weight: 2,
+      complexity: 1,
+    },
+    status: "concept",
+    openQuestions: "Sugarcane sourcing (fresh press vs bottled guarapo)",
+    notes: [
+      "The simplest drink on the menu — and intentionally so",
+      "Guarapo is sold at every roadside stand in the DR, pressed fresh from sugarcane stalks",
+      "Lime cuts the sweetness and makes it a drink, not just juice",
+      "Served tall over ice — the Dominican equivalent of lemonade",
+      "Non-alcoholic counterpart to the cocktail menu — everyone should have something to drink",
+    ],
+    story:
+      "Sugarcane pressed through a trapiche at the side of the road, poured over ice with a squeeze of lime. The drink every Dominican knows before they know any other.",
+    ingredients: [
+      "6 oz Fresh-pressed sugarcane juice (guarapo)",
+      "0.75 oz Fresh lime juice",
+      "Lime wheel",
+    ],
+    instructions: [
+      "Press fresh sugarcane through a juicer or trapiche",
+      "Pour over ice in a highball glass",
+      "Add fresh lime juice, stir gently",
+      "Garnish with a lime wheel",
+    ],
+    visual: {
+      glassType: "highball",
+      liquidColor: "#C8B560",
+      liquidGradient: "#A89940",
+      opacity: 0.6,
+      iceType: "rocks",
+      garnish: "Pale green-gold sugarcane juice with lime wheel",
+      viscosity: "thin",
+    },
+  },
 
   {
     id: 14,

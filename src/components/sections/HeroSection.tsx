@@ -23,15 +23,18 @@ export const HeroSection = () => {
   const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
   // Collapse vertical gaps between text elements
   const contentGap = useTransform(scrollYProgress, [0, 0.8], [32, 8]);
+  // Collapse the container's bottom margin so dead space closes as content fades
+  const heroMargin = useTransform(scrollYProgress, [0, 0.7], [0, -180]);
 
   const contentStyle = shouldReduceMotion
     ? {}
     : { scale: contentScale, y: contentY, opacity: contentOpacity, gap: contentGap };
 
   return (
-    <div
+    <motion.div
       ref={sectionRef}
       id="hero"
+      style={shouldReduceMotion ? {} : { marginBottom: heroMargin }}
       className="relative min-h-[75vh] flex items-center justify-center overflow-hidden px-4"
     >
       {/* Watercolor blobs — stay fixed, content collapses independently */}
@@ -105,6 +108,6 @@ export const HeroSection = () => {
           <span>15 Drinks</span>
         </motion.div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };

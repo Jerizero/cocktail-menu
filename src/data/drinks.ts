@@ -791,7 +791,7 @@ export const drinks: Drink[] = [
     modifiers: ["Fresh sugarcane juice", "Lime", "Ice"],
     technique:
       "Fresh-pressed sugarcane juice served over ice with lime — no cooking, no syrup, just cane",
-    serviceStyle: "rocks",
+    serviceStyle: "on-a-rock",
     spirits: [],
     dimensions: {
       boozy: 0,

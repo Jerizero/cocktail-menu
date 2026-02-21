@@ -240,7 +240,7 @@ export const drinks: Drink[] = [
       "Top with soda water, stir gently",
     ],
     story:
-      "The Rickey — spirit, lime, soda, nothing else — is the driest cocktail template there is. Mabí bark, the fermented root drink older than the republic, gives it a Dominican backbone.",
+      "Mabí — the fermented bark drink that predates every soda on the island, Taíno in origin — mixed with rye and lime into a bone-dry highball. Dominican root beer, grown up.",
     visual: {
       glassType: "highball",
       liquidColor: "#8B6914",

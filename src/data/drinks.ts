@@ -655,7 +655,7 @@ export const drinks: Drink[] = [
       "Float dark rum on top",
     ],
     visual: {
-      glassType: "rocks",
+      glassType: "hurricane",
       liquidColor: "#D4890F",
       liquidGradient: "#B87A0C",
       opacity: 0.85,

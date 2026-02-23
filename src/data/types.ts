@@ -22,7 +22,7 @@ export type ServiceStyle =
   | "spritz"
   | "frozen";
 
-export type GlassType = "coupe" | "highball" | "rocks" | "nick-and-nora" | "wine" | "spritz";
+export type GlassType = "coupe" | "highball" | "rocks" | "nick-and-nora" | "wine" | "spritz" | "hurricane";
 export type IceType = "none" | "large-cube" | "rocks" | "crushed" | "pebbled";
 export type FoamType = "egg-white" | "pineapple-froth" | "salt-topped";
 export type Viscosity = "thin" | "medium" | "thick" | "syrupy";

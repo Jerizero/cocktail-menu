@@ -30,12 +30,17 @@ export const InspirationCard = ({ inspiration, index }: Props) => {
       {inspiration.handle && (
         <p className="text-sm text-amber mb-3">{inspiration.handle}</p>
       )}
-      <p className="text-sm text-text-secondary leading-relaxed">
+      <p className="text-sm text-text-secondary leading-relaxed line-clamp-4">
         {inspiration.description}
       </p>
       {inspiration.highlight && (
-        <p className="text-xs text-text-muted mt-3 italic">
+        <p className="text-xs text-text-muted mt-3 italic line-clamp-2">
           {inspiration.highlight}
+        </p>
+      )}
+      {inspiration.keyInsight && (
+        <p className="text-xs text-amber/80 mt-3 leading-relaxed line-clamp-3">
+          {inspiration.keyInsight}
         </p>
       )}
     </motion.div>

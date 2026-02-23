@@ -47,4 +47,9 @@ export const inspirations: Inspiration[] = [
     handle: "@verygooddrinks",
     description: "Cocktail content creators",
   },
+  {
+    name: "Jarbae",
+    handle: "@jarbae",
+    description: "NYC-based cocktail creator. Inventive builds with a playful, visual-first approach.",
+  },
 ];

@@ -33,8 +33,8 @@ const DIMENSION_NARRATIVES = [
   {
     label: "Dry",
     range: "1 -- 7",
-    text: "Negroni leads at 7/10 with gin and blanc vermouth. Mab\u00ed pushes to 6 as the bone-dry refresher. Most drinks sit low \u2014 the menu leans rich over parched.",
-    drinkIds: [5, 4],
+    text: "Negroni leads at 7/10 with gin and blanc vermouth. Mab\u00ed and El Saz\u00f3n both push to 6 \u2014 bone-dry refresher meets savory stirred. Most drinks sit low \u2014 the menu leans rich over parched.",
+    drinkIds: [5, 4, 8],
   },
   {
     label: "Bitter",

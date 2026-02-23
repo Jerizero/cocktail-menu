@@ -104,6 +104,8 @@ export interface Inspiration {
   handle?: string;
   description: string;
   highlight?: string;
+  techniques?: string[];
+  keyInsight?: string;
 }
 
 export interface Decision {

@@ -11,12 +11,22 @@
 Dominican food culture reinterpreted as cocktail architecture. Not "Dominican ingredients dropped into classic templates" — Dominican *dishes and traditions* distilled into liquid form. Technique-forward but never technique-for-technique's-sake. Every technique serves the flavor.
 
 ### Inspirations & References
-- **Casarré** (@casarre.sdq) — Chef Olivier Bur, half Swiss/half Dominican, trained at Pujol and Noma México. Haute Dominican cuisine. Pineapple oil Negroni.
-- **Coctelería Perla Negra** — 3454 Broadway, NYC. Dominican cocktail bar. Malta India Espresso Martini (aged rum, coffee liqueur, amaro, cold brew, malta & condensed milk foam, volcanic salt).
-- **@drinksbyevie** (Evie Negri-Albert) — 736K TikTok, romantic vintage aesthetic
-- **@moresavorygoods** (Lance, Brooklyn) — "CEO of overengineering cocktails"
-- **@bottomshelfdav** — Creative/savory cocktails
-- **@verygooddrinks** (Jazz & Demi)
+
+**Bars & Restaurants**
+- **Casarré** (@casarre.sdq) — Chef Olivier Bur, half Swiss/half Dominican, trained at Pujol and Noma México. "No wine" constraint forces Dominican-origin beverages only — innovation through limitation. Mamajuana Negroni (mamajuana replacing gin), clairin as back-bar staple honoring the shared island, provenance storytelling (84-year-old sugar producers, border mushroom foragers, specific fincas). Cafe con Ron closer: coffee + cacao + aged rum.
+- **Coctelería Perla Negra** — 3454 Broadway, NYC. Dominican cocktail bar proving these techniques work commercially at $17-18. Platano Daiquiri (plantain-infused rum), Malta India Espresso Martini, Clarified Piña Colada (mezcal + milk clarification), Zapoteca (clarified zapote + mamajuana modifier). Techniques: milk clarification, condensed milk espuma (ISI), plantain-infused rum, fruit clarification.
+- **Attaboy** — 134 Eldridge St, NYC. Successor to Milk & Honey. 3-4 ingredient max: "With 8+, the drink starts to be muddied." Each ingredient must be audible — if you can't taste it, remove it. Template-variation method: start from a classic, change ONE variable (Penicillin = Gold Rush + ginger split + Islay float). Equal-parts architecture: Paper Plane (4 × 0.75oz). Technique amplifies, not replaces.
+- **Ethos** — Convergent cocktail philosophy merging Milk & Honey restraint + Japanese bartending intentionality + Dave Arnold's "maximal technique, minimal ingredients." The test: (1) What does this do that nothing else does? (2) Would the drink be worse without it? (3) Does it serve ONE concept? (4) Is there a simpler way?
+
+**Content Creators**
+- **@drinksbyevie** (Evie Negri-Albert) — 736K TikTok. Fat-washing (bacon, sesame, butter), compound syrups. Dominican application: manteca de cerdo, coconut oil, annatto oil into rum.
+- **@moresavorygoods** (Lance, Brooklyn) — "CEO of overengineering cocktails." Acid-adjusted citrus ("Not Lime"), Pectinex enzyme clarification, sous vide spice infusions. Key insight: sous vide extraction solves mabí bark (150°F/2hr) and cacao husk (175°F/45min) open questions.
+- **@bottomshelfdav** — Compound fat-washes (multiple aromatics simultaneously), lacto-fermented mixers, dish-to-drink flavor mapping. Lacto-fermented chinola puree could add depth to #2.
+- **@verygooddrinks** (Jazz & Demi) — Broth concentrate cocktails, hot cocktail formats. Key insight: hot drink gap on El Campo menu — Dominican Cafe con Ron closer is a natural future addition.
+- **@jarbae** (Jarbae) — NYC-based. Systematic dish-to-cocktail translation: identify 3-4 dish components, assign cocktail analogs. Brine at 0.5oz+ as structural ingredient, not a dash — direct influence on El Sazón escabeche brine increase.
+
+**Attaboy Audibility Test (Applied as Hard Rule)**
+Count distinct flavor voices per drink. If more than 4 (excluding water/ice/bitters-as-seasoning), one voice must be cut or merged. Applied to: #6 (Chartreuse cut), #3 (falernum A/B test recommended).
 
 ---
 
@@ -43,9 +53,9 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 - **Modifiers**: Chinola (passion fruit), Cayenne-Agave
 - **Technique**: Cayenne-infused agave
 - **Status**: Spec'd, not extensively tested
-- **Notes**: Simplest drink on the menu. Every menu needs one the bartender can bang out in 30 seconds.
+- **Notes**: Simplest drink on the menu. Every menu needs one the bartender can bang out in 30 seconds. Rooted in the batida de chinola — passion fruit blended with ice at every Dominican colmado. Consider lacto-fermented chinola puree for depth without added ingredients (bottomshelfdav technique).
 
-#### 3. Coco Concon Refrescante — Samaná Homage
+#### 3. Coco Concon — Samaná Homage
 - **Base**: JW Black Label, Blender Fat-Washed with concon
 - **Modifiers**: Velvet Falernum, **Guandules (pigeon pea) Orgeat**, Coconut Water
 - **Technique**: Flash-blend fried concon into scotch (10-15s) → freeze → strain
@@ -67,15 +77,16 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 
 #### 13. Mamajuana Spritz — Dominican Aperitivo
 - **Base**: Mamajuana (Dominican rum + red wine + honey + bark/herbs)
-- **Modifiers**: Cava, Orange Peel
-- **Technique**: Build in glass over ice
+- **Modifiers**: Campari (0.5oz), Cava, Orange Peel
+- **Technique**: Build in glass over ice — Campari commits to a real bitter element, not a rinse
 - **Status**: Concept
 - **Notes**:
   - THE most Dominican spirit tradition — previously absent from the menu
   - Mamajuana: rum steeped with red wine, honey, and tree bark/herbs — medicinal roots
   - Deep ruby-garnet color from the red wine base
   - Served in a balloon wine glass / spritz glass over ice
-  - Could add a Campari or Aperol rinse for additional bitter complexity
+  - 0.5oz Campari committed — needs to EARN its place as mamajuana's showcase, not just "mamajuana + bubbles"
+  - Casarré's Mamajuana Negroni proves mamajuana works in bitter-forward formats
 
 ### Refrescantes (Non-Alcoholic)
 
@@ -118,14 +129,14 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
   - Ratio starting point: 2 medium plantains per 750ml gin
   - Tasting schedule: 24hr, 36hr, 48hr — find the window where plantain is present but gin botanicals aren't buried
 
-#### 6. Mango de Fuego y Humo — Tropical Sour
-- **Base**: Smith & Cross Rum + Mezcal split
-- **Modifiers**: Smoked Mango Honey, Lime, Egg White
-- **Technique**: Smoked mango honey
-- **Possible enhancer**: Green Chartreuse (0.25-0.5oz) — use with caution, lots of voices already
+#### 6. Fuego y Humo — Tropical Sour
+- **Base**: Clairin + Mezcal split (Hispaniola story — clairin honors the shared island)
+- **Modifiers**: Scotch bonnet-infused mango syrup, Lime, Egg White
+- **Technique**: Clairin and mezcal split base, scotch bonnet-infused mango syrup for heat and fruit
+- **Chartreuse CUT**: Per Attaboy audibility test — already 5 voices (spirit split + mango-pepper + lime + egg white)
 - **Status**: Spec'd, not tested
 
-#### 7. Cafecito con Espuma Salada — Coffee Aperitivo
+#### 7. Piña Cafecito — Coffee Aperitivo
 - **Base**: Citrus-Forward Gin (Hendrick's, Roku, or Tanq 10)
 - **Modifiers**: Cap Corse Blanc (Corsican quinquina — this is the dominant flavor, not the gin), Light-Roast Cometeer espresso, Shaken Pineapple Juice (creates natural froth), Salt sprinkle on top
 - **Technique**: Shaken pineapple juice creates cafecito-style froth, salt mimics salted foam coffee
@@ -134,13 +145,14 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 
 #### 8. El Sazón — Savory Stirred
 - **Base**: Annatto-Infused Potato Vodka + Aquavit split
-- **Modifiers**: Dry Vermouth, Escabeche Brine, Cilantro Oil float
+- **Modifiers**: Dry Vermouth (0.5oz), Escabeche Brine (0.5oz), Cilantro Oil float
 - **Technique**: Annatto warm infusion (fat-soluble extraction), stirred
 - **Garnish**: Ají dulce on a pick
 - **Status**: Concept
 - **Notes**:
   - Annatto (achiote) provides deep saffron-gold to burnt orange color — the signature color of Dominican cooking
-  - Escabeche brine maintained — deeply Dominican preservation technique
+  - Escabeche brine at 0.5oz — Jarbae principle: below 0.5oz brine is invisible, needs to be a voice not a whisper (was 0.25oz)
+  - Dry vermouth reduced to 0.5oz to compensate for increased brine acidity
   - Cilantro oil as aromatic finishing layer (aroma, not flavor bomb — inspired by Perla Negra's finishing oils)
   - Aquavit caraway/dill complements sofrito aromatics
   - Savory without being jarring — sofrito essence, not liquid sofrito
@@ -148,14 +160,14 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 
 ### Tragos Fuertes y Ricos
 
-#### 9. Esencia de Habichuela Dulce — Served VISCOUS on a Rock
+#### 9. Habichuela Dulce — Served VISCOUS on a Rock
 - **Base**: Aged Dominican Rum + Blackstrap Rum
 - **Modifiers**: Spiced Bean & Batata Nectar, Rum-Raisin
 - **Technique**: Pectinex + agar-agar for viscosity (NOT clarified — served thick/rich)
 - **Status**: Spec'd, not tested
 - **Notes**: Differentiated from Piña Colada by texture — this is viscous/rich, Piña Colada is crystal clear/elegant.
 
-#### 10. El Tabaquero Francés — Tenares Homage (Smoked Old Fashioned)
+#### 10. El Tabaquero — Tenares Homage (Smoked Old Fashioned)
 - **Base**: VSOP Cognac
 - **Modifiers**: Dulce de Leche & **Cacao Husk Tea** Syrup (reduced dulce de leche by ~25%), Cynar (0.25oz), Angostura, Tobacco Smoke
 - **Technique**: Cacao husk tea brewed from Tenares cacao shells; stirred; smoked glass
@@ -167,15 +179,19 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
   - Reduced dulce de leche syrup compensates for Cynar addition
   - Possible Cynar enhancer already discussed — now committed
 
-#### 11. Alma de Piña Colada — Crystal Clear "Ghost" — Served UP
-- **Base**: Toasted Coconut-Infused White Rum (infusion, not fat-wash)
-- **Modifiers**: Pineapple Oleo, Lime Bitters, Allspice
-- **Technique**: Toasted coconut infusion, pineapple oleo-saccharum
-- **Possible enhancer**: Yellow Chartreuse
-- **Status**: Spec'd, not tested
-- **Notes**: Differentiated from Habichuela Dulce by being clarified/elegant vs viscous/rich. Served up.
+#### 11. Piña Fantasma — Frozen Piña Colada
+- **Base**: Aged Rum
+- **Modifiers**: Piloncillo-roasted pineapple, Fresh coconut cream, Dark rum float
+- **Technique**: Roast pineapple with piloncillo until caramelized, blend with coconut cream and aged rum, serve frozen with dark rum float
+- **Status**: Concept
+- **Notes**:
+  - Roasted pineapple adds depth and color — not a standard piña colada
+  - Piloncillo (panela) is the traditional DR raw cane sugar
+  - Dark rum float adds visual layering
+  - More Dominican and more distinct from Sueño than the previous clarified spec
+  - Attaboy spirit: accessible craft, no technique pretension
 
-#### 12. Malta de Cajuil Flip — Egg Flip
+#### 12. Malta Flip — Egg Flip
 - **Base**: Bourbon
 - **Modifiers**: Malta, Cashew Orgeat ("Dulce de Cajuil"), Whole Egg, Nutmeg
 - **Technique**: Cashew orgeat, dry shake + wet shake
@@ -209,31 +225,33 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | 3 | Coco Concon | 5 | 7 | 4 | 2 | 2 | 5 | 8 |
 | 4 | Mabí Burbujas | 4 | 8 | 2 | 7 | 6 | 2 | 4 |
 | 5 | Negroni Dorado | 8 | 2 | 2 | 9 | 1 | 6 | 8 |
-| 6 | Mango Fuego y Humo | 6 | 5 | 5 | 2 | 7 | 5 | 6 |
-| 7 | Cafecito Espuma | 6 | 4 | 3 | 7 | 3 | 5 | 9 |
-| 8 | El Sazón | 7 | 3 | 2 | 7 | 3 | 5 | 6 |
+| 6 | Fuego y Humo | 6 | 5 | 5 | 2 | 7 | 5 | 6 |
+| 7 | Piña Cafecito | 6 | 4 | 3 | 7 | 3 | 5 | 9 |
+| 8 | El Sazón | 7 | 3 | 2 | 8 | 4 | 5 | 6 |
 | 9 | Habichuela Dulce | 7 | 1 | 8 | 2 | 1 | 9 | 8 |
-| 10 | Tabaquero Francés | 8 | 1 | 5 | 5 | 0 | 8 | 6 |
-| 11 | Piña Colada Ghost | 6 | 5 | 5 | 2 | 3 | 4 | 8 |
-| 12 | Malta Cajuil Flip | 5 | 1 | 6 | 3 | 1 | 8 | 5 |
-| 13 | Mamajuana Spritz | 3 | 8 | 5 | 3 | 2 | 3 | 5 |
+| 10 | El Tabaquero | 8 | 1 | 5 | 5 | 0 | 8 | 6 |
+| 11 | Piña Fantasma | 5 | 7 | 7 | 1 | 3 | 6 | 5 |
+| 12 | Malta Flip | 5 | 1 | 6 | 3 | 1 | 8 | 5 |
+| 13 | Mamajuana Spritz | 4 | 7 | 4 | 4 | 2 | 3 | 6 |
 | 14 | Mabí Fresco | 0 | 7 | 3 | 5 | 5 | 2 | 5 |
 | 15 | Guarapo y Lima | 0 | 9 | 7 | 1 | 5 | 2 | 1 |
 
 ### Spirit Distribution
-- Rum: #1 (partial), #2, #6 (split), #9, #11, #13
+- Rum: #1 (partial), #2, #9, #11, #13
 - Cognac: #1 (partial), #10
 - Gin: #5, #7
 - Scotch: #3
 - Rye: #4
 - Vodka/Aquavit: #8
 - Bourbon: #12
-- Mezcal: #6 (split w/ rum)
+- Clairin: #6 (split w/ mezcal — Hispaniola story)
+- Mezcal: #6 (split w/ clairin)
 
 ### Service Style
 - Highball/Long: #2, #3, #4
 - Stirred/Short: #5, #8, #10
-- Shaken/Up: #6, #7, #11
+- Shaken/Up: #6, #7
+- Frozen: #11
 - Punch (on a rock): #1
 - On a Rock: #9
 - Flip: #12
@@ -248,13 +266,13 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 ## Regional Homages
 
 ### Samaná (Jeriel's family)
-- **Drink**: Coco Concon Refrescante (#3)
+- **Drink**: Coco Concon (#3)
 - **Connection**: Coconut + pigeon pea (guandules) + concon = guandules con coco meets crispy rice
 - **Key ingredient**: Guandules orgeat replaces demerara syrup
-- **About Samaná**: Coconut capital of DR. Peninsula covered in coconut groves. Unique Afro-American community — descendants of freed Black Americans who emigrated in 1824. Over 80% of population descends from these settlers. English-speaking heritage, AME churches. Signature dish: guandules con coco.
+- **About Samaná**: Coconut capital of DR. Peninsula covered in coconut groves. Notable Afro-American community — descendants of freed Black Americans who emigrated in 1824. English-speaking heritage, AME churches. Signature dish: guandules con coco.
 
 ### Tenares (Jeriel's family, Cibao valley)
-- **Drink**: El Tabaquero Francés (#10)
+- **Drink**: El Tabaquero (#10)
 - **Connection**: Tobacco smoke + cacao husk tea — two agricultural products from the same valley
 - **Key ingredient**: Cacao husk tea in the dulce de leche syrup
 - **About Tenares**: Agricultural heartland. Grows cacao, coffee, tobacco, banana, cassava. "Chocolate Jungle" cacao farm experiences. Hermanas Mirabal province. Cibao cuisine: hearty, bold, meat-forward.
@@ -301,6 +319,10 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | Cacao husk tea | Tabaquero | Brew shells, not beans. Light/fruity/floral, not chocolate. |
 | Annatto warm infusion | El Sazón | Fat-soluble extraction into vodka. Deep saffron-gold color, subtle earthy warmth. |
 | Cilantro oil finish | El Sazón | Aromatic finishing layer — aroma, not flavor bomb. Inspired by Perla Negra. |
+| Sous vide bark/spice extraction | Mabí (#4), Tabaquero (#10) | R&D: Mabí bark 150°F/65°C for 2hr, cacao husk 175°F/80°C for 45min. Eliminates guesswork of room-temp steeping. (Lance technique) |
+| Lacto-fermented fruit puree | Chinola (#2) future | R&D: Fermented chinola puree for depth without added ingredients. (bottomshelfdav technique) |
+| Condensed milk espuma | Malta Flip (#12) future | R&D: ISI whipper condensed milk foam top — malta con leche condensada tradition. (Perla Negra technique) |
+| Raisin-infused rum | Habichuela (#9) future | R&D: Soak golden raisins in aged rum 5-7 days, strain. Merges base spirit + modifier into one component. |
 
 ---
 
@@ -321,6 +343,11 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 - Condensed milk foam as texture element
 - These add Dominican identity to the experience without restructuring recipes
 
+### Menu Gaps Identified (Inspiration Research, 2026-02-23)
+- **No warm/hot drink** — Casarré's Cafe con Ron closer (coffee + cacao + aged rum), Jazz & Demi's Hot Colada. Natural future addition.
+- **No guanabana/zapote/guayiga** — Casarré and Perla Negra both use these. Future: guanabana element in an existing drink or menu v2.
+- **No dish-translated "brothtail"** — Jazz & Demi, bottomshelfdav. Future: Sancocho Brothtail concept.
+
 ---
 
 ## R&D Status Tracker
@@ -332,14 +359,14 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | Coco Concon | Partially (fat-wash proven) | Guandules orgeat needs R&D |
 | Mabí Burbujas | No | Bark tincture vs low-sugar syrup |
 | Negroni Dorado | No — NEXT UP | Fry method, infusion ratio/time, sherry split |
-| Mango Fuego y Humo | No | Smoked mango honey technique, Chartreuse enhancer |
-| Cafecito Espuma | YES | Proven and loved |
+| Fuego y Humo | No | Scotch bonnet mango syrup infusion time (Chartreuse CUT) |
+| Piña Cafecito | YES | Proven and loved |
 | El Sazón | No | Annatto infusion concentration, aquavit ratio, vermouth selection |
 | Habichuela Dulce | No | Agar viscosity (pourable vs gel), rum-raisin technique |
-| Tabaquero Francés | No | Cacao husk tea sourcing, Cynar balance, dulce de leche reduction |
-| Piña Colada Ghost | No | Clarification method, Chartreuse enhancer |
-| Malta Cajuil Flip | No | Cashew orgeat R&D |
-| Mamajuana Spritz | No | Mamajuana base recipe ratios, cava vs prosecco, bitter element |
+| El Tabaquero | No | Cacao husk tea sourcing, Cynar balance, dulce de leche reduction |
+| Piña Fantasma | No | Piloncillo-roasted pineapple technique, frozen consistency |
+| Malta Flip | No | Cashew orgeat R&D |
+| Mamajuana Spritz | No | Mamajuana base recipe ratios, cava vs prosecco (Campari committed) |
 | Mabí Fresco | No | Fermentation time (2 vs 3 days), carbonation level |
 | Guarapo y Lima | No | Sugarcane sourcing (fresh press vs bottled guarapo) |
 
@@ -366,3 +393,10 @@ Dominican food culture reinterpreted as cocktail architecture. Not "Dominican in
 | 2026-02-20 | "Deconstructed" → "Distilled" | Better word, avoids colonizer connotation. Feedback from Brandon. |
 | 2026-02-20 | Mabí Burbujas → Dominican Rickey | Ricky template (spirit + lime + soda). Soda water replaces dry tonic so bark flavor isn't competing with quinine. |
 | 2026-02-20 | Added Guarapo y Lima (#15) | Fresh sugarcane juice + lime on the rocks. Simplest drink on the menu. Non-alcoholic. |
+| 2026-02-23 | Chartreuse CUT from Fuego y Humo (#6) | Attaboy audibility test — already 5 voices. Chartreuse was flagged as risky in own notes. |
+| 2026-02-23 | Fuego y Humo base: Clairin + Mezcal (not Smith & Cross) | Hispaniola story — clairin honors the shared island. Resolves MENU.md/drinks.ts spec conflict. |
+| 2026-02-23 | Piña Fantasma (#11): Frozen (not clarified) | More Dominican, more distinct from Sueño. drinks.ts already had frozen spec. Resolves spec conflict. |
+| 2026-02-23 | Escabeche brine in El Sazón (#8): 0.25oz → 0.5oz | Jarbae principle: below 0.5oz brine is invisible. Vermouth reduced to 0.5oz to compensate. |
+| 2026-02-23 | Campari committed in Mamajuana Spritz (#13) | 0.5oz Campari, not a rinse. Needs to EARN its place as mamajuana's showcase. Casarré proves mamajuana works bitter-forward. |
+| 2026-02-23 | Attaboy audibility test adopted as hard rule | Max 4 distinct flavor voices per drink (excluding water/ice/bitters-as-seasoning). |
+| 2026-02-23 | Inspiration deep dive research completed | Casarré, Perla Negra, Attaboy, Ethos philosophy, all 5 content creators researched for concrete technique application. |

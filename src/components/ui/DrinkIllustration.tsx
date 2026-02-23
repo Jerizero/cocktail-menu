@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useId, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import type { DrinkVisual, GlassType } from "@/data/types";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -312,6 +312,7 @@ export const DrinkIllustration = ({ visual, size = "card", className }: Props) =
   const { glassType, liquidColor, liquidGradient, opacity, iceType, foam, smoke, straw, viscosity } = visual;
   const g = GLASS[glassType];
   const showDetail = size !== "tiny";
+  const clipId = useId();
   const dim =
     size === "tiny"
       ? { w: 36, h: 48 }
@@ -321,6 +322,12 @@ export const DrinkIllustration = ({ visual, size = "card", className }: Props) =
 
   return (
     <svg ref={ref} viewBox="0 0 120 180" width={dim.w} height={dim.h} className={className} aria-hidden="true" role="presentation">
+      <defs>
+        <clipPath id={clipId}>
+          <path d={g.fill} />
+        </clipPath>
+      </defs>
+
       {/* Base liquid */}
       <path d={g.fill} fill={liquidColor} fillOpacity={opacity * 0.5} />
 
@@ -333,9 +340,10 @@ export const DrinkIllustration = ({ visual, size = "card", className }: Props) =
         fill="#FFFFFF" fillOpacity={0.12}
       />
 
-      {/* Viscosity bottom layer */}
+      {/* Viscosity bottom layer — clipped to glass interior */}
       {(viscosity === "thick" || viscosity === "syrupy") && (
         <path
+          clipPath={`url(#${clipId})`}
           d={`M${g.meniscusL - 3},${g.liquidY + g.liquidH - 15} L${g.meniscusL - 3},${g.liquidY + g.liquidH} L${g.meniscusR + 3},${g.liquidY + g.liquidH} L${g.meniscusR + 3},${g.liquidY + g.liquidH - 15} Q60,${g.liquidY + g.liquidH - 10} ${g.meniscusL - 3},${g.liquidY + g.liquidH - 15} Z`}
           fill={liquidGradient || liquidColor} fillOpacity={opacity * 0.2}
         />

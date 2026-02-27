@@ -17,7 +17,9 @@ export const useScrollLock = (enabled: boolean): void => {
       body.style.position = "";
       body.style.top = "";
       body.style.width = "";
-      window.scrollTo(0, scrollTop);
+      // 'instant' overrides html { scroll-behavior: smooth } which otherwise
+      // starts an animation that gets lost in React StrictMode double-effects.
+      window.scrollTo({ top: scrollTop, left: 0, behavior: "instant" });
     };
   }, [enabled]);
 };

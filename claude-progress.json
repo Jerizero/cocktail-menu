@@ -1,0 +1,53 @@
+{
+  "project": "cocktail-menu",
+  "description": "Dominican-inspired cocktail menu R&D website — interactive data viz + editorial storytelling",
+  "lastUpdated": "2026-02-20",
+  "currentPhase": "Visual Overhaul Complete — Phase 7 (Deploy)",
+  "status": "active",
+  "context": {
+    "familyRoots": "Samaná & Tenares, Dominican Republic",
+    "menuSize": 15,
+    "testedDrinks": [
+      "Sueño Clarificado",
+      "Cafecito con Espuma Salada",
+      "Alpine Salt Meadow (side project)"
+    ],
+    "nextRnD": "Negroni de Plátano Dorado — plantain infusion protocol"
+  },
+  "website": {
+    "stack": "Next.js 16 + TypeScript + Tailwind v4 + Framer Motion",
+    "status": "Hero gap collapse + narrative redesign done. Ready for deploy.",
+    "github": "https://github.com/Jerizero/cocktail-menu",
+    "completedPhases": [
+      "Phase 1: Scaffold + data layer (Next.js, fonts, typed data)",
+      "Phase 2: Layout + nav + hero (SiteHeader, HeroSection, PhilosophySection)",
+      "Phase 3: Menu section + drink modal (CategoryTabs, DrinkCard, DrinkModal, DrinkRadar)",
+      "Phase 4: Editorial charts (DimensionalHeatmap, FlavorScatter, SpiritBars)",
+      "Phase 5: Supporting sections (Regional, Technique, R&D)",
+      "Phase 6: Visual Overhaul — SVG drink illustrations, interactive DR map, dynamic layout, background density",
+      "Phase 6.5: Hero gap collapse + NarrativeSection redesign with watercolor ingredient illustrations"
+    ],
+    "remaining": [
+      "Lighthouse performance/a11y check",
+      "Deploy to Vercel/hosting"
+    ],
+    "fileCount": "36+ component files across data/, charts/, sections/, ui/, hooks/"
+  },
+  "recentDecisions": [
+    "Hero outer div → motion.div with scroll-linked marginBottom to collapse dead space",
+    "WatercolorIngredient: dual-layer SVG (fill blob + hand-drawn stroke) — hybrid of WatercolorBlob and BotanicalIllustration patterns",
+    "Single scrollY listener in NarrativeSection, shared via prop to all 6 ingredients",
+    "Narrative copy rewritten: heritage-forward, evocative, mami/tía voice",
+    "Ingredients desktop-only (isMobile early return + hidden md:block)",
+    "All animations guarded by useReducedMotion"
+  ],
+  "keyFiles": {
+    "menu": "MENU.md",
+    "page": "src/app/page.tsx",
+    "drinks": "src/data/drinks.ts",
+    "types": "src/data/types.ts",
+    "drinkIllustration": "src/components/ui/DrinkIllustration.tsx",
+    "drMap": "src/components/ui/DRMap.tsx",
+    "watercolorIngredient": "src/components/ui/WatercolorIngredient.tsx"
+  }
+}

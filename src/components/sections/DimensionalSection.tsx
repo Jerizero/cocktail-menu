@@ -104,7 +104,13 @@ export const DimensionalSection = () => {
         title="Dimensional Analysis"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         subtitle="Eight dimensions reveal how 15 drinks create a balanced menu"
+||||||| Stash base
+        subtitle="Seven dimensions reveal how 12 drinks create a balanced menu"
+=======
+        subtitle="Seven dimensions reveal how 13 drinks create a balanced menu"
+>>>>>>> Stashed changes
 ||||||| Stash base
         subtitle="Seven dimensions reveal how 12 drinks create a balanced menu"
 =======

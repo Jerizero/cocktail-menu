@@ -39,16 +39,16 @@ export const HeroSection = () => {
     >
       {/* Watercolor blobs — stay fixed, content collapses independently */}
       <WatercolorBlob
-        color="#B45309"
+        color="#A94E0F"
         className="top-10 -left-16 md:-left-32 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px]"
       />
       <WatercolorBlob
-        color="#166534"
+        color="#1E5F32"
         className="bottom-20 -right-12 md:-right-24 w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px]"
         variant={1}
       />
       <WatercolorBlob
-        color="#DC2626"
+        color="#C93038"
         className="top-1/3 right-1/4 w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px]"
         variant={2}
         opacity={0.08}

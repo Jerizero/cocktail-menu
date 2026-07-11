@@ -125,9 +125,9 @@ export const DRMap = ({ activeRegion, onSelectRegion }: Props) => {
       {/* Samaná region */}
       <motion.path
         d={SAMANA_PATH}
-        fill="#B45309"
+        fill="#A94E0F"
         fillOpacity={activeRegion === "samana" ? 0.35 : 0.15}
-        stroke={activeRegion === "samana" ? "#B45309" : "#A89F91"}
+        stroke={activeRegion === "samana" ? "#A94E0F" : "#A89F91"}
         strokeWidth={activeRegion === "samana" ? 2 : 1}
         className="cursor-pointer outline-none"
         tabIndex={0}
@@ -137,7 +137,7 @@ export const DRMap = ({ activeRegion, onSelectRegion }: Props) => {
         onClick={() => handleClick("samana")}
         onKeyDown={(e) => handleKeyDown(e, "samana")}
         whileHover={{ fillOpacity: 0.3, scale: 1.05 }}
-        whileFocus={{ stroke: "#B45309", strokeWidth: 2 }}
+        whileFocus={{ stroke: "#A94E0F", strokeWidth: 2 }}
         initial={animate ? { opacity: 0 } : {}}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ delay: animate ? 1.3 : 0, duration: 0.5 }}
@@ -147,9 +147,9 @@ export const DRMap = ({ activeRegion, onSelectRegion }: Props) => {
       {/* Tenares region */}
       <motion.path
         d={TENARES_PATH}
-        fill="#78350F"
+        fill="#6E3A12"
         fillOpacity={activeRegion === "tenares" ? 0.35 : 0.15}
-        stroke={activeRegion === "tenares" ? "#78350F" : "#A89F91"}
+        stroke={activeRegion === "tenares" ? "#6E3A12" : "#A89F91"}
         strokeWidth={activeRegion === "tenares" ? 2 : 1}
         className="cursor-pointer outline-none"
         tabIndex={0}
@@ -159,7 +159,7 @@ export const DRMap = ({ activeRegion, onSelectRegion }: Props) => {
         onClick={() => handleClick("tenares")}
         onKeyDown={(e) => handleKeyDown(e, "tenares")}
         whileHover={{ fillOpacity: 0.3, scale: 1.05 }}
-        whileFocus={{ stroke: "#78350F", strokeWidth: 2 }}
+        whileFocus={{ stroke: "#6E3A12", strokeWidth: 2 }}
         initial={animate ? { opacity: 0 } : {}}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ delay: animate ? 1.5 : 0, duration: 0.5 }}
@@ -176,7 +176,7 @@ export const DRMap = ({ activeRegion, onSelectRegion }: Props) => {
         <text
           x="340"
           y="155"
-          fill="#78350F"
+          fill="#6E3A12"
           fillOpacity={0.5}
           fontSize="11"
           fontFamily="var(--font-sans)"
@@ -191,7 +191,7 @@ export const DRMap = ({ activeRegion, onSelectRegion }: Props) => {
         <text
           x="399"
           y="80"
-          fill="#B45309"
+          fill="#A94E0F"
           fillOpacity={activeRegion === "samana" ? 0.9 : 0.6}
           fontSize="9"
           fontFamily="var(--font-sans)"
@@ -205,7 +205,7 @@ export const DRMap = ({ activeRegion, onSelectRegion }: Props) => {
         <text
           x="318"
           y="96"
-          fill="#78350F"
+          fill="#6E3A12"
           fillOpacity={activeRegion === "tenares" ? 0.9 : 0.6}
           fontSize="9"
           fontFamily="var(--font-sans)"
@@ -220,20 +220,20 @@ export const DRMap = ({ activeRegion, onSelectRegion }: Props) => {
           cx={SANTO_DOMINGO.x}
           cy={SANTO_DOMINGO.y}
           r={3}
-          fill="#78350F"
+          fill="#6E3A12"
           fillOpacity={0.4}
         />
         <circle
           cx={SANTO_DOMINGO.x}
           cy={SANTO_DOMINGO.y}
           r={1.5}
-          fill="#78350F"
+          fill="#6E3A12"
           fillOpacity={0.7}
         />
         <text
           x={SANTO_DOMINGO.x + 8}
           y={SANTO_DOMINGO.y + 4}
-          fill="#78350F"
+          fill="#6E3A12"
           fillOpacity={0.45}
           fontSize="7.5"
           fontFamily="var(--font-sans)"
@@ -279,13 +279,13 @@ export const RegionSelector = ({
       id: "samana",
       name: "Samaná",
       drink: "Coco Concon Refrescante",
-      color: "#B45309",
+      color: "#A94E0F",
     },
     {
       id: "tenares",
       name: "Tenares",
       drink: "El Tabaquero Francés",
-      color: "#78350F",
+      color: "#6E3A12",
     },
   ];
 

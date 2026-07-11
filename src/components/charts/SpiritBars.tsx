@@ -174,7 +174,7 @@ export const SpiritBars = ({
       >
         {/* Arc segments */}
         {arcs.map((arc, i) => {
-          const color = SPIRIT_COLORS[arc.spirit] ?? "#78350F";
+          const color = SPIRIT_COLORS[arc.spirit] ?? "#6E3A12";
           const isHighlighted = highlightSpirit === arc.spirit;
           const isDimmed =
             highlightSpirit != null && highlightSpirit !== arc.spirit;
@@ -276,7 +276,7 @@ export const SpiritBars = ({
           textAnchor="middle"
           dominantBaseline="central"
           className="text-[28px] font-bold"
-          fill="#78350F"
+          fill="#6E3A12"
         >
           {uniqueSpirits}
         </text>
@@ -286,7 +286,7 @@ export const SpiritBars = ({
           textAnchor="middle"
           dominantBaseline="central"
           className="text-[10px] font-medium uppercase tracking-wider"
-          fill="#A16207"
+          fill="#9A6A10"
         >
           Spirits
         </text>
@@ -296,7 +296,7 @@ export const SpiritBars = ({
           textAnchor="middle"
           dominantBaseline="central"
           className="text-[10px] font-medium"
-          fill="#92400E"
+          fill="#8C4310"
         >
           {totalDrinks} Drinks
         </text>
@@ -305,7 +305,7 @@ export const SpiritBars = ({
       {/* Legend — arc labels below the chart */}
       <div className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 mt-4 max-w-[320px]">
         {arcs.map((arc) => {
-          const color = SPIRIT_COLORS[arc.spirit] ?? "#78350F";
+          const color = SPIRIT_COLORS[arc.spirit] ?? "#6E3A12";
           const isDimmed =
             highlightSpirit != null && highlightSpirit !== arc.spirit;
           const isHighlighted = highlightSpirit === arc.spirit;
@@ -316,7 +316,7 @@ export const SpiritBars = ({
               type="button"
               className="flex items-center gap-1.5 text-[11px] font-medium transition-opacity duration-200"
               style={{
-                color: isDimmed ? "#C4A882" : "#78350F",
+                color: isDimmed ? "#C4A882" : "#6E3A12",
                 opacity: isDimmed ? 0.5 : 1,
               }}
               onClick={() => handleArcClick(arc.spirit)}

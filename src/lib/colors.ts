@@ -1,25 +1,25 @@
 export const SPIRIT_COLORS: Record<string, string> = {
-  rum: "#B45309",
-  gin: "#166534",
-  cognac: "#78350F",
-  whiskey: "#78350F",
-  vodka: "#475569",
-  aquavit: "#475569",
-  scotch: "#A16207",
-  rye: "#92400E",
+  rum: "#A94E0F",
+  gin: "#1E5F32",
+  cognac: "#6E3A12",
+  whiskey: "#6E3A12",
+  vodka: "#4A5A63",
+  aquavit: "#4A5A63",
+  scotch: "#9A6A10",
+  rye: "#8C4310",
   bourbon: "#854D0E",
-  mezcal: "#B45309",
+  mezcal: "#A94E0F",
   clairin: "#D97706",
 };
 
 export const CATEGORY_COLORS = {
-  aperitivos: "#B45309",
-  caracter: "#166534",
-  fuertes: "#78350F",
+  aperitivos: "#A94E0F",
+  caracter: "#1E5F32",
+  fuertes: "#6E3A12",
   refrescantes: "#0E7490",
 } as const;
 
-export const HIGHLIGHT_COLOR = "#DC2626";
+export const HIGHLIGHT_COLOR = "#C93038";
 
 export const HEATMAP_SCALE = [
   "#FEF3C7",
@@ -28,8 +28,8 @@ export const HEATMAP_SCALE = [
   "#FBBF24",
   "#F59E0B",
   "#D97706",
-  "#B45309",
-  "#92400E",
+  "#A94E0F",
+  "#8C4310",
 ] as const;
 
 export const getHeatmapColor = (value: number): string => {
@@ -44,4 +44,4 @@ export const getHeatmapColor = (value: number): string => {
 };
 
 export const getHeatmapTextColor = (value: number): string =>
-  value >= 7 ? "#FFFBEB" : "#78350F";
+  value >= 7 ? "#FFFBEB" : "#6E3A12";

@@ -151,19 +151,19 @@ const Annotation = ({
       y1={fromY}
       x2={toX}
       y2={toY}
-      stroke="#78350F"
+      stroke="#6E3A12"
       strokeWidth={1}
       strokeDasharray="3 2"
       opacity={0.6}
     />
     {/* Arrow tip */}
-    <circle cx={toX} cy={toY} r={2.5} fill="#78350F" opacity={0.6} />
+    <circle cx={toX} cy={toY} r={2.5} fill="#6E3A12" opacity={0.6} />
     <text
       x={fromX}
       y={fromY - 6}
       textAnchor={textAnchor}
       className="text-[11px] font-medium italic"
-      fill="#78350F"
+      fill="#6E3A12"
     >
       {text}
     </text>
@@ -207,16 +207,16 @@ const DesktopScatter = ({ onSelectDrink, selectedId }: Props) => {
         <line x1={centerX} y1={0} x2={centerX} y2={PLOT_H} stroke="#E7E5E4" strokeWidth={0.75} />
 
         {/* Axis labels */}
-        <text x={0} y={centerY - 8} textAnchor="start" className="text-[10px] font-semibold" fill="#92400E" opacity={0.7}>
+        <text x={0} y={centerY - 8} textAnchor="start" className="text-[10px] font-semibold" fill="#8C4310" opacity={0.7}>
           Sweet
         </text>
-        <text x={PLOT_W} y={centerY - 8} textAnchor="end" className="text-[10px] font-semibold" fill="#92400E" opacity={0.7}>
+        <text x={PLOT_W} y={centerY - 8} textAnchor="end" className="text-[10px] font-semibold" fill="#8C4310" opacity={0.7}>
           Dry
         </text>
-        <text x={centerX + 8} y={12} textAnchor="start" className="text-[10px] font-semibold" fill="#92400E" opacity={0.7}>
+        <text x={centerX + 8} y={12} textAnchor="start" className="text-[10px] font-semibold" fill="#8C4310" opacity={0.7}>
           Light
         </text>
-        <text x={centerX + 8} y={PLOT_H - 4} textAnchor="start" className="text-[10px] font-semibold" fill="#92400E" opacity={0.7}>
+        <text x={centerX + 8} y={PLOT_H - 4} textAnchor="start" className="text-[10px] font-semibold" fill="#8C4310" opacity={0.7}>
           Heavy
         </text>
 
@@ -278,7 +278,7 @@ const DesktopScatter = ({ onSelectDrink, selectedId }: Props) => {
                 r={pos.r}
                 fill={color}
                 fillOpacity={baseOpacity}
-                stroke={isSelected ? "#78350F" : isHovered ? "#78350F" : color}
+                stroke={isSelected ? "#6E3A12" : isHovered ? "#6E3A12" : color}
                 strokeWidth={isSelected || isHovered ? 2 : 1}
                 initial={
                   shouldReduceMotion
@@ -312,7 +312,7 @@ const DesktopScatter = ({ onSelectDrink, selectedId }: Props) => {
               textAnchor={placement.anchor}
               dominantBaseline="middle"
               className="text-[11px] font-medium pointer-events-none"
-              fill={hoveredId === drink.id ? "#78350F" : "#92400E"}
+              fill={hoveredId === drink.id ? "#6E3A12" : "#8C4310"}
               opacity={hoveredId === drink.id ? 1 : 0.85}
             >
               {getShortName(drink)}
@@ -388,10 +388,10 @@ const MobileScatter = ({ onSelectDrink, selectedId }: Props) => {
           <line x1={centerX} y1={0} x2={centerX} y2={M_PLOT_H} stroke="#E7E5E4" strokeWidth={0.75} />
 
           {/* Axis labels */}
-          <text x={0} y={-8} className="text-[9px] font-semibold" fill="#92400E" opacity={0.6}>Sweet</text>
-          <text x={M_PLOT_W} y={-8} textAnchor="end" className="text-[9px] font-semibold" fill="#92400E" opacity={0.6}>Dry</text>
-          <text x={centerX + 4} y={8} className="text-[9px] font-semibold" fill="#92400E" opacity={0.6}>Light</text>
-          <text x={centerX + 4} y={M_PLOT_H - 2} className="text-[9px] font-semibold" fill="#92400E" opacity={0.6}>Heavy</text>
+          <text x={0} y={-8} className="text-[9px] font-semibold" fill="#8C4310" opacity={0.6}>Sweet</text>
+          <text x={M_PLOT_W} y={-8} textAnchor="end" className="text-[9px] font-semibold" fill="#8C4310" opacity={0.6}>Dry</text>
+          <text x={centerX + 4} y={8} className="text-[9px] font-semibold" fill="#8C4310" opacity={0.6}>Light</text>
+          <text x={centerX + 4} y={M_PLOT_H - 2} className="text-[9px] font-semibold" fill="#8C4310" opacity={0.6}>Heavy</text>
 
           {/* Numbered dots */}
           {drinks.map((drink, i) => {
@@ -420,7 +420,7 @@ const MobileScatter = ({ onSelectDrink, selectedId }: Props) => {
                   r={pos.r}
                   fill={color}
                   fillOpacity={dotOpacity}
-                  stroke={isSelected ? "#78350F" : color}
+                  stroke={isSelected ? "#6E3A12" : color}
                   strokeWidth={isSelected ? 2 : 1}
                   initial={shouldReduceMotion ? {} : { r: 0 }}
                   animate={{ r: pos.r, fillOpacity: dotOpacity }}

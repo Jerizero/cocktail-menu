@@ -88,7 +88,7 @@ const DesktopHeatmap = ({ activeDimension, onSelectDrink }: Props) => {
               textAnchor="middle"
               dominantBaseline="middle"
               className="text-[12px] font-semibold"
-              fill={isActive ? "#92400E" : "#78350F"}
+              fill={isActive ? "#8C4310" : "#6E3A12"}
               opacity={activeDimension != null && !isActive ? 0.4 : 1}
             >
               {dim.label}
@@ -106,7 +106,7 @@ const DesktopHeatmap = ({ activeDimension, onSelectDrink }: Props) => {
           height={drinks.length * CELL_H + 2}
           rx={4}
           fill="none"
-          stroke="#B45309"
+          stroke="#A94E0F"
           strokeWidth={2}
           initial={shouldReduceMotion ? {} : { opacity: 0 }}
           animate={{ opacity: 0.7 }}
@@ -159,7 +159,7 @@ const DesktopHeatmap = ({ activeDimension, onSelectDrink }: Props) => {
               y={y + CELL_H / 2}
               dominantBaseline="middle"
               className="text-[12px] font-medium"
-              fill={isHovered ? "#92400E" : "#78350F"}
+              fill={isHovered ? "#8C4310" : "#6E3A12"}
             >
               {getShortName(drink)}
             </text>
@@ -240,7 +240,7 @@ const MiniBar = ({
         />
         <span
           className="absolute inset-0 flex items-center justify-center text-[10px] font-bold tabular-nums"
-          style={{ color: value >= 5 ? textColor : "#78350F" }}
+          style={{ color: value >= 5 ? textColor : "#6E3A12" }}
         >
           {value}
         </span>

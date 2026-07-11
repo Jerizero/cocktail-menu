@@ -26,10 +26,10 @@ export const SectionDivider = ({ variant = 1, flip = false, className = "" }: Pr
       {/* Subtle fill beneath the wave */}
       <defs>
         <linearGradient id="divider-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#B45309" stopOpacity="0" />
-          <stop offset="30%" stopColor="#B45309" stopOpacity="0.15" />
-          <stop offset="70%" stopColor="#78350F" stopOpacity="0.15" />
-          <stop offset="100%" stopColor="#78350F" stopOpacity="0" />
+          <stop offset="0%" stopColor="#A94E0F" stopOpacity="0" />
+          <stop offset="30%" stopColor="#A94E0F" stopOpacity="0.15" />
+          <stop offset="70%" stopColor="#6E3A12" stopOpacity="0.15" />
+          <stop offset="100%" stopColor="#6E3A12" stopOpacity="0" />
         </linearGradient>
         <mask id={`wave-mask-${variant}${flip ? "-f" : ""}`}>
           <rect width="1440" height="80" fill="white" />

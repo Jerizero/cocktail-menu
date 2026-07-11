@@ -36,6 +36,7 @@ export const drinks: Drink[] = [
       "Backloading = adding ingredients after clarification that don't contain tannins (preserves volatile aromatics)",
       "Triple coffee filter straining",
       "Tang is intentional and non-negotiable",
+      "Taste the clarified punch specifically for chamomile — clarification strips delicate aromatics; if it reads faint, backload a chamomile cold-steep or tincture after straining (same move as the Licor 43)",
       "Brands: Pierre Ferrand 1840 Cognac, Ten To One White Rum, Pierre Ferrand Dry Curacao",
       "Can be served non-alcoholic as 'Sueñito' — substitute chamomile tea for the cognac and rum, keep the milk clarification and oleo-saccharum",
     ],
@@ -104,6 +105,7 @@ export const drinks: Drink[] = [
       "Simplest drink on the menu",
       "Every menu needs one the bartender can bang out in 30 seconds",
       "Use a Dominican white rum",
+      "Make the cayenne-agave sous-vide (~55°C / 2 hr) — controlled warm extraction pulls pepper flavor over raw burn and keeps batches consistent",
     ],
     ingredients: [
       "2 oz White rum",
@@ -165,6 +167,8 @@ export const drinks: Drink[] = [
       "Concon must be real caldero concon, oven-dried to cracker-dry, fried in neutral oil until deep golden",
       "Guandules orgeat replaces High-Saline Demerara (orgeat provides sweetness + body + earthiness)",
       "Concon carries salt through fat-wash; add saline drops if needed",
+      "Stabilize the orgeat with a gum (gellan, guar, or xanthan) and fine-strain — house orgeats split in-glass within 10-15 min, and this build has no egg to mask it",
+      "Orgeat is a make-ahead with a ~2-week refrigerated shelf life; date the bottle",
     ],
     ingredients: [
       "1.5 oz Concon fat-washed blended scotch",
@@ -283,7 +287,8 @@ export const drinks: Drink[] = [
     openQuestions: "Fry method, infusion ratio/time, sherry split",
     notes: [
       "No cacao nibs — Suze already does bitter work, nibs would muddy the plantain",
-      "No default saline in stirred drinks",
+      "A/B test 2-4 drops saline — a small saline dose is the proven fix for Suze's dryness/bitterness in stirred builds",
+      "Plantain infusion must read clearly sweet and aromatic — if it doesn't, the Suze pushes the drink into too-dry, dirt-like territory",
       "Gin rec: Fords or Tanqueray No. Ten — NOT Monkey 47 (too many botanicals get muddied by plantain infusion)",
       "Vermouth rec: Dolin Blanc",
       "Sherry split TBD — A/B test with and without",
@@ -342,6 +347,8 @@ export const drinks: Drink[] = [
     notes: [
       "Clairin (Haitian cane spirit) honors the shared island — Haiti and DR on Hispaniola",
       "Chartreuse CUT per Attaboy audibility test — already 5 voices (spirit split + mango-pepper + lime + egg white)",
+      "Infuse the scotch bonnet into the mango syrup sous-vide (~55°C / 2 hr starting point) — pulls pepper flavor over raw burn, batch-consistent heat",
+      "Real Clairin labels: Sajous, Vaval, Casimir — Barbancourt is aged rhum, NOT a Clairin",
     ],
     story:
       "Dominican mango season meets Haitian clairin — honoring the shared island — and mezcal smoke in a sour that tastes like a Caribbean summer bonfire.",
@@ -581,6 +588,7 @@ export const drinks: Drink[] = [
       "Cacao husk tea is light/fruity/floral, NOT heavy chocolate — it's the terroir of cacao before processing",
       "Cynar pushes drink from sweet toward bitter-sweet (breaks the rich/sweet cluster)",
       "Reduced dulce de leche syrup compensates for Cynar addition",
+      "Smoke with a smoking gun or under a cloche — NEVER play the torch flame into the glass (flame on cold glass deposits unburnt butane, reads as lighter fuel)",
     ],
     story:
       "Tobacco and cacao grow in the same Tenares valley — this smoked old fashioned with cognac and cacao husk tea puts both crops in one glass.",
@@ -592,7 +600,7 @@ export const drinks: Drink[] = [
     ],
     instructions: [
       "Brew cacao husk tea from Tenares cacao shells, incorporate into dulce de leche syrup (reduce dulce de leche ~25%)",
-      "Smoke the rocks glass with tobacco smoke",
+      "Smoke the rocks glass with tobacco smoke via smoking gun or cloche (torch lights the tobacco, never the glass)",
       "Combine Cognac, syrup, Cynar, and Angostura in mixing glass",
       "Add ice, stir until well chilled and diluted",
       "Strain into smoked glass over large ice cube",
@@ -695,6 +703,8 @@ export const drinks: Drink[] = [
     openQuestions: "Cashew orgeat R&D",
     notes: [
       "Cashew orgeat (\"Dulce de Cajuil\") is the key R&D element",
+      "Stabilize the orgeat with a gum (gellan, guar, or xanthan) and fine-strain — house nut orgeats split in-glass within 10-15 min without it",
+      "Orgeat is a make-ahead with a ~2-week refrigerated shelf life; date the bottle",
     ],
     story:
       "Malta — the malt soda Dominicans drink like water — and cajuil, the cashew fruit most of the world throws away, shaken into a bourbon egg flip with nutmeg on top.",

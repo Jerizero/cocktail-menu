@@ -4,40 +4,11 @@ import { useMemo } from "react";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { StatusBadge } from "@/components/ui/StatusBadge";
 import { drinks } from "@/data/drinks";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useDrinkNavigation } from "@/hooks/useDrinkNavigation";
 import type { RnDStatus } from "@/data/types";
-
-const STATUS_CONFIG: Record<
-  RnDStatus,
-  { label: string; bg: string; text: string; dot: string }
-> = {
-  tested: {
-    label: "Tested",
-    bg: "bg-green-100",
-    text: "text-green-800",
-    dot: "bg-green-500",
-  },
-  "partially-tested": {
-    label: "Partially Tested",
-    bg: "bg-amber-100",
-    text: "text-amber-800",
-    dot: "bg-amber-500",
-  },
-  specced: {
-    label: "Specced",
-    bg: "bg-blue-100",
-    text: "text-blue-800",
-    dot: "bg-blue-500",
-  },
-  concept: {
-    label: "Concept",
-    bg: "bg-stone-100",
-    text: "text-stone-600",
-    dot: "bg-stone-400",
-  },
-};
 
 const STATUS_ORDER: RnDStatus[] = [
   "tested",
@@ -45,18 +16,6 @@ const STATUS_ORDER: RnDStatus[] = [
   "specced",
   "concept",
 ];
-
-const StatusBadge = ({ status }: { status: RnDStatus }) => {
-  const config = STATUS_CONFIG[status];
-  return (
-    <span
-      className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium ${config.bg} ${config.text}`}
-    >
-      <span className={`w-1.5 h-1.5 rounded-full ${config.dot}`} />
-      {config.label}
-    </span>
-  );
-};
 
 export const RnDSection = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -105,7 +64,7 @@ export const RnDSection = () => {
             return (
               <div key={status}>
                 <div className="flex items-center gap-3 mb-3">
-                  <StatusBadge status={status} />
+                  <StatusBadge status={status} withDot />
                   <span className="text-text-muted text-sm">
                     ({group.length})
                   </span>

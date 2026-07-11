@@ -3,27 +3,9 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { StatusBadge } from "@/components/ui/StatusBadge";
 import { sideProjects } from "@/data/side-projects";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import type { RnDStatus } from "@/data/types";
-
-const STATUS_BADGE: Record<
-  RnDStatus,
-  { label: string; bg: string; text: string }
-> = {
-  tested: { label: "Tested", bg: "bg-green-100", text: "text-green-800" },
-  "partially-tested": {
-    label: "Partially Tested",
-    bg: "bg-amber-100",
-    text: "text-amber-800",
-  },
-  specced: { label: "Specced", bg: "bg-blue-100", text: "text-blue-800" },
-  concept: {
-    label: "Concept",
-    bg: "bg-stone-100",
-    text: "text-stone-600",
-  },
-};
 
 export const SideProjectsSection = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -34,7 +16,6 @@ export const SideProjectsSection = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {sideProjects.map((project, i) => {
-          const badge = STATUS_BADGE[project.status];
           return (
             <motion.div
               key={project.id}
@@ -53,10 +34,8 @@ export const SideProjectsSection = () => {
                     {project.subtitle}
                   </p>
                 </div>
-                <span
-                  className={`flex-shrink-0 px-2.5 py-0.5 rounded-full text-xs font-medium ${badge.bg} ${badge.text}`}
-                >
-                  {badge.label}
+                <span className="flex-shrink-0">
+                  <StatusBadge status={project.status} />
                 </span>
               </div>
 

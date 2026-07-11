@@ -355,11 +355,11 @@ export const DrinkModal = ({ drink, onClose, onPrev, onNext, hasPrev, hasNext }:
             {/* Status cards */}
             <div className="flex flex-col sm:flex-row gap-4">
               {drink.testedNotes && (
-                <div className="flex-1 bg-green-50 border border-green-200/50 rounded-xl p-5">
-                  <h4 className="text-xs font-semibold text-green-800 uppercase tracking-[0.15em] mb-2">
+                <div className="flex-1 bg-forest/5 border border-forest/20 rounded-xl p-5">
+                  <h4 className="text-xs font-semibold text-forest uppercase tracking-[0.15em] mb-2">
                     Tasting Notes
                   </h4>
-                  <p className="text-sm text-green-700 leading-relaxed">{drink.testedNotes}</p>
+                  <p className="text-sm text-text-secondary leading-relaxed">{drink.testedNotes}</p>
                 </div>
               )}
 
